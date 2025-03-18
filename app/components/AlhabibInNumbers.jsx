@@ -7,7 +7,7 @@ const AlhabibInNumbers = () => {
       <section className="relative bg-[#004D4F] py-14 px-4 md:px-16 overflow-hidden">
         {/* Background Vector */}
         <Image
-          src="/alhabibImages/vector35.png"
+          src="/alhabibImages/Vector35.png"
           alt="Vector Background"
           fill
           className="object-contain z-0 md:hidden"
