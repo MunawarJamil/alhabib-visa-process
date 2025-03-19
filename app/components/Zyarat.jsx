@@ -24,11 +24,11 @@ function Zyarat() {
   return (
     <>
       <div
-        className="bg-white py-3" 
+        className="bg-white  "
         style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
       >
         <div className="lg:flex lg:justify-center  lg:items-center ">
-          <div className="py-10 pl-6  bg-white">
+          <div className="py-5 pl-4  bg-white">
             <div className="  mx-auto ">
               <h1 className="text-3xl font-bold text-primary-color mb-4">
                 What Ziyarat’s We Provide?
@@ -84,33 +84,42 @@ function Zyarat() {
               </div>
             </div>
           </div>
-<div>
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow, Pagination]}
-            className="mySwiper bg-white"
-          >
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-          </Swiper>
+          <div>
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              pagination={true}
+              modules={[EffectCoverflow, Pagination]}
+              className="mySwiper bg-white"
+            >
+              <SwiperSlide>
+                <img
+                  src="/alhabibImages/imgalary2.png"
+                  className="object-cover h-full rounded-2xl"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/alhabibImages/imgalary2.png"
+                  className="object-cover h-full  rounded-2xl"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/alhabibImages/imgalary2.png"
+                  className="object-cover h-full rounded-2xl"
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
         {/* below banner */}

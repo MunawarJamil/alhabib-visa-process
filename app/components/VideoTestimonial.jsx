@@ -16,7 +16,7 @@ function VideoTestimonial() {
   return (
     <>
       {" "}
-      <div className="  w-[90%] md:w-[70%] mx-auto">
+      <div className="  w-[90%] md:w-[70%] mx-auto mt-10">
         <div className="text-center text-3xl px-4 font-bold">
           
           Watch <span className="text-[#D4A10F]"> Real</span>  

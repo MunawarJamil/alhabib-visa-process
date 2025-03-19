@@ -130,3 +130,15 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+/* In your globals.css or other CSS file */
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

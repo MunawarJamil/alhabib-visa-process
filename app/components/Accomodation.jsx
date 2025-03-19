@@ -23,15 +23,15 @@ function Accomodation() {
     makkah: {
       "3-star": [
         {
-          image: "https://picsum.photos/id/1018/600/400",
+          image: "/alhabibImages/imgalary2.png",
           title: "Makkah 3-Star Hotel 1",
         },
         {
-          image: "https://picsum.photos/id/1015/600/400",
+          image: "/alhabibImages/imgalary2.png",
           title: "Makkah 3-Star Hotel 2",
         },
         {
-          image: "https://picsum.photos/id/1016/600/400",
+          image: "/alhabibImages/imgalary2.png",
           title: "Makkah 3-Star Hotel 3",
         },
       ],
@@ -59,7 +59,7 @@ function Accomodation() {
           title: "Makkah 5-Star Hotel 2",
         },
         {
-          image: "https://picsum.photos/id/1024/600/400",
+          image: "/alhabibImages/imgalary2.png",
           title: "Makkah 5-Star Hotel 3",
         },
       ],
@@ -67,7 +67,7 @@ function Accomodation() {
     madina: {
       "3-star": [
         {
-          image: "https://picsum.photos/id/1025/600/400",
+          image: "/alhabibImages/imgalary2.png",
           title: "Madina 3-Star Hotel 1",
         },
         {
@@ -89,7 +89,7 @@ function Accomodation() {
           title: "Madina 4-Star Hotel 2",
         },
         {
-          image: "https://picsum.photos/id/1030/600/400",
+          image: "/alhabibImages/imgalary2.png",
           title: "Madina 4-Star Hotel 3",
         },
       ],
@@ -111,7 +111,8 @@ function Accomodation() {
   };
 
   return (
-    <div className="min-h-[80vh] bg-gradient-to-b from-white via-amber-50 to-white px-4 py-10 overflow-hidden">
+    <div className="min-h-[80vh] bg-gradient-to-b from-white via-amber-50 to-white
+     px-4 py-7 overflow-hidden">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-primary-color mb-2">
@@ -123,7 +124,7 @@ function Accomodation() {
       </div>
 
       {/* Filters */}
-      <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
+      <div className="flex flex-wrap justify-center items-center gap-4 mb-5">
         <Select onValueChange={(val) => setCity(val)} defaultValue={city}>
           <SelectTrigger className="w-[160px] md:w-[180px] rounded-xl border  shadow-sm focus:ring-2 focus:ring-primary focus:border-primary text-primary-color border-amber-500">
             <SelectValue placeholder="Preferred City" />
@@ -160,7 +161,7 @@ function Accomodation() {
           {data[city][stars].map((place, index) => (
             <SwiperSlide key={index} className="relative">
               {/* Image Card */}
-              <div className="overflow-hidden rounded-2xl shadow-lg w-full aspect-square relative">
+              <div className="overflow-hidden rounded-2xl   w-full aspect-square relative">
                 <Image
                   src={place.image}
                   alt={place.title}
@@ -169,13 +170,13 @@ function Accomodation() {
                   objectFit="cover"
                   quality={100}
                   priority
-                  className="h-[300px] "
+                  className="h-[300px] object-cover"
                 />
                 <p
                   className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm md:text-lg font-semibold bg-black/50 px-4 py-1 rounded-lg animate-fadeInUp"
                   style={{ textShadow: "0 2px 4px rgba(0,0,0,0.4)" }}
                 >
-                  {place.title}
+                  {/* {place.title} */}
                 </p>
               </div>
             </SwiperSlide>
