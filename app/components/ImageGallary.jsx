@@ -30,8 +30,8 @@ const ImageGallery = ({ images }) => {
             key={index}
             className={`relative transition-all mx-auto duration-300 ease-in-out cursor-pointer flex-shrink-0 rounded-xl overflow-hidden ${
               activeIndex === index
-                ? "w-52 h-40 sm:w-64 sm:h-52 md:w-80 md:h-64 lg:w-[28rem] lg:h-[20rem] xl:w-[36rem] xl:h-[24rem] z-10"
-                : "w-12 h-40 sm:w-14 sm:h-52 md:w-16 md:h-64 lg:w-20 lg:h-[20rem] xl:w-24 xl:h-[24rem]  "
+                ? "w-72 h-56 sm:w-64 sm:h-52 md:w-80 md:h-64 lg:w-[28rem] lg:h-[20rem] xl:w-[36rem] xl:h-[24rem] z-10"
+                : "w-12 h-56 sm:w-14 sm:h-52 md:w-16 md:h-64 lg:w-20 lg:h-[20rem] xl:w-24 xl:h-[24rem]  "
             }`}
             onClick={() => handleImageClick(index)}
           >
