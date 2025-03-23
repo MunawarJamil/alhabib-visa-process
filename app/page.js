@@ -26,6 +26,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <TravelDetails />
       <PopularPackages />
       <Accomodation />
       <Zyarat />

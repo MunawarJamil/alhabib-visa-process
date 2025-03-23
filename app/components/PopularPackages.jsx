@@ -13,7 +13,7 @@ const PopularPackages = () => {
   return (
     <>
       <div
-        className="    bg-white-50  w-full  mt-10  "
+        className=" lg:hidden   bg-white-50  w-full  mt-10  "
         style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
       >
         {/* top area */}
