@@ -20,7 +20,7 @@ export default function Navbar() {
 
       {/* for desktop */}
 
-      <div className="hidden lg:flex w-full bg-white">
+      <div className="hidden sticky top-0 z-50 lg:flex w-full bg-white">
         <div className=" flex px-12 justify-between w-full max-w-7xl   lg:hidded h-20 sticky top-0 z-50 bg-white        mx-auto     items-center    ">
           <div className="left flex  items-center gap-20 w-6 h-3   ">
             <img src="alhabibImages/icon2.png" alt="logo" className=" " />

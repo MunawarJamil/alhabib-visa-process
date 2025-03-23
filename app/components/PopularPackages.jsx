@@ -69,11 +69,11 @@ const PopularPackages = () => {
                     <span className="text-[#D4A10F] text-sm">
                       Makkah:{" "}
                     </span>{" "}
-                    Hilton Makkah (3N)
+                    Hilton Makkah(3N)
                   </p>
                   <p className="text-xs border-b pb-1 ">
-                    <span className="text-[#D4A10F] text-sm ">Madinah: </span>{" "}
-                    Pullman Zam Zam (4)
+                    <span className="text-[#D4A10F] text-sm ">Madinah:</span>
+                    Pullman Zam Zam(4)
                   </p>
                   <p className="  text-[#D4A10F] text-sm">Package Includes:</p>
                   <p className="text-xs my-1 ">
@@ -100,15 +100,12 @@ const PopularPackages = () => {
                     5 Star Umrah Package
                   </h1>
                   <p className="text-xs  ">
-                    {" "}
-                    <span className="text-[#D4A10F] text-sm">
-                      Makkah:{" "}
-                    </span>{" "}
-                    Hilton Makkah (3N)
+                    <span className="text-[#D4A10F] text-sm">Makkah:</span>
+                    Hilton Makkah(3N)
                   </p>
                   <p className="text-xs border-b pb-1 ">
-                    <span className="text-[#D4A10F] text-sm ">Madinah: </span>{" "}
-                    Pullman Zam Zam (4)
+                    <span className="text-[#D4A10F] text-sm ">Madinah:</span>
+                    Pullman Zam Zam(4)
                   </p>
                   <p className="  text-[#D4A10F] text-sm">Package Includes:</p>
                   <p className="text-xs my-1 ">
@@ -135,15 +132,12 @@ const PopularPackages = () => {
                     5 Star Umrah Package
                   </h1>
                   <p className="text-xs  ">
-                    {" "}
-                    <span className="text-[#D4A10F] text-sm">
-                      Makkah:{" "}
-                    </span>{" "}
-                    Hilton Makkah (3N)
+                    <span className="text-[#D4A10F] text-sm">Makkah: </span>{" "}
+                    Hilton Makkah(3N)
                   </p>
                   <p className="text-xs border-b pb-1 ">
-                    <span className="text-[#D4A10F] text-sm ">Madinah: </span>{" "}
-                    Pullman Zam Zam (4)
+                    <span className="text-[#D4A10F] text-sm ">Madinah:</span>{" "}
+                    Pullman Zam Zam(4)
                   </p>
                   <p className="  text-[#D4A10F] text-sm">Package Includes:</p>
                   <p className="text-xs my-1 ">
@@ -176,11 +170,11 @@ const PopularPackages = () => {
                     <span className="text-[#D4A10F] text-sm">
                       Makkah:{" "}
                     </span>{" "}
-                    Hilton Makkah (3N)
+                    Hilton Makkah(3N)
                   </p>
                   <p className="text-xs border-b pb-1 ">
-                    <span className="text-[#D4A10F] text-sm ">Madinah: </span>{" "}
-                    Pullman Zam Zam (4)
+                    <span className="text-[#D4A10F] text-sm ">Madinah:</span>{" "}
+                    Pullman Zam Zam(4)
                   </p>
                   <p className="  text-[#D4A10F] text-sm">Package Includes:</p>
                   <p className="text-xs my-1 ">
@@ -211,11 +205,11 @@ const PopularPackages = () => {
                     <span className="text-[#D4A10F] text-sm">
                       Makkah:{" "}
                     </span>{" "}
-                    Hilton Makkah (3N)
+                    Hilton Makkah(3N)
                   </p>
                   <p className="text-xs border-b pb-1 ">
-                    <span className="text-[#D4A10F] text-sm ">Madinah: </span>{" "}
-                    Pullman Zam Zam (4)
+                    <span className="text-[#D4A10F] text-sm ">Madinah:</span>{" "}
+                    Pullman Zam Zam(4)
                   </p>
                   <p className="  text-[#D4A10F] text-sm">Package Includes:</p>
                   <p className="text-xs my-1 ">
@@ -248,11 +242,11 @@ const PopularPackages = () => {
                     <span className="text-[#D4A10F] text-sm">
                       Makkah:{" "}
                     </span>{" "}
-                    Hilton Makkah (3N)
+                    Hilton Makkah(3N)
                   </p>
                   <p className="text-xs border-b pb-1 ">
-                    <span className="text-[#D4A10F] text-sm ">Madinah: </span>{" "}
-                    Pullman Zam Zam (4)
+                    <span className="text-[#D4A10F] text-sm ">Madinah:</span>
+                    Pullman Zam Zam(4)
                   </p>
                   <p className="  text-[#D4A10F] text-sm">Package Includes:</p>
                   <p className="text-xs my-1 ">
