@@ -1,123 +1,146 @@
+// ModernTravelDetails.jsx
 "use client";
-import React, { useState, useEffect, useRef } from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, Check, X } from "lucide-react";
 
-function TravelDetails() {
-  // State to track which popup is open
-  const [openPopup, setOpenPopup] = useState(null);
-  const popupRefs = useRef([]);
-  const triggerRefs = useRef([]);
+// Data for inclusions
+const inclusionData = [
+  {
+    title: "Flights for Umrah",
+    content:
+      "Our Umrah packages include flights from London, Manchester, Birmingham, Glasgow, and Edinburgh to Jeddah, with return flights from Madinah. We partner with top airlines, including Qatar Airways, Saudi Airlines, Emirates, Etihad, and Gulf Air, ensuring a comfortable journey. Plus, we provide 30kg free baggage per person for your convenience.",
+    icon: "✈️",
+  },
+  {
+    title: "Visa Processing",
+    content:
+      "All our Umrah packages include the visa for all pilgrims. Al Habib Travel handles the entire application process and ensures approval. To apply, simply email a passport picture and a clear face picture—no need to send physical documents. Visas are available for all nationalities, including British, European, Asian, and African travelers.",
+    icon: "📝",
+  },
+  {
+    title: "Accommodation",
+    content:
+      "Stay in premium hotels near Haram Sharif in Makkah and Madinah, all within 8-10 minutes walking distance. We offer luxurious hotels with Haram & Kaaba views and 4-star budget-friendly options close to Masjid Al Haram. Have a hotel preference? Let our agents know, and we’ll arrange it for you!",
+    icon: "🏢",
+  },
+  {
+    title: "Visa Processing",
+    content:
+      "Enjoy private, comfortable transport with expert English-speaking drivers. Upon arrival at Jeddah or Madinah Airport, our driver will pick you up and take you to your Makkah or Madinah hotel as per your itinerary. Travel between Makkah and Madinah via private car or the Haramain High-Speed Train. We also provide guided Ziyarah tours to must-visit Islamic sites. Customize your transport needs—just let us know!",
+    icon: "🚗",
+  },
+];
 
-  // Data for inclusions
-  const inclusionData = [
-    {
-      title: "Flights for Umrah",
-      content:
-        "To ensure a comfortable journey, we provide round-trip flights to Jeddah or Madinah, with options for direct routes or convenient connections based on your location.",
-      icon: "✈️",
-    },
-    {
-      title: "Visa Processing",
-      content:
-        "Our team handles the complete visa application process, ensuring all documentation is properly prepared and submitted for a smooth approval experience.",
-      icon: "🪪",
-    },
-    {
-      title: "Accommodation",
-      content:
-        "Enjoy comfortable stays in carefully selected hotels close to the holy sites in both Makkah and Madinah, with options ranging from standard to luxury accommodations.",
-      icon: "🏢",
-    },
-    {
-      title: "Visa Processing",
-      content:
-        "Our team handles the complete visa application process, ensuring all documentation is properly prepared and submitted for a smooth approval experience.",
-      icon: "🚗",
-    },
-  ];
+export default function TravelDetails() {
+  const [activeInclusions, setActiveInclusions] = useState({});
 
-  // Handle click outside to close popup
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (openPopup !== null) {
-        const popupEl = popupRefs.current[openPopup];
-        const triggerEl = triggerRefs.current[openPopup];
+  const toggleInclusion = (index) => {
+    setActiveInclusions((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
 
-        if (
-          popupEl &&
-          triggerEl &&
-          !popupEl.contains(event.target) &&
-          !triggerEl.contains(event.target)
-        ) {
-          setOpenPopup(null);
-        }
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [openPopup]);
-
-  // Toggle popup function
-  const togglePopup = (index) => {
-    setOpenPopup(openPopup === index ? null : index);
+  const toggleExclusion = (index) => {
+    setActiveExclusions((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
   };
 
   return (
-    <div className="bg-white w-full">
-      <div className="max-w-7xl mx-auto text-center px-4 md:px-6 lg:px-8 py-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
-          <span className="text-teal-800">What's </span>
-          <span className="text-yellow-500">Included </span>
-          <span className="text-teal-800">in Your </span>
-          <span className="text-yellow-500">Package?</span>
-        </h2>
+    <div className="bg-gradient-to-b from-white to-gray-50 py-5 mt-10 lg:py-16">
+      <div className="w-full max-w-7xl px-4 mx-auto">
+        {/* Heading with animation */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-3xl md:text-5xl font-bold relative mt-5 inline-block">
+            What Include <span className="text-[#D4A10F]">in your Package</span>
+            <motion.div
+              className="absolute -bottom-2 left-0 right-0 h-1 bg-[#D4A10F]"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            />
+          </h1>
+          {/* <p className="text-gray-600 mt-8 max-w-xl  mx-auto">
+            Discover our comprehensive Umrah packages designed for a spiritually
+            fulfilling journey
+          </p> */}
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {inclusionData.map((item, index) => (
-            <div key={`inclusion-${index}`} className="relative">
-              {/* Custom accordion trigger */}
-              <div
-                ref={(el) => (triggerRefs.current[index] = el)}
-                className="flex items-center p-4 text-lg font-medium text-teal-800 bg-[#E1F4F5] hover:bg-teal-700 hover:text-white transition-colors duration-200 cursor-pointer rounded-md"
-                onClick={() => togglePopup(index)}
-              >
-                <span className="mr-3 text-xl">{item.icon}</span>
-                {item.title}
-                <span className="ml-auto">
-                  {openPopup === index ? "▲" : "▼"}
-                </span>
+        {/* Includes & Exclusive Sections */}
+        <div className="flex flex-col md:flex-row justify-center gap-8">
+          {/* Includes */}
+          <motion.div
+            className="flex-1 bg-white rounded-lg shadow-sm overflow-hidden"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="bg-[#D4A10F] text-white py-4 px-6">
+              <div className="flex items-center">
+                <Check className="mr-2" size={20} />
+                <h2 className="text-xl font-bold"> Packages Includes</h2>
               </div>
-
-              {/* Popup content with animation */}
-              {openPopup === index && (
-                <div
-                  ref={(el) => (popupRefs.current[index] = el)}
-                  className="absolute mt-1 left-0 right-0 p-4 bg-white border border-gray-200 rounded-md shadow-lg z-50 animate-fadeIn"
-                  style={{
-                    width: "100%",
-                    opacity: 1,
-                    transform: "translateY(0)",
-                    transition:
-                      "opacity 300ms ease-in-out, transform 300ms ease-in-out",
-                  }}
-                >
-                  {item.content}
-                </div>
-              )}
             </div>
-          ))}
+            <div className="p-4">
+              {inclusionData.map((item, index) => (
+                <motion.div
+                  key={`inclusion-${index}`}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
+                  className="mb-3"
+                >
+                  <div
+                    onClick={() => toggleInclusion(index)}
+                    className={`flex items-center 
+                      justify-between p-4 rounded-lg cursor-pointer
+                       transition-all duration-300 ${
+                         activeInclusions[index]
+                           ? "bg-primary-color text-white border-l-4 border-[#D4A10F]"
+                           : "bg-gray-50 hover:bg-gray-200"
+                       }`}
+                  >
+                    <div className="flex items-center">
+                      <span className="text-xl mr-3">{item.icon}</span>
+                      <span className="font-medium">{item.title}</span>
+                    </div>
+                    <motion.div
+                      animate={{ rotate: activeInclusions[index] ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ChevronDown size={18} className="text-gray-500" />
+                    </motion.div>
+                  </div>
+
+                  <AnimatePresence>
+                    {activeInclusions[index] && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="p-4 md:pl-12 text-gray-600 border-l border-r border-b rounded-b-lg">
+                          {item.content}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
   );
 }
-
- 
-export default TravelDetails;

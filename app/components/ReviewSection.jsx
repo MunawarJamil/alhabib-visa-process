@@ -100,7 +100,7 @@ const ReviewSection = () => {
     );
   };
 
-  return ( <div className="bg-white py-10 md:py-20 "> 
+  return ( <div className="bg-white py-4  md:py-20 "> 
     <div className="w-full   max-w-6xl mt-10 mx-auto px-4 relative">
       <div
         ref={sliderRef}

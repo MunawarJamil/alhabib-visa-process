@@ -29,7 +29,7 @@ export default function Home() {
       <TravelDetails />
       <PopularPackages />
       <Accomodation />
-      <Zyarat />
+      {/* <Zyarat /> */}
       <BookingProcess />
       <AlhabibInNumbers />
       <ReviewCard />

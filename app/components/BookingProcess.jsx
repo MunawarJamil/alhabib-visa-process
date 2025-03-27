@@ -33,7 +33,7 @@ export default function BookingProcess() {
   return (
 
     <div className="bg-white w-full">
-    <div className="bg-white py-16 px-6  my-1 max-w-7xl mx-auto">
+    <div className="bg-white py-8 lg:py-16 px-6  my-1 max-w-7xl mx-auto">
       {/* Booking Process Section */}
       <h2 className="text-center text-3xl font-bold text-teal-900">
         Our <span className="text-yellow-500">Booking</span> Process

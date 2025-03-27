@@ -13,15 +13,16 @@ const PopularPackages = () => {
   return (
     <>
       <div
-        className=" lg:hidden   bg-white-50  w-full  mt-10  "
+        className=" lg:hidden   bg-white  w-full     "
         style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
       >
         {/* top area */}
         <div className="flex justify-between items-center px-4 text-primary-color pt-10">
-          <h1 className="text-xl font-bold">Poplar Packages</h1>
+          <h1 className="text-xl font-bold">Poplar <span className="text-yellow-600">
+          Packages</span> </h1>
           <div>
             <Select>
-              <SelectTrigger className="w-[180px]  ">
+              <SelectTrigger className="w-[160px]  ">
                 <SelectValue placeholder="Preferred Month" />
               </SelectTrigger>
               <SelectContent>

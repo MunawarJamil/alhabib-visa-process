@@ -59,7 +59,7 @@ function Zyarat() {
                   <div className="block md:hidden">
                     <div className="flex pr-4 gap-5 text-primary-color">
                       <div className="space-y-3">
-                        <p className="text-primary-color text-lg hover:text-primary transition">
+                        <p className="text-yellow-600 text-lg hover:text-primary transition">
                           1. Quba Mosque
                         </p>
                         <p className="text-primary-color text-lg hover:text-primary transition">
@@ -130,16 +130,16 @@ function Zyarat() {
                   <div className="    gap-20   w-full max-w-7xl mx-auto justify-evenly hidden lg:flex">
                     {/* left div */}
                     <div>
-                      <ol className="grid grid-cols-2 text-xl mt-5 gap-x-20 gap-y-5 text-primary-color">
-                        <li>1. Jabal al-Thawr</li>
-                        <li>2. Masjid Sharjah </li>
-                        <li> 2. Masjid Sharjah </li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
+                      <ol className="grid grid-cols-2 text-xl mt-5 gap-x-20 gap-y-5 text-yellow-600">
+                        <li>Jabal al-Thawr</li>
+                        <li>Jabal-e-Rehmat</li>
+                        <li>Mina and Muzdalifah</li>
+                        <li>Janat al-Moula</li>
+                        <li>Masjid Shajra</li>
+                        <li>Maidan-e-Arafat</li>
+                        <li>Canal of Zubeidah</li>
+                        <li>Cave of Hira</li>
+                        <li>Masjid Jinn</li>
                       </ol>
                       <button
                         className="mt-5 bg-yellow-500 text-white text-2xl shadow-2xl cursor-pointer animate-pulse
@@ -239,16 +239,19 @@ function Zyarat() {
                   <div className="    gap-20   w-full max-w-7xl mx-auto justify-evenly hidden lg:flex">
                     {/* left div */}
                     <div>
-                      <ol className="grid grid-cols-2 text-xl mt-5 gap-x-20 gap-y-5 text-primary-color">
-                        <li>1. Jabal al-Thawr</li>
-                        <li>2. Masjid Sharjah </li>
-                        <li> 2. Masjid Sharjah </li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
-                        <li>2. Masjid Sharjah</li>
+                      <ol className="grid grid-cols-2 text-lg mt-5 gap-x-20 gap-y-5 text-yellow-600">
+                        <li>Jabal Uhud</li>
+                        <li>Saba'a Masjid</li>
+                        <li>Masjid Quba</li>
+                        <li>Garden of Dates</li>
+                        <li>Masjid Qiblatain</li>
+                        <li>Masjid Juma</li>
+                        <li>Janat al-Moula</li>
+                        <li>Masjid Shajra</li>
+                        <li>Maidan-e-Arafat</li>
+                        <li>Canal of Zubeidah</li>
+                        <li>Cave of Hira</li>
+                        <li>Masjid Jinn</li>
                       </ol>
                       <button
                         className="mt-5 bg-yellow-500 text-white text-2xl shadow-2xl cursor-pointer animate-pulse

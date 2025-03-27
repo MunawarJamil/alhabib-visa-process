@@ -7,77 +7,89 @@ import { ChevronDown, Check, X } from "lucide-react";
 const inclusionData = [
   {
     title: "Return Flight",
-    desc: "Round-trip airfare included in the package.",
+    desc: "Round-trip flights from one of our preferred partners. Travel with reputable airlines that offer quality services and comfort.",
     icon: "✈️",
   },
   {
-    title: "Accomodation",
-    desc: "Comfortable hotel stays near the Haram.",
+    title: "Accommodation",
+    desc: "Stay in hotels close to the Haram in Makkah and Madinah, as per your booked package. Provides enough time to perform your prayers & rituals or to explore the city.",
     icon: "🏨",
   },
   {
     title: "Visa Processing",
-    desc: "Full assistance with Umrah visa application.",
+    desc: "Al Habib Travel Ltd will process the Umrah Visa application. You just need to provide the required documents, and we will take care of the rest.",
     icon: "📄",
   },
   {
     title: "Ground Transport",
-    desc: "Airport to hotel transfers and local transport.",
+    desc: "Private ground transport is included between Jeddah - Makkah - Madinah - Airport in the package.",
     icon: "🚌",
   },
   {
     title: "Rawdah Permit",
-    desc: "Permit for visiting the Rawdah area.",
+    desc: "To pray in the Rawdah, you will need a Rawdah permit, which we will help you obtain without any delay.",
     icon: "🔖",
   },
   {
-    title: "Umrah kit",
-    desc: "Includes Ihram, prayer mat, and other essentials.",
+    title: "Zam Zam 5 Ltr",
+    desc: "Receive a 5-litre bottle of Zam-Zam water as a return gift from us. Drink from it or bring it back home with you.",
+    icon: "🧴",
+  },
+  {
+    title: "Checked Baggage",
+    desc: "The first checked baggage of 28kg is included in your package, along with 20kg baggage and 8kg hand carry.",
     icon: "🧳",
   },
   {
-    title: "Rawdah Permit",
-    desc: "Permit for visiting the Rawdah area.",
-    icon: "🔖",
+    title: "Umrah Kit",
+    desc: "An Umrah kit will be provided that contains essential items for the journey, such as different essential bags, a 3-point travel adapter, and more.",
+    icon: "🎒",
   },
 ];
 
+// Data for Exclusions
 const exclusionData = [
   {
     title: "Meal",
-    desc: "Meals are not included in this package.",
+    desc: "Meals are not included in the packages. You can add them to your package by requesting our agent. The charges will be £7 per person per day for breakfast only.",
     icon: "🍽️",
   },
   {
     title: "Laundry",
-    desc: "Laundry services are available at extra cost.",
+    desc: "Laundry services are not included in the package.",
     icon: "👕",
   },
   {
-    title: "GST & TCS",
-    desc: "Government taxes applicable separately.",
+    title: "TCS & GST",
+    desc: "GST & TCS are applicable taxes not included in your Umrah Package Price.",
     icon: "💰",
   },
   {
-    title: "Ziyarat's Trans port",
-    desc: "Transport for Ziyarat not part of the package.",
+    title: "Ziyarat's Transport",
+    desc: "Transport for Ziyarat in Makkah & Madinah is not included. You can add it to the package by paying £25 per person for both cities.",
     icon: "🚐",
   },
   {
-    title: "Checked Baggage",
-    desc: "Baggage beyond allowance will incur extra fees.",
+    title: "Additional Checked Baggage",
+    desc: "If your luggage exceeds the first checked baggage of 28kg, you will need to pay at the airport. Additional baggage is not included.",
     icon: "🧳",
   },
   {
     title: "Room Service",
-    desc: "Room service charges are not included.",
+    desc: "Room service, including food, drinks, or other items delivered to your hotel room, is not included in the Umrah package and must be paid directly to the hotel on a per-use basis.",
     icon: "🛎️",
   },
   {
-    title: "Room Service",
-    desc: "Room service charges are not included.",
-    icon: "🛎️",
-  },
+    title: "Travel Insurance",
+    desc:
+      "Travel insurance is not included in the package. You are advised to purchase a suitable policy for medical coverage, trip cancellations, and other unforeseen circumstances.",
+      icon: "🩺",
+    },
+    {
+      title: "PCR Test & Health Requirements",
+      desc:
+        "Any required PCR tests or other health-related formalities (such as vaccinations) are not covered in the package and must be arranged separately by the traveler.",
+      icon: "🩹",}
 ];
 
 export default function TravelDetails() {
@@ -99,7 +111,7 @@ export default function TravelDetails() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-16">
+    <div className="bg-gradient-to-b from-white to-gray-50 py-5 lg:py-16">
       <div className="w-full max-w-7xl px-4 mx-auto">
         {/* Heading with animation */}
         <motion.div
@@ -108,7 +120,7 @@ export default function TravelDetails() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold relative inline-block">
+          <h1 className="text-3xl md:text-5xl font-bold relative inline-block">
             Umrah <span className="text-[#D4A10F]">Package</span>
             <motion.div
               className="absolute -bottom-2 left-0 right-0 h-1 bg-[#D4A10F]"
@@ -117,7 +129,7 @@ export default function TravelDetails() {
               transition={{ delay: 0.3, duration: 0.5 }}
             />
           </h1>
-          <p className="text-gray-600 mt-4 max-w-xl mx-auto">
+          <p className="text-gray-600 mt-8 max-w-xl  mx-auto">
             Discover our comprehensive Umrah packages designed for a spiritually
             fulfilling journey
           </p>
@@ -153,7 +165,7 @@ export default function TravelDetails() {
                       justify-between p-4 rounded-lg cursor-pointer
                        transition-all duration-300 ${
                          activeInclusions[index]
-                           ? "bg-amber-50 border-l-4 border-[#D4A10F]"
+                           ? "bg-primary-color text-white border-l-4 border-[#D4A10F]"
                            : "bg-gray-50 hover:bg-gray-200"
                        }`}
                   >
@@ -178,7 +190,7 @@ export default function TravelDetails() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="p-4 pl-12 text-gray-600 border-l border-r border-b rounded-b-lg">
+                        <div className="p-4 md:pl-12 text-gray-600 border-l border-r border-b rounded-b-lg">
                           {item.desc}
                         </div>
                       </motion.div>
@@ -215,7 +227,7 @@ export default function TravelDetails() {
                     onClick={() => toggleExclusion(index)}
                     className={`flex items-center justify-between p-4 rounded-lg cursor-pointer transition-all duration-300 ${
                       activeExclusions[index]
-                        ? "bg-gray-100 border-l-4 border-[#D4A10F]"
+                        ? "bg-primary-color text-white  border-l-4 border-[#D4A10F]"
                         : "bg-gray-50 hover:bg-gray-200"
                     }`}
                   >
@@ -240,7 +252,7 @@ export default function TravelDetails() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="p-4 pl-12 text-gray-600 border-l border-r border-b rounded-b-lg">
+                        <div className="p-4 md:pl-12 text-gray-600 border-l border-r border-b rounded-b-lg">
                           {item.desc}
                         </div>
                       </motion.div>
