@@ -20,7 +20,7 @@ export default function ImageGallery() {
       <div className="w-full bg-white border p-6   ">
       <div className="w-full max-w-7xl mx-auto      ">
           
-            <h1 className="text-primary-color text-3xl md:text-6xl font-bold  text-center">
+            <h1 className="text-primary-color text-3xl md:text-5xl font-bold  text-center">
               Image <span className="text-yellow-600">Gallery</span>{" "}
             </h1>
          

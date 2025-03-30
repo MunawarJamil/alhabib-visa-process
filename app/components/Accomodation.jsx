@@ -66,9 +66,7 @@ function Accommodation() {
 
   return (
     <>
-      {/* Desktop View */}
-
-      <div className="  bg-white py-5 lg:py-20 lg:block  md:text-center ">
+      <div className="  bg-white py-5 lg:py-20 lg:block scrollbar-hide md:text-center ">
         <div className="border border-gray-200 rounded-lg shadow-lg p-8 max-w-7xl mx-auto">
           {/* Heading */}
           <h2 className=" text-3xl md:text-4xl  lg:text-5xl font-semibold text-[#003C2F]">
@@ -99,7 +97,7 @@ function Accommodation() {
           </div>
 
           {/* Images / Hotels */}
-          <div className="w-full overflow-x-auto ">
+          <div className="w-full overflow-x-auto scrollbar-hide">
             <div className="flex justify-center gap-3 lg:gap-8 min-w-max">
               {filteredHotels.map((hotel, index) => (
                 <div

@@ -12,6 +12,7 @@ import TravelDetails from "./components/TravelDetails";
 import VideoTestimonial from "./components/VideoTestimonial";
 import ReviewCard from "./components/ReviewSection";
 import ImageGallery from "./components/ImageGallary";
+import PopularforDeskTop from "./components/PoplarforDeskTop";
 export default function Home() {
   const images = [
     { src: "/alhabibImages/imgalary2.png", alt: "Kaaba in Mecca" },
@@ -28,10 +29,12 @@ export default function Home() {
       <Hero />
       <TravelDetails />
       <PopularPackages />
+      {/* <PopularforDeskTop /> */}
       <Accomodation />
-      {/* <Zyarat /> */}
+     
       <BookingProcess />
       <AlhabibInNumbers />
+      <Zyarat />
       <ReviewCard />
       <PackageInclusions />
       <VideoTestimonial />
