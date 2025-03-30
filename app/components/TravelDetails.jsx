@@ -42,15 +42,10 @@ export default function TravelDetails() {
     }));
   };
 
-  const toggleExclusion = (index) => {
-    setActiveExclusions((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
+ 
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-5 mt-10 lg:py-16">
+    <div className="bg-gradient-to-b from-white to-gray-50 py-5  lg:py-16">
       <div className="w-full max-w-7xl px-4 mx-auto">
         {/* Heading with animation */}
         <motion.div
