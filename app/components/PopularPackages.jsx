@@ -88,7 +88,7 @@ const PopularPackages = () => {
   return (
     <>
       <div
-        className="bg-white w-full"
+        className="bg-white md:hidden w-full"
          style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
       >
         <div className="w-full md:max-w-7xl md:px-7 md:mx-auto">

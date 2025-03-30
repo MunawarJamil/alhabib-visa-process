@@ -97,7 +97,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="w-full relative overflow-hidden top-16 bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
+      <div className="w-full relative overflow-hidden top-2 bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
         {/* Bubble shapes similar to the reference image */}
         <motion.div
           custom={0}
