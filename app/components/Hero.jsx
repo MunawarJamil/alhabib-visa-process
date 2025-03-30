@@ -93,7 +93,7 @@ export default function Hero() {
           width={1400}
           height={1200}
           alt="hero"
-          className="rounded-b-3xl shadow-lg shadow-gray-600 "
+          className="rounded-b-3xl cursor-pointer shadow-lg shadow-gray-600 "
         />
       </div>
 

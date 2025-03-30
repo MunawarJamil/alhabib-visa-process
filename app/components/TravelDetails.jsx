@@ -45,7 +45,7 @@ export default function TravelDetails() {
  
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-5  lg:py-16">
+    <div className="bg-gradient-to-b from-white to-gray-50 py-5 mt-5 rounded-t-2xl lg:py-16">
       <div className="w-full max-w-7xl px-4 mx-auto">
         {/* Heading with animation */}
         <motion.div
