@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { motion } from "framer-motion";
+ 
 import Image from "next/image";
 
 function Accommodation() {
