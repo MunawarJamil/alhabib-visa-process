@@ -18,7 +18,10 @@ export default function App() {
   return (
     <>
       <div className="text-center h-[100%]    pb-10  mb-28">
-       <p className="font-semibold text-3xl md:text-5xl mb-6"> Image <span className="text-yellow-600">Galery</span> </p>
+        <p className="font-semibold text-3xl md:text-5xl mb-6">
+          {" "}
+          Image <span className="text-yellow-600">Galery</span>{" "}
+        </p>
         <Swiper
           style={{
             "--swiper-navigation-color": "#fff",
@@ -31,16 +34,16 @@ export default function App() {
           className="mySwiper2"
         >
           <SwiperSlide>
-            <img src="/alhabibImages/img1.jpg"/>
+            <img src="/alhabibImages/wa1.jpeg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/alhabibImages/img2.jpg" />
+            <img src="/alhabibImages/wa2.jpeg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/alhabibImages/img3.jpg" />
+            <img src="/alhabibImages/wa3.jpeg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/alhabibImages/img4.jpg" />
+            <img src="/alhabibImages/wa4.jpeg" />
           </SwiperSlide>
           <SwiperSlide>
             <img src="/alhabibImages/img5.jpg" />
@@ -50,7 +53,7 @@ export default function App() {
           </SwiperSlide>
           <SwiperSlide>
             <img src="/alhabibImages/img7.jpg" />
-          </SwiperSlide> 
+          </SwiperSlide>
         </Swiper>
         <Swiper
           onSwiper={setThumbsSwiper}
@@ -61,8 +64,8 @@ export default function App() {
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
         >
-           <SwiperSlide>
-            <img src="/alhabibImages/img1.jpg" className="object-contain"  />
+          <SwiperSlide>
+            <img src="/alhabibImages/img1.jpg" className="object-contain" />
           </SwiperSlide>
           <SwiperSlide>
             <img src="/alhabibImages/img2.jpg" />
@@ -81,17 +84,11 @@ export default function App() {
           </SwiperSlide>
           <SwiperSlide>
             <img src="/alhabibImages/img7.jpg" />
-          </SwiperSlide> 
+          </SwiperSlide>
         </Swiper>
 
-        <p className="text-yellow-600 py-3 md:hidden " >  - swipe for more - </p>
+        <p className="text-yellow-600 py-3 md:hidden "> - swipe for more - </p>
       </div>
-
-
- 
-
-
-
     </>
   );
 }
