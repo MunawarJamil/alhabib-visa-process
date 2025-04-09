@@ -43,7 +43,7 @@ function Zyarat() {
     ],
     madina: [
       {
-        name: "Jabal Uhud",
+        name: "Jabal al-Uhud",
         src: "/alhabibImages/MadinahZiyaarat/JabalUhud.webp",
       },
       {

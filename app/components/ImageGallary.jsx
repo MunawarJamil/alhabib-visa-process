@@ -20,7 +20,7 @@ export default function App() {
       <div className="text-center h-[100%]    pb-10  mb-28">
         <p className="font-semibold text-3xl md:text-5xl mb-6">
           {" "}
-          Image <span className="text-yellow-600">Galery</span>{" "}
+          Image <span className="text-yellow-600">Gallery</span>{" "}
         </p>
         <Swiper
           style={{
