@@ -6,26 +6,67 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 
 function Zyarat() {
- 
   const zyaratdata = {
     makkah: [
-      { name: "Jabal al-Thawr", src: "/svgfiles/makah.svg" },
-      { name: "Jabal-e-Rehmat", src: "/svgfiles/zamzam.svg" },
-      { name: "Mina and Muzdalifah", src: "/svgfiles/jabal.svg" },
-      { name: "Masjid Shajra", src: "/svgfiles/anjum.svg" },
-      { name: "Maidan-e-Arafat", src: "/svgfiles/anjum.svg" },
-      { name: "Canal of Zubeidah", src: "/svgfiles/anjum.svg" },
-      { name: "Cave of Hira", src: "/svgfiles/anjum.svg" },
-      { name: "Masjid Jinn", src: "/svgfiles/anjum.svg" },
+      {
+        name: "Jabal al-Thawr",
+        src: "/alhabibImages/MakkahZiyaarat/JabalAlThawr.jpg",
+      },
+      {
+        name: "Jabal-e-Rehmat",
+        src: "/alhabibImages/MakkahZiyaarat/JabalRehmat.webp",
+      },
+      {
+        name: "Mina and Muzdalifah",
+        src: "/alhabibImages/MakkahZiyaarat/MinaandMuzdalifah.webp",
+      },
+      {
+        name: "Masjid Shajra",
+        src: "/alhabibImages/MakkahZiyaarat/MasjidShajra.webp",
+      },
+      {
+        name: "Maidan-e-Arafat",
+        src: "/alhabibImages/MakkahZiyaarat/MaidaneArafat.webp",
+      },
+      {
+        name: "Canal of Zubeidah",
+        src: "/alhabibImages/MakkahZiyaarat/CanalZubeidah.jpg",
+      },
+      {
+        name: "Cave of Hira",
+        src: "/alhabibImages/MakkahZiyaarat/CaveofHira.jpg",
+      },
+      {
+        name: "Masjid Jinn",
+        src: "/alhabibImages/MakkahZiyaarat/MasjidJinn.jpg",
+      },
     ],
     madina: [
-      { name: "Jabal Uhud", src: "/svgfiles/zamzam.svg" },
-      { name: "Saba'a Masjid", src: "/svgfiles/jabal.svg" },
-      { name: "Masjid Quba", src: "/svgfiles/jabal.svg" },
-      { name: "Masjid Juma", src: "/svgfiles/anjum.svg" },
+      {
+        name: "Jabal Uhud",
+        src: "/alhabibImages/MadinahZiyaarat/JabalUhud.webp",
+      },
+      {
+        name: "Saba'a Masjid",
+        src: "/alhabibImages/MadinahZiyaarat/SabaMasjid.jpg",
+      },
+      {
+        name: "Masjid Quba",
+        src: "/alhabibImages/MadinahZiyaarat/MasjidQuba.jpg",
+      },
+      {
+        name: "Masjid Juma",
+        src: "/alhabibImages/MadinahZiyaarat/MasjidJuma.jpg",
+      },
 
-      { name: "Masjid Qiblatain", src: "/svgfiles/anjum.svg" },
-      { name: "Garden of dates", src: "/svgfiles/anjum.svg" },
+      {
+        name: "Masjid Qiblatain",
+        src: "/alhabibImages/MadinahZiyaarat/MasjidQiblatian.jpg",
+      },
+      {
+        name: "Garden of dates",
+        src: "/alhabibImages/MadinahZiyaarat/Garden.webp",
+      },
     ],
   };
 
@@ -50,7 +91,7 @@ function Zyarat() {
         <div className="border border-gray-200 rounded-lg shadow-lg p-8 max-w-7xl mx-auto">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl my-5 lg:text-5xl font-semibold text-[#003C2F]">
-            What <span className="text-yellow-600">Zyarats We</span>  Provide
+            What <span className="text-yellow-600">Zyarats We</span> Provide
           </h2>
 
           {/* Tabs */}
@@ -77,7 +118,7 @@ function Zyarat() {
                     alt={hotel.name}
                     width={240}
                     height={240}
-                    className="rounded-xl w-52 h-60 object-contain mx-auto mb-2"
+                    className="rounded-xl w-52 h-60 object-cover mx-auto mb-2"
                   />
                   <p className="text-yellow-600 lg:text-lg">{hotel.name}</p>
                 </div>
