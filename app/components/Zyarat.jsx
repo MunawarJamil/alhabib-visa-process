@@ -118,7 +118,7 @@ function Zyarat() {
                     alt={hotel.name}
                     width={240}
                     height={240}
-                    className="rounded-xl w-52 h-60 object-cover mx-auto mb-2"
+                    className="rounded-4xl w-52 h-60 object-cover px-2 mx-auto mb-2"
                   />
                   <p className="text-yellow-600 lg:text-lg">{hotel.name}</p>
                 </div>
