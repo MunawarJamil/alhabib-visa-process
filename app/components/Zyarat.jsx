@@ -1,156 +1,189 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+const zyaratdata = {
+  makkah: [
+    {
+      name: "Jabal al-Thawr",
+      src: "/alhabibImages/MakkahZiyaarat/JabalAlThawr.jpg",
+    },
+    {
+      name: "Jabal-e-Rehmat",
+      src: "/alhabibImages/MakkahZiyaarat/JabalRehmat.webp",
+    },
+    {
+      name: "Mina and Muzdalifah",
+      src: "/alhabibImages/MakkahZiyaarat/MinaandMuzdalifah.webp",
+    },
+    {
+      name: "Masjid Shajra",
+      src: "/alhabibImages/MakkahZiyaarat/MasjidShajra.webp",
+    },
+    {
+      name: "Maidan-e-Arafat",
+      src: "/alhabibImages/MakkahZiyaarat/MaidaneArafat.webp",
+    },
+    {
+      name: "Canal of Zubeidah",
+      src: "/alhabibImages/MakkahZiyaarat/CanalZubeidah.jpg",
+    },
+    {
+      name: "Cave of Hira",
+      src: "/alhabibImages/MakkahZiyaarat/CaveofHira.jpg",
+    },
+    {
+      name: "Masjid Jinn",
+      src: "/alhabibImages/MakkahZiyaarat/MasjidJinn.jpg",
+    },
+  ],
+  madina: [
+    {
+      name: "Jabal al-Uhud",
+      src: "/alhabibImages/MadinahZiyaarat/JabalUhud.webp",
+    },
+    {
+      name: "Saba'a Masjid",
+      src: "/alhabibImages/MadinahZiyaarat/SabaMasjid.jpg",
+    },
+    {
+      name: "Masjid Quba",
+      src: "/alhabibImages/MadinahZiyaarat/MasjidQuba.jpg",
+    },
+    {
+      name: "Masjid Juma",
+      src: "/alhabibImages/MadinahZiyaarat/MasjidJuma.jpg",
+    },
+    {
+      name: "Masjid Qiblatain",
+      src: "/alhabibImages/MadinahZiyaarat/MasjidQiblatian.jpg",
+    },
+    {
+      name: "Garden of dates",
+      src: "/alhabibImages/MadinahZiyaarat/Garden.webp",
+    },
+  ],
+};
 
-import Image from "next/image";
+const ZiyaratSlider = () => {
+  const [selectedTab, setSelectedTab] = useState("makkah");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const sliderRef = useRef(null);
 
-function Zyarat() {
-  const zyaratdata = {
-    makkah: [
-      {
-        name: "Jabal al-Thawr",
-        src: "/alhabibImages/MakkahZiyaarat/JabalAlThawr.jpg",
-      },
-      {
-        name: "Jabal-e-Rehmat",
-        src: "/alhabibImages/MakkahZiyaarat/JabalRehmat.webp",
-      },
-      {
-        name: "Mina and Muzdalifah",
-        src: "/alhabibImages/MakkahZiyaarat/MinaandMuzdalifah.webp",
-      },
-      {
-        name: "Masjid Shajra",
-        src: "/alhabibImages/MakkahZiyaarat/MasjidShajra.webp",
-      },
-      {
-        name: "Maidan-e-Arafat",
-        src: "/alhabibImages/MakkahZiyaarat/MaidaneArafat.webp",
-      },
-      {
-        name: "Canal of Zubeidah",
-        src: "/alhabibImages/MakkahZiyaarat/CanalZubeidah.jpg",
-      },
-      {
-        name: "Cave of Hira",
-        src: "/alhabibImages/MakkahZiyaarat/CaveofHira.jpg",
-      },
-      {
-        name: "Masjid Jinn",
-        src: "/alhabibImages/MakkahZiyaarat/MasjidJinn.jpg",
-      },
-    ],
-    madina: [
-      {
-        name: "Jabal al-Uhud",
-        src: "/alhabibImages/MadinahZiyaarat/JabalUhud.webp",
-      },
-      {
-        name: "Saba'a Masjid",
-        src: "/alhabibImages/MadinahZiyaarat/SabaMasjid.jpg",
-      },
-      {
-        name: "Masjid Quba",
-        src: "/alhabibImages/MadinahZiyaarat/MasjidQuba.jpg",
-      },
-      {
-        name: "Masjid Juma",
-        src: "/alhabibImages/MadinahZiyaarat/MasjidJuma.jpg",
-      },
+  const ziyarat = zyaratdata[selectedTab];
 
-      {
-        name: "Masjid Qiblatain",
-        src: "/alhabibImages/MadinahZiyaarat/MasjidQiblatian.jpg",
-      },
-      {
-        name: "Garden of dates",
-        src: "/alhabibImages/MadinahZiyaarat/Garden.webp",
-      },
-    ],
+  const scrollToIndex = (index) => {
+    const itemsLength = ziyarat.length;
+    if (index < 0) index = itemsLength - 1;
+    if (index >= itemsLength) index = 0;
+
+    setActiveIndex(index);
+    const scrollAmount = index * 320;
+    sliderRef.current?.scrollTo({ left: scrollAmount, behavior: "smooth" });
   };
 
-  // State management
-  const [city, setCity] = useState("makkah");
-  const [filteredHotels, setFilteredHotels] = useState([]);
+  const handleScroll = () => {
+    const scrollLeft = sliderRef.current?.scrollLeft ?? 0;
+    const newIndex = Math.round(scrollLeft / 320);
+    setActiveIndex(newIndex);
+  };
 
-  // Update filtered hotels when city changes
   useEffect(() => {
-    if (zyaratdata[city]) {
-      setFilteredHotels(zyaratdata[city]);
-    } else {
-      setFilteredHotels([]);
-    }
-  }, [city]);
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    slider.addEventListener("scroll", handleScroll);
+    return () => slider.removeEventListener("scroll", handleScroll);
+  }, [selectedTab]);
+
+  useEffect(() => {
+    setActiveIndex(0);
+    sliderRef.current?.scrollTo({ left: 0 });
+  }, [selectedTab]);
 
   return (
-    <>
-      {/* Desktop View */}
+    <div className="bg-white py-10 border border-yellow-600 mx-1 mt-4 ">
+      <p className="text-3xl text-center font-semibold pb-4">What <span className="text-yellow-600 ">Zyarats We</span> <br />  Provide</p>
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Tabs */}
+        <div className="flex justify-center mb-6 gap-6">
+          {["makkah", "madina"].map((tab) => (
+            <button
+              key={tab}
+              className={`px-6 py-2 text-lg     border transition-all ${
+                selectedTab === tab
+                  ? "bg-gradient-to-r from-teal-700 to-primary-color text-white  shadow-lg"
+                  : "bg-gray-100 text-yellow-600 hover:bg-gray-200"
+              }`}
+              onClick={() => setSelectedTab(tab)}
+            >
+              {tab === "makkah" ? "Makkah" : "Madinah"}
+            </button>
+          ))}
+        </div>
 
-      <div className="bg-white py-5 lg:py-20 lg:block md:text-center ">
-        <div className="border border-gray-200 rounded-lg shadow-lg p-8 max-w-7xl mx-auto">
-          {/* Heading */}
-          <h2 className="text-3xl md:text-4xl my-5 lg:text-5xl font-semibold text-[#003C2F]">
-            What <span className="text-yellow-600">Zyarats We</span> Provide
-          </h2>
-
-          {/* Tabs */}
-          <div className="flex lg:items-center max-w-5xl mx-auto mb-8 gap-2 md:gap-4">
-            {/* City Tabs */}
-            <Tabs defaultValue="makkah" onValueChange={(val) => setCity(val)}>
-  <TabsList className="    border border-primary-color rounded-none shadow-sm text-yellow-600">
-    <TabsTrigger value="makkah" className="flex accent-primary-color items-center gap-2">
-      <input
-        type="radio"
-        name="city"
-        value="makkah"
-        checked={city === "makkah"}
-        readOnly
-      />
-      Makkah
-    </TabsTrigger>
-    <TabsTrigger value="madina" className="flex accent-primary-color items-center gap-2">
-      <input
-        type="radio"
-        name="city"
-        value="madina"
-        checked={city === "madina"}
-        readOnly
-      />
-      Madina
-    </TabsTrigger>
-  </TabsList>
-</Tabs>
-
-          </div>
-
-          {/* Images / Hotels */}
-          <div className="w-full overflow-x-auto scrollbar-hide ">
-            <div className="flex justify-center gap-3 lg:gap-8 min-w-max">
-              {filteredHotels.map((hotel, index) => (
-                <div
-                  key={index}
-                  className="text-center border border-yellow-600 p-1 py-3 lg:p-3 rounded-4xl"
-                >
-                  <Image
-                    src={hotel.src}
-                    alt={hotel.name}
-                    width={240}
-                    height={240}
-                    className="rounded-4xl w-52 h-60 object-cover px-2 mx-auto mb-2"
-                  />
-                  <p className="text-yellow-600 lg:text-lg">{hotel.name}</p>
-                </div>
-              ))}
+        {/* Slider */}
+        <div
+          ref={sliderRef}
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-4"
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+          {ziyarat.map((item, index) => (
+            <div
+              key={index}
+              className="flex-none w-[21rem] snap-start mr-5 transition-all duration-300 transform hover:scale-105"
+            >
+              <div className=" 
+               rounded-xl shadow-lg p-4 h-full flex flex-col">
+                <img
+                  src={item.src}
+                  alt={item.name}
+                  className="rounded-lg h-48 w-full object-cover mb-4"
+                />
+                <h3 className="text-lg   text-gray-600 text-center">
+                  {item.name}
+                </h3>
+              </div>
             </div>
+          ))}
+        </div>
+
+        {/* Controls */}
+        <div className="flex justify-center items-center mt-6 gap-6">
+          <button
+            onClick={() => scrollToIndex(activeIndex - 1)}
+            className="p-2 bg-white rounded-full shadow text-gray-700 hover:text-yellow-500"
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          <div className="flex gap-2">
+            {ziyarat.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToIndex(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? "w-8 bg-gradient-to-r from-teal-400 to-primary-color"
+                    : "w-2 bg-gray-300 hover:bg-gray-400"
+                }`}
+              />
+            ))}
           </div>
-          <p className="  mt-3 text-center text-yellow-600">
-            ← Slide to discover more →
-          </p>
+
+          <button
+            onClick={() => scrollToIndex(activeIndex + 1)}
+            className="p-2 bg-white rounded-full shadow text-gray-700 hover:text-yellow-500"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
-export default Zyarat;
+export default ZiyaratSlider;

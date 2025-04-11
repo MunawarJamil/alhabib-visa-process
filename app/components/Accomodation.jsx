@@ -12,7 +12,7 @@ function Accommodation() {
       5: [
         {
           name: "Swissotel Makkah",
-          src: "/alhabibImages/MakkahHotels/5STAR/Swissotel Makkah.jpg",
+          src: "/alhabibImages/MakkahHotels/5STAR/swiss.jpeg",
         },
         {
           name: "Pullman ZamZam",
