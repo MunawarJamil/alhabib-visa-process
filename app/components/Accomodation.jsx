@@ -16,7 +16,7 @@ function Accommodation() {
         },
         {
           name: "Pullman ZamZam",
-          src: "/alhabibImages/MakkahHotels/5STAR/Pullman ZamZam Makkah.jpg",
+          src: "/alhabibImages/MakkahHotels/5STAR/pullmanzamzam.jpeg",
         },
         {
           name: "Jabal Omar Hyatt",
