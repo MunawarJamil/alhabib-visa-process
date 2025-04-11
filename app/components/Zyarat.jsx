@@ -102,7 +102,7 @@ const ZiyaratSlider = () => {
   }, [selectedTab]);
 
   return (
-    <div className="bg-white py-10 border border-yellow-600 mx-1 mt-4 ">
+    <div className="bg-white py-10 border border-yellow-600 rounded-2xl mx-1 mt-4 ">
       <p className="text-3xl text-center font-semibold pb-4">What <span className="text-yellow-600 ">Zyarats We</span> <br />  Provide</p>
       <div className="max-w-6xl mx-auto px-4">
         {/* Tabs */}
@@ -134,14 +134,14 @@ const ZiyaratSlider = () => {
           {ziyarat.map((item, index) => (
             <div
               key={index}
-              className="flex-none w-[21rem] snap-start mr-5 transition-all duration-300 transform hover:scale-105"
+              className="flex-none   snap-start mr-6 transition-all duration-300 transform"
             >
               <div className=" 
-               rounded-xl shadow-lg p-4 h-full flex flex-col">
+               rounded-xl shadow-lg p-4 h-full flex border-2 w-[20.5rem]  flex-col">
                 <img
                   src={item.src}
                   alt={item.name}
-                  className="rounded-lg h-48 w-full object-cover mb-4"
+                  className="rounded-lg h-48   w-full object-cover mb-4"
                 />
                 <h3 className="text-lg   text-gray-600 text-center">
                   {item.name}
