@@ -4,9 +4,10 @@ import React, { useEffect, useRef } from "react";
 
 const videoData = [
   { videoLink: "/alhabibVideos/vid1.mp4" },
+  
+  { videoLink: "/alhabibVideos/vid4.mp4" },
   { videoLink: "/alhabibVideos/vid2.mp4" },
   { videoLink: "/alhabibVideos/vid3.mp4" },
-  { videoLink: "/alhabibVideos/vid4.mp4" },
 ];
 
 function VideoTestimonial() {
