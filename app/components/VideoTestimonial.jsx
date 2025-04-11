@@ -1,48 +1,87 @@
-import React from "react";
+"use client";
 
-// Sample data for video testimonials
+import React, { useEffect, useRef } from "react";
+
 const videoData = [
-  {
-    videoLink: "/alhabibVideos/vid1.mp4", // Replace with actual video link
-  },
-
-  {
-    videoLink: "/alhabibVideos/vid2.mp4",
-  },
-  {
-    videoLink: "/alhabibVideos/vid3.mp4",
-  },
-  {
-    videoLink: "/alhabibVideos/vid4.mp4",
-  },
+  { videoLink: "/alhabibVideos/vid1.mp4" },
+  { videoLink: "/alhabibVideos/vid2.mp4" },
+  { videoLink: "/alhabibVideos/vid3.mp4" },
+  { videoLink: "/alhabibVideos/vid4.mp4" },
 ];
 
-// Video Testimonial Component
 function VideoTestimonial() {
-  return (
-    <>
-      {" "}
-      <div className="bg-white   w-full ">
-        <div className="w-full lg:max-w-7xl mx-auto lg:text-center  md:px-6 lg:px-8 py-8">
-          <div className=" w-[95%]  md:w-[70%]  mx-auto  ">
-            <div className="lg:text-center text-3xl px-4 font-bold text-nowrap">
-              Watch <span className="text-[#D4A10F]"> Real Stories </span>!
-            </div>
-          </div>
+  const videoRefs = useRef([]);
 
-          <div className="flex justify-center   items-center w-[90%] md:w-[60%] lg:w-[45%] mx-auto gap-3 my-5 flex-col md:flex-row ">
-            {videoData.map((item, index) => (
-              <video
-                key={index} // Add a unique key for each video
-                className="w-full   p-1  md:w-[52%] h-[23rem] lg:h-[29rem] object-contain rounded-lg"
-                src={item.videoLink} // Correctly use item.videoLink
-                controls
-              ></video>
-            ))}
+  const handlePlay = (playingIndex) => {
+    videoRefs.current.forEach((video, index) => {
+      if (index !== playingIndex && video && !video.paused) {
+        video.pause();
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (window.innerWidth >= 768) return; // Only apply on mobile screens
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.75, // Play only when 75% visible
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+
+        if (entry.isIntersecting) {
+          video.play().catch(() => {}); // Autoplay might be blocked silently
+        } else {
+          video.pause();
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    videoRefs.current.forEach((video) => {
+      if (video) observer.observe(video);
+    });
+
+    return () => {
+      videoRefs.current.forEach((video) => {
+        if (video) observer.unobserve(video);
+      });
+    };
+  }, []);
+
+  return (
+    <div className="bg-white w-full">
+      <div className="w-full lg:max-w-7xl mx-auto lg:text-center md:px-6 lg:px-8 py-8">
+        <div className="w-[95%] md:w-[70%] mx-auto">
+          <div className="lg:text-center text-3xl px-4 font-bold text-nowrap">
+            Watch <span className="text-[#D4A10F]"> Real Stories </span>!
           </div>
         </div>
+
+        <div className="flex justify-center items-center w-[90%] md:w-[60%] lg:w-[45%] mx-auto gap-3 my-5 flex-col md:flex-row">
+          {videoData.map((item, index) => (
+            <video
+              key={index}
+              ref={(el) => (videoRefs.current[index] = el)}
+              className="w-full p-1 md:w-[52%] h-[23rem] lg:h-[29rem] object-contain rounded-lg"
+              src={item.videoLink}
+              controls
+              playsInline
+              muted
+              onPlay={() => handlePlay(index)}
+            ></video>
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
