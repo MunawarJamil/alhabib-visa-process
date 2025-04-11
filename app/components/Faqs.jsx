@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import { Phone } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { Phone, MessageCircle } from "lucide-react";
 // FAQ data with real content
 const accordionData = [
   {
@@ -126,6 +125,8 @@ const CustomAccordion = ({ item, index, activeIndex, setActiveIndex }) => {
 // FAQ Section Component
 function Faqs() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [showOptions, setShowOptions] = useState(false);
+  const phoneNumber = "923470063865"; // No spaces or '+' sign
 
   return (
     <div className="bg-gradient-to-b from-white to-gray-50 py-16 px-4 sm:px-6 lg:px-8">
@@ -203,6 +204,7 @@ function Faqs() {
               </div>
 
               {/* Content */}
+
               <div className="relative z-10">
                 {/* Phone Icon Circle */}
                 <motion.div
@@ -247,23 +249,50 @@ function Faqs() {
                 </motion.p>
 
                 {/* Call Now Button */}
-                <motion.button
-                  className="relative bg-[#D69E00] w-full py-4 px-6 rounded-full text-white font-bold text-lg transition-colors duration-300 shadow-lg flex items-center justify-center group"
-                  whileHover={{ backgroundColor: "#c58c00", scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <motion.div
+                  className="relative w-full"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.9, duration: 0.5 }}
                 >
-                  <span className="absolute inset-0 w-full h-full rounded-full bg-white opacity-25 animate-ping"></span>
-                  <motion.div
-                    whileHover={{ rotate: 12 }}
-                    transition={{ duration: 0.3 }}
+                  <button
+                    className="relative bg-[#D69E00] w-full py-4 px-6 rounded-full text-white font-bold text-lg transition-colors duration-300 shadow-lg flex items-center justify-center group"
+                    onClick={() => setShowOptions((prev) => !prev)}
                   >
-                    <Phone size={20} className="mr-2" />
-                  </motion.div>
-                  Call Now
-                </motion.button>
+                    <span className="absolute inset-0 w-full h-full rounded-full bg-white opacity-25 animate-ping"></span>
+                    <motion.div
+                      whileHover={{ rotate: 12 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Phone size={20} className="mr-2" />
+                    </motion.div>
+                    Call Now
+                  </button>
+
+                  {showOptions && (
+                    <div className="absolute top-[-100] w-full  md:w-[98%] bg-white shadow-xl border rounded-xl z-50 p-4 mt-2 space-y-3 text-sm">
+                      <a
+                        href={`tel:${phoneNumber}`}
+                        className="flex items-center gap-2 text-black hover:text-primary-color"
+                      >
+                        <Phone className="w-4 h-4" />
+                        Call via SIM
+                      </a>
+                      <a
+                        href={`https://wa.me/44${phoneNumber.replace(
+                          /^0/,
+                          ""
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-green-600 hover:text-green-800"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        Message on WhatsApp
+                      </a>
+                    </div>
+                  )}
+                </motion.div>
               </div>
             </motion.div>
           </div>

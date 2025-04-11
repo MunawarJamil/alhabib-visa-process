@@ -1,57 +1,61 @@
-"use client"; 
+"use client";
 import { PhoneCall, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 export default function Navbar() {
   const [showOptions, setShowOptions] = useState(false);
-  const phoneNumber = "02088191111"; // Without spaces for link usage
+  const phoneNumber = "923470063865"; // Without spaces for link usage
 
   return (
     <>
       {/* phone no  */}
-      <div className="flex z-50 py-3 fixed top-0 bg-white flex-col justify-center w-full items-center text-center">
-      <div className="flex flex-col items-center relative">
-        <div
-          className="flex items-center gap-2 cursor-pointer"
-          onClick={() => setShowOptions(!showOptions)}
-        >
-          <PhoneCall className="w-6 h-6 text-primary-color text-center" />
-          <h1 className="text-primary-color text-2xl lg:text-3xl font-bold">
-            {phoneNumber}
-          </h1>
+      <div
+        className="flex z-50 py-3 
+      shadow-lg
+      
+      fixed top-0 bg-white flex-col justify-center w-full items-center text-center"
+      >
+        <div className="flex flex-col items-center relative">
+          <div
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => setShowOptions(!showOptions)}
+          >
+            <PhoneCall className="w-6 h-6 text-primary-color text-center" />
+            <h1 className="text-primary-color text-2xl lg:text-3xl font-bold">
+              {phoneNumber}
+            </h1>
+          </div>
+
+          {showOptions && (
+            <div className="absolute top-12 mt-2 bg-white shadow-lg border rounded-lg w-48 z-50 p-2 space-y-2">
+              <a
+                href={`tel:${phoneNumber}`}
+                className="flex items-center gap-2 text-black hover:text-primary-color"
+              >
+                <Phone className="w-4 h-4" />
+                Call via SIM
+              </a>
+              <a
+                href={`https://wa.me/44${phoneNumber.replace(/^0/, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-green-600 hover:text-green-800"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Message on WhatsApp
+              </a>
+            </div>
+          )}
         </div>
 
-        {showOptions && (
-          <div className="absolute top-12 mt-2 bg-white shadow-lg border rounded-lg w-48 z-50 p-2 space-y-2">
-            <a
-              href={`tel:${phoneNumber}`}
-              className="flex items-center gap-2 text-black hover:text-primary-color"
-            >
-              <Phone className="w-4 h-4" />
-              Call via SIM
-            </a>
-            <a
-              href={`https://wa.me/44${phoneNumber.replace(/^0/, "")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-green-600 hover:text-green-800"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Message on WhatsApp
-            </a>
-          </div>
-        )}
+        <p className="text-yellow-600 text-center text-sm mt-1">
+          We are available 24/7
+        </p>
       </div>
-
-      <p className="text-yellow-600 text-center text-sm mt-1">
-        We are available 24/7
-      </p>
-    </div>
-  
 
       {/* navbar */}
       <div className="w-full bg-white top-0  sticky z-50">
         <div className="flex lg:hidden h-20  top-0 z-50  bg-white px-6  w-full  justify-between   items-center    ">
-        <div className="left flex  items-center   w-6 h-3 mt-2   ">
+          <div className="left flex  items-center   w-6 h-3 mt-2   ">
             <button
               className="  py-2 text-sm  border border-yellow-600 shadow-2xl rounded-md   items-center flex gap-2 text-primary-color 
              px-3     animate-pulse "
@@ -69,7 +73,9 @@ export default function Navbar() {
               alt=""
               className=" w-14 h-12"
             />
-            <p className="text-xs mt-1 text-center text-[#00454A]">Al-Habib-Travel</p>
+            <p className="text-xs mt-1 text-center text-[#00454A]">
+              Al-Habib-Travel
+            </p>
           </div>
         </div>
       </div>

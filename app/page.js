@@ -14,6 +14,7 @@ import ReviewCard from "./components/ReviewSection";
 import ImageGallery from "./components/ImageGallary";
 import PopularforDeskTop from "./components/PoplarforDeskTop";
 import Partners from "./components/Partners";
+import VisaForm from "./components/VisaForm";
 export default function Home() {
   const images = [
     { src: "/alhabibImages/imgalary2.png", alt: "Kaaba in Mecca" },
@@ -44,6 +45,7 @@ export default function Home() {
       <Faqs />
       <Partners />
       <Footer />
+      {/* <VisaForm /> */}
     </>
   );
 }

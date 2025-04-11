@@ -126,7 +126,7 @@ function Zyarat() {
             </div>
           </div>
           <p className="  mt-3 text-center text-yellow-600">
-            ← Swipe for more →
+            ← Slide to discover more →
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
- 
+
 import Image from "next/image";
 
 function Accommodation() {
@@ -77,21 +77,66 @@ function Accommodation() {
           </p>
 
           {/* Tabs */}
-          <div className="flex  lg:items-center max-w-5xl mx-auto mb-8  gap-2  md:gap-4">
+          <div className="flex  flex-col  md:flex-row lg:items-center max-w-5xl mx-auto mb-8  gap-2  md:gap-4">
             {/* City Tabs */}
             <Tabs defaultValue="makkah" onValueChange={(val) => setCity(val)}>
-              <TabsList className="rounded-sm lg:ml- border border-yellow-600   shadow-sm text-yellow-600">
-                <TabsTrigger value="makkah">Makkah</TabsTrigger>
-                <TabsTrigger value="madina">Madina</TabsTrigger>
-              </TabsList>
-            </Tabs>
+  <TabsList className="rounded-none lg:ml- border border-primary-color shadow-sm text-yellow-600">
+    <TabsTrigger value="makkah" className="flex items-center gap-2">
+      <input
+        type="radio"
+        checked={city === "makkah"}
+        readOnly
+        className="form-radio accent-primary-color text-yellow-600"
+      />
+      Makkah
+    </TabsTrigger>
+
+    <TabsTrigger value="madina" className="flex items-center gap-2">
+      <input
+        type="radio"
+        checked={city === "madina"}
+        readOnly
+        className="form-radio accent-primary-color text-yellow-600"
+      />
+      Madina
+    </TabsTrigger>
+  </TabsList>
+</Tabs>
+
 
             {/* Star Tabs */}
             <Tabs defaultValue="5" onValueChange={(val) => setStar(val)}>
-              <TabsList className="rounded-sm border border-yellow-600 shadow-sm text-yellow-600">
-                <TabsTrigger value="5">5 Star</TabsTrigger>
-                <TabsTrigger value="4">4 Star</TabsTrigger>
-                <TabsTrigger value="3">3 Star</TabsTrigger>
+              <TabsList className="rounded-none border border-primary-color shadow-sm text-yellow-600">
+                <TabsTrigger value="5" className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    checked={star === "5"}
+                    readOnly
+                    className="form-radio  accent-primary-color text-yellow-600"
+                  />
+                  5 Star
+                </TabsTrigger>
+
+                <TabsTrigger value="4" className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    checked={star === "4"}
+                    readOnly
+                    className="form-radio accent-primary-color text-yellow-600"
+                  />
+                  4 Star
+                </TabsTrigger>
+
+                <TabsTrigger value="3" className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    
+                    checked={star === "3"}
+                    readOnly
+                    className="form-radio accent-primary-color text-yellow-600"
+                  />
+                  3 Star
+                </TabsTrigger>
               </TabsList>
             </Tabs>
           </div>
@@ -118,7 +163,7 @@ function Accommodation() {
             </div>
           </div>
           <p className="md:hidden mt-3 text-center text-yellow-600">
-            ← Swipe for more →
+            ← More available — keep swiping →
           </p>
         </div>
       </div>
