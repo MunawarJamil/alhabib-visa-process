@@ -8,41 +8,38 @@ const ReviewSection = () => {
   const sliderRef = useRef(null);
   const testimonials = [
     {
-      date: "Jul 12, 2024",
-      rating: 5,
-      text: "Excellent service. Spoke to Momina about my transaction with Iqbd. She helped me and my transaction was successful within no time. Highly recommended. Great staff. Very polite and skill full.",
-      author: "Imran Sohail",
-      avatar: null, // Add avatar URLs when available
-    },
-    {
-      date: "Jul 12, 2024",
-      rating: 5,
-      text: "Excellent service. Spoke to Momina about my transaction with Iqbd. She helped me and my transaction was successful within no time. Highly recommended. Great staff. Very polite and skill full.",
-      author: "Imran Sohail",
+      date: "Mar 05, 2024",
+      text: "Amazing support! The entire process was handled professionally and without delays.",
+      author: "Ahmed Khan",
       avatar: null,
     },
     {
-      date: "Jul 12, 2024",
-      rating: 5,
-      text: "Excellent service. Spoke to Momina about my transaction with Iqbd. She helped me and my transaction was successful within no time. Highly recommended. Great staff. Very polite and skill full.",
-      author: "Imran Sohail",
+      date: "Apr 18, 2024",
+      text: "Very cooperative team. They answered all my queries and made the transaction easy.",
+      author: "Fatima Zahra",
       avatar: null,
     },
     {
-      date: "Jul 12, 2024",
-      rating: 5,
-      text: "Excellent service. Spoke to Momina about my transaction with Iqbd. She helped me and my transaction was successful within no time. Highly recommended. Great staff. Very polite and skill full.",
-      author: "Imran Sohail",
+      date: "Feb 22, 2024",
+      text: "I was really impressed with the speed and clarity of the service. Highly recommended!",
+      author: "Omar Siddiqui",
       avatar: null,
     },
     {
-      date: "Jul 12, 2024",
-      rating: 5,
-      text: "Excellent service. Spoke to Momina about my transaction with Iqbd. She helped me and my transaction was successful within no time. Highly recommended. Great staff. Very polite and skill full.",
-      author: "Imran Sohail",
+      date: "Jan 30, 2024",
+      text: "Smooth experience from start to finish. Thank you for the reliable support.",
+      author: "Ayesha Malik",
+      avatar: null,
+    },
+    {
+      date: "Mar 10, 2024",
+      text: "Great communication and fast service. I’ll definitely use this platform again.",
+      author: "Zainab Ali",
       avatar: null,
     },
   ];
+  
+  
 
   const scrollToIndex = (index) => {
     if (index < 0) index = testimonials.length - 1;
@@ -77,28 +74,7 @@ const ReviewSection = () => {
     }
   }, [activeIndex]);
 
-  // Function to render star ratings
-  const renderStars = (rating) => {
-    return (
-      
-     
-      <div className="flex  items-center gap-1">
-        {[...Array(5)].map((_, i) => (
-          <Star
-            key={i}
-            size={16}
-            className={
-              i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
-            }
-          />
-        ))}
-        <span className="ml-2 text-sm font-medium text-gray-700">
-          {rating}/5
-        </span>
-      </div>
-      
-    );
-  };
+ 
 
   return ( <div className="bg-white py-4   "> 
     <div className="w-full   max-w-6xl mt-10 mx-auto px-4 relative">
@@ -121,12 +97,14 @@ const ReviewSection = () => {
                transition-shadow duration-300"
             >
               {/* Quote icon */}
-
+<div className="flex justify-between mb-4">
+  <img src="/svgfiles/star.svg" alt="" className="w-36 " />
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">
                 {testimonial.date}
               </div>
 
-              <div className="mb-4">{renderStars(testimonial.rating)}</div>
+               
+</div>
 
               <div className="text-gray-700 mb-5 italic">
                 "{testimonial.text}"
@@ -169,7 +147,8 @@ const ReviewSection = () => {
             <button
               key={index}
               onClick={() => scrollToIndex(index)}
-              className={`h-2 rounded-full focus:outline-none transition-all duration-300 ${
+              className={`h-2 rounded-full focus:outline-none transition-all
+                 duration-300 ${
                 index === activeIndex
                   ? "w-8 bg-gradient-to-r from-teal-400 to-primary-color"
                   : "w-2 bg-gray-300 hover:bg-gray-400"
