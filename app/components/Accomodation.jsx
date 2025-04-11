@@ -10,42 +10,114 @@ function Accommodation() {
   const hotelData = {
     makkah: {
       5: [
-        { name: "Swissotel Makkah", src: "/svgfiles/makah.svg" },
-        { name: "Pullman ZamZam", src: "/svgfiles/zamzam.svg" },
-        { name: "Jabal Omar Hyatt", src: "/svgfiles/jabal.svg" },
-        { name: "Anjum Makkah", src: "/svgfiles/anjum.svg" },
+        {
+          name: "Swissotel Makkah",
+          src: "/alhabibImages/MakkahHotels/5STAR/Swissotel Makkah.jpg",
+        },
+        {
+          name: "Pullman ZamZam",
+          src: "/alhabibImages/MakkahHotels/5STAR/Pullman ZamZam Makkah.jpg",
+        },
+        {
+          name: "Jabal Omar Hyatt",
+          src: "/alhabibImages/MakkahHotels/5STAR/Jabal Omar Hyatt.jpg",
+        },
+        {
+          name: "Anjum Makkah",
+          src: "/alhabibImages/MakkahHotels/5STAR/Anjum Makkah.jpg",
+        },
       ],
       4: [
-        { name: "Al Ebaa Hotel", src: "/svgfiles/zamzam.svg" },
-        { name: "Dar Al Eiman Grand", src: "/svgfiles/jabal.svg" },
-        { name: "DoubleTree by Hilton", src: "/svgfiles/jabal.svg" },
-        { name: "Voco Makkah", src: "/svgfiles/anjum.svg" },
+        {
+          name: "Al Ebaa Hotel",
+          src: "/alhabibImages/MakkahHotels/4STAR/Al Ebaa Hotel.png",
+        },
+        {
+          name: "Dar Al Eiman Grand",
+          src: "/alhabibImages/MakkahHotels/4STAR/Dar Al Eiman Grand.jpg",
+        },
+        {
+          name: "DoubleTree by Hilton",
+          src: "/alhabibImages/MakkahHotels/4STAR/DoubleTree by Hilton.jpg",
+        },
+        {
+          name: "Voco Makkah",
+          src: "/alhabibImages/MakkahHotels/4STAR/Voco Makkah.jpg",
+        },
       ],
       3: [
-        { name: "Dar Al Eiman Al Andalus", src: "/svgfiles/makah.svg" },
-        { name: "Nawazi Ajyad Makkah", src: "/svgfiles/anjum.svg" },
-        { name: "Emaar Al Khalil Makkah", src: "/svgfiles/jabal.svg" },
-        { name: "Emaar Al Manar Makkah", src: "/svgfiles/anjum.svg" },
+        {
+          name: "Dar Al Eiman Al Andalus",
+          src: "/alhabibImages/MakkahHotels/3STAR/Dar Al Eiman Al Andalus.webp",
+        },
+        {
+          name: "Nawazi Ajyad Makkah",
+          src: "/alhabibImages/MakkahHotels/3STAR/Nawazi Ajyad Makkah.webp",
+        },
+        {
+          name: "Emaar Al Khalil Makkah",
+          src: "/alhabibImages/MakkahHotels/3STAR/Emaar Al Khalil Makkah.jpg",
+        },
+        {
+          name: "Emaar Al Manar Makkah",
+          src: "/alhabibImages/MakkahHotels/3STAR/Emaar Al Manar Makkah.jpg",
+        },
       ],
     },
     madina: {
       5: [
-        { name: "The Oberoi Madina", src: "/svgfiles/zamzam.svg" },
-        { name: "Anwar Al Madinah Mövenpick", src: "/svgfiles/jabal.svg" },
-        { name: "Pullman ZamZam Madinah", src: "/svgfiles/jabal.svg" },
-        { name: "Sofitel Shahd Al Madinah", src: "/svgfiles/anjum.svg" },
+        {
+          name: "The Oberoi Madina",
+          src: "/alhabibImages/MadinaHotels/5STAR/The Oberoi Madina.jpg",
+        },
+        {
+          name: "Anwar Al Madinah Mövenpick",
+          src: "/alhabibImages/MadinaHotels/5STAR/Anwar Al Madinah Mövenpick.jpg",
+        },
+        {
+          name: "Pullman ZamZam Madinah",
+          src: "/alhabibImages/MadinaHotels/5STAR/Pullman ZamZam Madinah.jpg",
+        },
+        {
+          name: "Sofitel Shahd Al Madinah",
+          src: "/alhabibImages/MadinaHotels/5STAR/Sofitel Shahd Al Madinah.jpg",
+        },
       ],
       4: [
-        { name: "Saja Al Madinah", src: "/svgfiles/zamzam.svg" },
-        { name: "Golden Tulip Al Mektan", src: "/svgfiles/jabal.svg" },
-        { name: "Dar Al Eiman Elite", src: "/svgfiles/anjum.svg" },
-        { name: "Zowar International Madinah", src: "/svgfiles/anjum.svg" },
+        {
+          name: "Saja Al Madinah",
+          src: "/alhabibImages/MadinaHotels/4STAR/Saja Al Madinah.jpg",
+        },
+        {
+          name: "Golden Tulip Al Mektan",
+          src: "/alhabibImages/MadinaHotels/4STAR/Golden Tulip Al Mektan.jpg",
+        },
+        {
+          name: "Dar Al Eiman Elite",
+          src: "/alhabibImages/MadinaHotels/4STAR/Dar Al Eiman Elite.jpg",
+        },
+        {
+          name: "Zowar International Madinah",
+          src: "/alhabibImages/MadinaHotels/4STAR/Zowar-International-Hotel-1.png",
+        },
       ],
       3: [
-        { name: "Grand Plaza Madinah", src: "/svgfiles/zamzam.svg" },
-        { name: "Zaha Al Madinah", src: "/svgfiles/jabal.svg" },
-        { name: "Dar Al Eiman Taibah", src: "/svgfiles/anjum.svg" },
-        { name: "Odst Hotel Al - Madinah", src: "/svgfiles/anjum.svg" },
+        {
+          name: "Grand Plaza Madinah",
+          src: "/alhabibImages/MadinaHotels/3STAR/Grand Plaza Madinah.jpg",
+        },
+        {
+          name: "Zaha Al Madinah",
+          src: "/alhabibImages/MadinaHotels/3STAR/Zaha Al Madinah.jpg",
+        },
+        {
+          name: "Dar Al Eiman Taibah",
+          src: "/alhabibImages/MadinaHotels/3STAR/Dar Al Eiman Taibah.jpg",
+        },
+        {
+          name: "Odst Hotel Al - Madinah",
+          src: "/alhabibImages/MadinaHotels/3STAR/Odst Hotel Al - Madinah.jpg",
+        },
       ],
     },
   };
@@ -80,29 +152,28 @@ function Accommodation() {
           <div className="flex  flex-col  md:flex-row lg:items-center max-w-5xl mx-auto mb-8  gap-2  md:gap-4">
             {/* City Tabs */}
             <Tabs defaultValue="makkah" onValueChange={(val) => setCity(val)}>
-  <TabsList className="rounded-none lg:ml- border border-primary-color shadow-sm text-yellow-600">
-    <TabsTrigger value="makkah" className="flex items-center gap-2">
-      <input
-        type="radio"
-        checked={city === "makkah"}
-        readOnly
-        className="form-radio accent-primary-color text-yellow-600"
-      />
-      Makkah
-    </TabsTrigger>
+              <TabsList className="rounded-none lg:ml- border border-primary-color shadow-sm text-yellow-600">
+                <TabsTrigger value="makkah" className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    checked={city === "makkah"}
+                    readOnly
+                    className="form-radio accent-primary-color text-yellow-600"
+                  />
+                  Makkah
+                </TabsTrigger>
 
-    <TabsTrigger value="madina" className="flex items-center gap-2">
-      <input
-        type="radio"
-        checked={city === "madina"}
-        readOnly
-        className="form-radio accent-primary-color text-yellow-600"
-      />
-      Madina
-    </TabsTrigger>
-  </TabsList>
-</Tabs>
-
+                <TabsTrigger value="madina" className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    checked={city === "madina"}
+                    readOnly
+                    className="form-radio accent-primary-color text-yellow-600"
+                  />
+                  Madina
+                </TabsTrigger>
+              </TabsList>
+            </Tabs>
 
             {/* Star Tabs */}
             <Tabs defaultValue="5" onValueChange={(val) => setStar(val)}>
@@ -130,7 +201,6 @@ function Accommodation() {
                 <TabsTrigger value="3" className="flex items-center gap-2">
                   <input
                     type="radio"
-                    
                     checked={star === "3"}
                     readOnly
                     className="form-radio accent-primary-color text-yellow-600"
@@ -155,7 +225,7 @@ function Accommodation() {
                     alt={hotel.name}
                     width={240}
                     height={240}
-                    className="rounded-xl w-52 h-60   object-contain mx-auto mb-2"
+                    className="rounded-xl w-52 h-60   object-cover mx-auto mb-2"
                   />
                   <p className="text-yellow-600 lg:text-lg">{hotel.name}</p>
                 </div>

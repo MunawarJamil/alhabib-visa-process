@@ -98,11 +98,30 @@ function Zyarat() {
           <div className="flex lg:items-center max-w-5xl mx-auto mb-8 gap-2 md:gap-4">
             {/* City Tabs */}
             <Tabs defaultValue="makkah" onValueChange={(val) => setCity(val)}>
-              <TabsList className="rounded-sm lg:ml- border border-yellow-600 shadow-sm text-yellow-600">
-                <TabsTrigger value="makkah">Makkah</TabsTrigger>
-                <TabsTrigger value="madina">Madina</TabsTrigger>
-              </TabsList>
-            </Tabs>
+  <TabsList className="    border border-primary-color rounded-none shadow-sm text-yellow-600">
+    <TabsTrigger value="makkah" className="flex accent-primary-color items-center gap-2">
+      <input
+        type="radio"
+        name="city"
+        value="makkah"
+        checked={city === "makkah"}
+        readOnly
+      />
+      Makkah
+    </TabsTrigger>
+    <TabsTrigger value="madina" className="flex accent-primary-color items-center gap-2">
+      <input
+        type="radio"
+        name="city"
+        value="madina"
+        checked={city === "madina"}
+        readOnly
+      />
+      Madina
+    </TabsTrigger>
+  </TabsList>
+</Tabs>
+
           </div>
 
           {/* Images / Hotels */}

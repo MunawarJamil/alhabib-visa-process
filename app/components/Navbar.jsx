@@ -1,10 +1,17 @@
 "use client";
 import { PhoneCall, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import EnquiryComponent from "./VisaForm"
+
+
+
 export default function Navbar() {
   const [showOptions, setShowOptions] = useState(false);
-  const phoneNumber = "923470063865"; // Without spaces for link usage
-
+  const phoneNumber = "923470063865"; 
+const [showPopup, setShowPopup] = useState(false); // State to control the popup visibility
+  const handleFormSubmit = () => {
+    setShowPopup(!showPopup); // Close the popup after form submission
+  };
   return (
     <>
       {/* phone no  */}
@@ -63,7 +70,8 @@ export default function Navbar() {
               <span>
                 <PhoneCall />
               </span>
-              <span className="text-nowrap">Contact Now</span>
+              <span className="text-nowrap" 
+              onClick={handleFormSubmit}>Connect Now</span>
             </button>
           </div>
 
@@ -83,28 +91,40 @@ export default function Navbar() {
 
       <div className="hidden  top-0 bg-white    lg:flex w-full  ">
         <div className=" flex px-10 justify-between w-full max-w-7xl   lg:hidded h-20 sticky top-0 z-50 bg-white        mx-auto     items-center    ">
-          <div className="left flex  items-center gap-20 w-6 h-3   ">
+          <div className="left flex  items-center  gap-20 w-6 h-3   ">
             <button
               className="bg-[#D4A10F] py-3 items-center flex gap-2 text-white 
-             px-16 rounded-xl text-xl font-bold animate-pulse "
+             px-12 rounded-xl text-xl font-bold animate-pulse "
             >
               <span>
                 <PhoneCall />
               </span>
-              <span className="text-nowrap">Call Now</span>
+              <span className="text-nowrap"
+              onClick={handleFormSubmit}
+              >Connect Now</span>
             </button>
           </div>
 
-          <div className="logo    ">
+          <div className="logo  flex flex-col justify-center items-center   ">
             <img
               src="alhabibImages/logoimage.png"
               alt=""
-              className=" w-14 h-12"
+              className=" w-16 h-14"
             />
-            <p className="text-xs mt-1 text-[#00454A]     ">Al habib travel</p>
+            <p className="text-xs mt-1 text-[#00454A] text-center    ">Al-Habib-Travel</p>
           </div>
         </div>
       </div>
+
+
+
+
+       {/*   render the InquiryForm as a popup */}
+         {showPopup && (
+          <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
+            <EnquiryComponent closePopup={handleFormSubmit} />
+          </div>
+            )}
     </>
   );
 }

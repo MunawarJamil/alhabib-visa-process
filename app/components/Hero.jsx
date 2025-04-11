@@ -5,8 +5,10 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import EnquiryComponent from "./VisaForm"
 
 export default function Hero() {
+  
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   // Bubble animation variants
@@ -84,6 +86,13 @@ export default function Hero() {
       transition: { duration: 1.2, ease: "easeOut" },
     },
   };
+
+  const [showPopup, setShowPopup] = useState(false); // State to control the popup visibility
+  const handleFormSubmit = () => {
+    setShowPopup(!showPopup); // Close the popup after form submission
+  };
+
+
 
   return (
     <>
@@ -206,9 +215,13 @@ export default function Hero() {
                     </svg>
                   </motion.div>
 
-                  <Link href="/quote" className="relative group">
+                  <Link href="" className="relative group">
                     <span className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#D4A10F] to-[#FFD700] blur-md opacity-70 group-hover:opacity-100 transition duration-300"></span>
-                    <button className="relative bg-[#D4A10F] py-4 px-8 rounded-2xl text-xl font-bold text-white shadow-xl group-hover:scale-105 transition duration-300">
+                    <button className="relative bg-[#D4A10F] py-4 px-8 rounded-2xl text-xl font-bold
+                     text-white shadow-xl group-hover:scale-105 transition duration-300"
+                     
+                      onClick={handleFormSubmit} // Open the form popup
+                     >
                       Get quote - it&apos;s free
                     </button>
                   </Link>
@@ -322,6 +335,15 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+
+      
+       {/*   render the InquiryForm as a popup */}
+       {showPopup && (
+          <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
+            <EnquiryComponent closePopup={handleFormSubmit} />
+          </div>
+            )}
     </>
   );
 }
