@@ -10,25 +10,25 @@ const inclusionData = [
     title: "Flights for Umrah",
     content:
       "Our Umrah packages include flights from London, Manchester, Birmingham, Glasgow, and Edinburgh to Jeddah, with return flights from Madinah. We partner with top airlines, including Qatar Airways, Saudi Airlines, Emirates, Etihad, and Gulf Air, ensuring a comfortable journey. Plus, we provide 30kg free baggage per person for your convenience.",
-    icon: "/alhabibImages/icons/airplane.png",
+    icon: "/alhabibImages/Icons/airplane.png",
   },
   {
     title: "Visa Processing",
     content:
       "All our Umrah packages include the visa for all pilgrims. Al Habib Travel handles the entire application process and ensures approval. To apply, simply email a passport picture and a clear face picture—no need to send physical documents. Visas are available for all nationalities, including British, European, Asian, and African travelers.",
-      icon: "/alhabibImages/icons/passport (1).png",
+    icon: "/alhabibImages/Icons/passport (1).png",
   },
   {
     title: "Accommodation",
     content:
       "Stay in premium hotels near Haram Sharif in Makkah and Madinah, all within 8-10 minutes walking distance. We offer luxurious hotels with Haram & Kaaba views and 4-star budget-friendly options close to Masjid Al Haram. Have a hotel preference? Let our agents know, and we’ll arrange it for you!",
-      icon: "/alhabibImages/icons/Hotel Black Icon.png",
+    icon: "/alhabibImages/Icons/Hotel Black Icon.png",
   },
   {
     title: "Transportation",
     content:
       "Enjoy private, comfortable transport with expert English-speaking drivers. Upon arrival at Jeddah or Madinah Airport, our driver will pick you up and take you to your Makkah or Madinah hotel as per your itinerary. Travel between Makkah and Madinah via private car or the Haramain High-Speed Train. We also provide guided Ziyarah tours to must-visit Islamic sites. Customize your transport needs—just let us know!",
-      icon: "/alhabibImages/icons/Car Cyan icon.png",
+    icon: "/alhabibImages/Icons/Car Cyan icon.png",
   },
 ];
 
@@ -41,8 +41,6 @@ export default function TravelDetails() {
       [index]: !prev[index],
     }));
   };
-
- 
 
   return (
     <div className="bg-gradient-to-b from-white to-gray-50 py-5 mt-5 rounded-t-2xl lg:py-16">
@@ -104,7 +102,9 @@ export default function TravelDetails() {
                        }`}
                   >
                     <div className="flex items-center">
-                      <span className="text-xl mr-3 "><img src={item.icon} alt="" className="w-7 h-7" /></span>
+                      <span className="text-xl mr-3 ">
+                        <img src={item.icon} alt="" className="w-7 h-7" />
+                      </span>
                       <span className="font-medium">{item.title}</span>
                     </div>
                     <motion.div

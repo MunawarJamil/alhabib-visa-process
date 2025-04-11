@@ -33,25 +33,34 @@ const [showPopup, setShowPopup] = useState(false); // State to control the popup
           </div>
 
           {showOptions && (
-            <div className="absolute top-12 mt-2 bg-white shadow-lg border rounded-lg w-48 z-50 p-2 space-y-2">
-              <a
-                href={`tel:${phoneNumber}`}
-                className="flex items-center gap-2 text-black hover:text-primary-color"
-              >
-                <Phone className="w-4 h-4" />
-                Call via SIM
-              </a>
-              <a
-                href={`https://wa.me/44${phoneNumber.replace(/^0/, "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-green-600 hover:text-green-800"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Message on WhatsApp
-              </a>
-            </div>
-          )}
+  <div className="absolute top-14 mt-2 bg-white shadow-lg border rounded-lg w-[22rem] md:w-48 z-50 p-2 space-y-2  ">
+    {/* Cross Button */}
+    <button
+      onClick={() => setShowOptions(false)}
+      className="absolute top-1 right-4 font-bold  text-gray-500 hover:text-black text-xl"
+    >
+      &times;
+    </button>
+
+    <a
+      href={`tel:${phoneNumber}`}
+      className="flex items-center gap-2 text-black hover:text-primary-color"
+    >
+      <Phone className="w-4 h-4" />
+      Call via SIM
+    </a>
+    <a
+      href={`https://wa.me/44${phoneNumber.replace(/^0/, "")}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-green-600 hover:text-green-800"
+    >
+      <MessageCircle className="w-4 h-4" />
+      Message on WhatsApp
+    </a>
+  </div>
+)}
+
         </div>
 
         <p className="text-yellow-600 text-center text-sm mt-1">
