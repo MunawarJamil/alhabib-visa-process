@@ -5,10 +5,9 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import EnquiryComponent from "./VisaForm"
+import EnquiryComponent from "./VisaForm";
 
 export default function Hero() {
-  
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   // Bubble animation variants
@@ -35,13 +34,14 @@ export default function Hero() {
     }),
   };
   const slides = [
-    { id: 1, src: "/svgfiles/stone.svg", alt: "Decorative stone image 1" },
     {
       id: 2,
-      src: "/svgfiles/stone.svg",
+      src: "/alhabibImages/MakkahZiyaarat/JabalRehmat.webp",
       alt: "Decorative stone image 2",
     },
-    { id: 3, src: "/svgfiles/stone.svg", alt: "Decorative stone image 3" },
+    { id: 1, src: "/svgfiles/stone.svg", alt: "Decorative stone image 1" },
+    
+    { id: 3, src: "/alhabibImages/MakkahZiyaarat/MaidaneArafat.webp", alt: "Decorative stone image 3" },
   ];
 
   useEffect(() => {
@@ -92,21 +92,57 @@ export default function Hero() {
     setShowPopup(!showPopup); // Close the popup after form submission
   };
 
-
-
   return (
     <>
-      <div className="w-full lg:hidden   mx-auto  ">
-        <Image
-          src="/alhabibImages/hermobile.png"
-          width={1400}
-          height={1200}
-          alt="hero"
-          className="rounded-b-3xl cursor-pointer shadow-lg shadow-gray-600 "
-        />
-      </div>
+
+      {/* Mobile view */} 
+     <div className="relative font-serif w-full h-[400px] rounded-b-4xl shadow-2xl lg:hidden mx-auto overflow-hidden flex    bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
+  {/* Background image with opacity */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url('/alhabibImages/MadinahZiyaarat/the-kaaba-in-mecca-photo.jpg')",
+      opacity: 0.2,
+    }}
+  ></div>
+
+  {/* Text content on top */} 
+  <div className="relative mt-4 p-5 z-10  ">
+    <h1 className="text-3xl font-bold text-yellow-500">
+      All Inclusive <span className="text-white">Umrah Package </span>     with Guided Tour.
+    </h1>
+    <p className="text-gray-200 leading-loose
+     font-semibold py-3">
+      All packages include flights, visa processing, accommodation near Haram,
+      ground transport, and a guided tour. Meals are optional.
+    </p>
+
+<div className="flex   items-center    ">
+<img src="svgfiles/arrow.svg " alt="" className="h-20" />
+    <button 
+     onClick={handleFormSubmit} // Open the form popup
+    className="  bg-yellow-600 text-white px-4 py-2 rounded text-lg font-semibold shadow-lg hover:bg-yellow-700 animate-pulse transition duration-initial mt-8  ease-in-out">
+      Get Quote - It's free
+    </button>
+    </div>
+   
+</div>
+</div>
+ 
+
 
       <div className="w-full relative overflow-hidden top-2 bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
+
+
+      <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url('/alhabibImages/MadinahZiyaarat/the-kaaba-in-mecca-photo.jpg')",
+      opacity: 0.2,
+    }}
+  ></div>
         {/* Bubble shapes similar to the reference image */}
         <motion.div
           custom={0}
@@ -217,11 +253,11 @@ export default function Hero() {
 
                   <Link href="" className="relative group">
                     <span className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#D4A10F] to-[#FFD700] blur-md opacity-70 group-hover:opacity-100 transition duration-300"></span>
-                    <button className="relative bg-[#D4A10F] py-4 px-8 rounded-2xl text-xl font-bold
+                    <button
+                      className="relative bg-[#D4A10F] py-4 px-8 rounded-2xl text-xl font-bold
                      text-white shadow-xl group-hover:scale-105 transition duration-300"
-                     
                       onClick={handleFormSubmit} // Open the form popup
-                     >
+                    >
                       Get quote - it&apos;s free
                     </button>
                   </Link>
@@ -336,14 +372,12 @@ export default function Hero() {
         </div>
       </div>
 
-
-      
-       {/*   render the InquiryForm as a popup */}
-       {showPopup && (
-          <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
-            <EnquiryComponent closePopup={handleFormSubmit} />
-          </div>
-            )}
+      {/*   render the InquiryForm as a popup */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
+          <EnquiryComponent closePopup={handleFormSubmit} />
+        </div>
+      )}
     </>
   );
 }
