@@ -40,14 +40,24 @@ export default function Hero() {
       alt: "Decorative stone image 2",
     },
     { id: 2, src: "/svgfiles/stone.svg", alt: "Decorative stone image 1" },
-    
-    { id: 3, src: "/alhabibImages/MakkahZiyaarat/MaidaneArafat.webp", alt: "Decorative stone image 3" },
 
-    { id: 4, src: "/alhabibImages/MakkahZiyaarat/MinaandMuzdalifah.webp", alt: "Decorative stone image 3" },
+    {
+      id: 3,
+      src: "/alhabibImages/MakkahZiyaarat/MaidaneArafat.webp",
+      alt: "Decorative stone image 3",
+    },
 
-    { id: 5, src: "/alhabibImages/MakkahZiyaarat/CaveofHira.jpg", alt: "Decorative stone image 3" },
+    {
+      id: 4,
+      src: "/alhabibImages/MakkahZiyaarat/MinaandMuzdalifah.webp",
+      alt: "Decorative stone image 3",
+    },
 
-
+    {
+      id: 5,
+      src: "/alhabibImages/MakkahZiyaarat/CaveofHira.jpg",
+      alt: "Decorative stone image 3",
+    },
   ];
 
   useEffect(() => {
@@ -100,55 +110,53 @@ export default function Hero() {
 
   return (
     <>
+      {/* Mobile view */}
+      <div className="relative font-serif w-full h-[400px] rounded-b-2xl shadow-2xl lg:hidden mx-auto overflow-hidden flex    bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
+        {/* Background image with opacity */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('/alhabibImages/MadinahZiyaarat/the-kaaba-in-mecca-photo.jpg')",
+            opacity: 0.2,
+          }}
+        ></div>
 
-      {/* Mobile view */} 
-     <div className="relative font-serif w-full h-[400px] rounded-b-4xl shadow-2xl lg:hidden mx-auto overflow-hidden flex    bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
-  {/* Background image with opacity */}
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{
-      backgroundImage:
-        "url('/alhabibImages/MadinahZiyaarat/the-kaaba-in-mecca-photo.jpg')",
-      opacity: 0.2,
-    }}
-  ></div>
+        {/* Text content on top */}
+        <div className="relative mt-4 p-5 z-10  ">
+          <h1 className="text-3xl font-bold text-yellow-500">
+            All Inclusive <span className="text-white">Umrah Package </span>{" "}
+            with Guided Tour.
+          </h1>
+          <p
+            className="text-gray-200 leading-loose
+     font-semibold py-3"
+          >
+            All packages include flights, visa processing, accommodation near
+            Haram, ground transport, and a guided tour. Meals are optional.
+          </p>
 
-  {/* Text content on top */} 
-  <div className="relative mt-4 p-5 z-10  ">
-    <h1 className="text-3xl font-bold text-yellow-500">
-      All Inclusive <span className="text-white">Umrah Package </span>     with Guided Tour.
-    </h1>
-    <p className="text-gray-200 leading-loose
-     font-semibold py-3">
-      All packages include flights, visa processing, accommodation near Haram,
-      ground transport, and a guided tour. Meals are optional.
-    </p>
-
-<div className="flex   items-center    ">
-<img src="svgfiles/arrow.svg " alt="" className="h-20" />
-    <button 
-     onClick={handleFormSubmit} // Open the form popup
-    className="  bg-yellow-600 text-white px-4 py-2 rounded text-lg font-semibold shadow-lg hover:bg-yellow-700 animate-pulse transition duration-initial mt-8  ease-in-out">
-      Get Quote - It's free
-    </button>
-    </div>
-   
-</div>
-</div>
- 
-
+          <div className="flex   items-center    ">
+            <img src="svgfiles/arrow.svg " alt="" className="h-20" />
+            <button
+              onClick={handleFormSubmit} // Open the form popup
+              className="  bg-yellow-600 text-white px-4 py-2 rounded text-lg font-semibold shadow-lg hover:bg-yellow-700 animate-pulse transition duration-initial mt-8  ease-in-out"
+            >
+              Get Quote - It's free
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className="w-full relative overflow-hidden top-2 bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
-
-
-      <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{
-      backgroundImage:
-        "url('/alhabibImages/MadinahZiyaarat/the-kaaba-in-mecca-photo.jpg')",
-      opacity: 0.2,
-    }}
-  ></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('/alhabibImages/MadinahZiyaarat/the-kaaba-in-mecca-photo.jpg')",
+            opacity: 0.2,
+          }}
+        ></div>
         {/* Bubble shapes similar to the reference image */}
         <motion.div
           custom={0}
