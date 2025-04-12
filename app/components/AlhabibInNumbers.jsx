@@ -140,7 +140,7 @@ const AlhabibInNumbers = () => {
   return (
     <>
       <section
-        className="relative bg-white border mt-10 lg:max-w-7xl  rounded-2xl
+        className="relative bg-white border-yellow-600 border md:border-gray-200 my-10 lg:max-w-7xl  rounded-2xl
          px-4 w-[95%] mx-auto py-14   md:px-16 overflow-hidden"
       >
         {/* Modern Background Circles */}
@@ -208,11 +208,11 @@ const AlhabibInNumbers = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col gap-8 md:flex-row md:justify-between md:gap-4"
+            className="flex flex-col gap-4 lg:gap-8 md:flex-row md:justify-between "
           >
             {stats.map((stat, index) => {
               // Calculate appropriate classes based on index and screen size
-              let extraClasses = "mx-auto md:mx-0";
+              let extraClasses = "mx-auto md:mx-0 ";
               if (index === 1)
                 extraClasses += " md:ml-0 md:mx-0 md:mt-0 mt-0 sm:mt-5";
               if (index === 2) extraClasses += " md:mx-0 md:mt-0 sm:-mt-5";
@@ -223,13 +223,13 @@ const AlhabibInNumbers = () => {
                   key={index}
                   variants={cardVariants}
                   whileHover="hover"
-                  className={`bg-white    border relative rounded-xl 
+                  className={`bg-white    border border-yellow-600  relative rounded-xl 
                     shadow-md p-5 w-full max-w-[300px] ${extraClasses}`}
                 >
                   <h3 className="text-yellow-600 text-lg lg:text-xl font-semibold   mb-1">
                     {stat.title}
                   </h3>
-                  <p className=" lg:text-lg text-gray-600 mb-8">
+                  <p className=" lg:text-lg text-gray-600 mb-5">
                     {stat.description}
                   </p>
                   <motion.div variants={iconVariants}>
