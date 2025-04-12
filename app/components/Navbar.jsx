@@ -1,14 +1,12 @@
 "use client";
 import { PhoneCall, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
-import EnquiryComponent from "./VisaForm"
-
-
+import EnquiryComponent from "./VisaForm";
 
 export default function Navbar() {
   const [showOptions, setShowOptions] = useState(false);
-  const phoneNumber = "923470063865"; 
-const [showPopup, setShowPopup] = useState(false); // State to control the popup visibility
+  const phoneNumber = "923470063865";
+  const [showPopup, setShowPopup] = useState(false); // State to control the popup visibility
   const handleFormSubmit = () => {
     setShowPopup(!showPopup); // Close the popup after form submission
   };
@@ -33,34 +31,33 @@ const [showPopup, setShowPopup] = useState(false); // State to control the popup
           </div>
 
           {showOptions && (
-  <div className="absolute top-14 mt-2 bg-white shadow-lg border rounded-lg w-[22rem] md:w-48 z-50 p-2 space-y-2  ">
-    {/* Cross Button */}
-    <button
-      onClick={() => setShowOptions(false)}
-      className="absolute top-1 right-4 font-bold  text-gray-500 hover:text-black text-xl"
-    >
-      &times;
-    </button>
+            <div className="absolute top-14 mt-2 bg-white shadow-lg border rounded-lg w-full md:w-48 z-50 p-2 space-y-2  ">
+              {/* Cross Button */}
+              <button
+                onClick={() => setShowOptions(false)}
+                className="absolute top-1 right-4 font-bold  text-gray-500 hover:text-black text-xl"
+              >
+                &times;
+              </button>
 
-    <a
-      href={`tel:${phoneNumber}`}
-      className="flex items-center gap-2 text-black hover:text-primary-color"
-    >
-      <Phone className="w-4 h-4" />
-      Call via SIM
-    </a>
-    <a
-      href={`https://wa.me/44${phoneNumber.replace(/^0/, "")}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-green-600 hover:text-green-800"
-    >
-      <MessageCircle className="w-4 h-4" />
-      Message on WhatsApp
-    </a>
-  </div>
-)}
-
+              <a
+                href={`tel:${phoneNumber}`}
+                className="flex items-center gap-2 text-black hover:text-primary-color"
+              >
+                <Phone className="w-4 h-4" />
+                Call via SIM
+              </a>
+              <a
+                href={`https://wa.me/${phoneNumber.replace(/^0/, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-green-600 hover:text-green-800"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Message on WhatsApp
+              </a>
+            </div>
+          )}
         </div>
 
         <p className="text-yellow-600 text-center text-sm mt-1">
@@ -79,8 +76,9 @@ const [showPopup, setShowPopup] = useState(false); // State to control the popup
               <span>
                 <PhoneCall />
               </span>
-              <span className="text-nowrap" 
-              onClick={handleFormSubmit}>Connect Now</span>
+              <span className="text-nowrap" onClick={handleFormSubmit}>
+                Connect Now
+              </span>
             </button>
           </div>
 
@@ -108,9 +106,9 @@ const [showPopup, setShowPopup] = useState(false); // State to control the popup
               <span>
                 <PhoneCall />
               </span>
-              <span className="text-nowrap"
-              onClick={handleFormSubmit}
-              >Connect Now</span>
+              <span className="text-nowrap" onClick={handleFormSubmit}>
+                Connect Now
+              </span>
             </button>
           </div>
 
@@ -120,20 +118,19 @@ const [showPopup, setShowPopup] = useState(false); // State to control the popup
               alt=""
               className=" w-16 h-14"
             />
-            <p className="text-xs mt-1 text-[#00454A] text-center    ">Al-Habib-Travel</p>
+            <p className="text-xs mt-1 text-[#00454A] text-center    ">
+              Al-Habib-Travel
+            </p>
           </div>
         </div>
       </div>
 
-
-
-
-       {/*   render the InquiryForm as a popup */}
-         {showPopup && (
-          <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
-            <EnquiryComponent closePopup={handleFormSubmit} />
-          </div>
-            )}
+      {/*   render the InquiryForm as a popup */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
+          <EnquiryComponent closePopup={handleFormSubmit} />
+        </div>
+      )}
     </>
   );
 }

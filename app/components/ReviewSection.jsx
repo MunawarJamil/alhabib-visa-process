@@ -77,7 +77,7 @@ const ReviewSection = () => {
  
 
   return ( <div className="bg-white py-4   "> 
-    <div className="w-full   max-w-6xl mt-10 mx-auto px-4 relative">
+    <div className="w-full   max-w-6xl mb-10 lg:mt-10 mx-auto px-4 relative">
       <div
         ref={sliderRef}
         className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-4"

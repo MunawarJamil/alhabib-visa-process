@@ -182,6 +182,11 @@ const ZiyaratSlider = () => {
           </button>
         </div>
       </div>
+
+
+      <div className=" mt-4">
+        <img src="/alhabibImages/MakkahZiyaarat/zyaratBanner.jpeg" alt="" className="h-24" />
+        </div>
     </div>
   );
 };

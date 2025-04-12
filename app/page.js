@@ -74,9 +74,11 @@ export default function Home() {
       <BookingProcess />
       <AlhabibInNumbers />
       <Zyarat />
-      <ReviewCard />
       <PackageInclusions />
+      
+      <ReviewCard />
       <VideoTestimonial />
+      
       <ImageGallery images={images} />
 
       <Faqs />

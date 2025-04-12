@@ -35,13 +35,19 @@ export default function Hero() {
   };
   const slides = [
     {
-      id: 2,
+      id: 1,
       src: "/alhabibImages/MakkahZiyaarat/JabalRehmat.webp",
       alt: "Decorative stone image 2",
     },
-    { id: 1, src: "/svgfiles/stone.svg", alt: "Decorative stone image 1" },
+    { id: 2, src: "/svgfiles/stone.svg", alt: "Decorative stone image 1" },
     
     { id: 3, src: "/alhabibImages/MakkahZiyaarat/MaidaneArafat.webp", alt: "Decorative stone image 3" },
+
+    { id: 4, src: "/alhabibImages/MakkahZiyaarat/MinaandMuzdalifah.webp", alt: "Decorative stone image 3" },
+
+    { id: 5, src: "/alhabibImages/MakkahZiyaarat/CaveofHira.jpg", alt: "Decorative stone image 3" },
+
+
   ];
 
   useEffect(() => {
