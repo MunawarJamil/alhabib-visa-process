@@ -18,7 +18,7 @@ export default function App() {
   return (
     <>
       <div className="text-center h-[100%]  border-t-4  pb-10  mb-28">
-        <p className="font-semibold   md:text-4xl mb-6 pt-10">
+        <p className="font-semibold text-3xl  md:text-4xl mb-6 pt-10">
           {" "}
           Image <span className="text-yellow-600  ">Gallery</span>{" "}
         </p>

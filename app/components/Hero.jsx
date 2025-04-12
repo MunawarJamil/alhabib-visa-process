@@ -111,7 +111,7 @@ export default function Hero() {
   return (
     <>
       {/* Mobile view */}
-      <div className="relative font-serif w-full h-[400px] rounded-b-2xl shadow-2xl lg:hidden mx-auto overflow-hidden flex    bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
+      <div className="relative font-[Coolvetica] w-full h-[400px] rounded-b-2xl shadow-2xl lg:hidden mx-auto overflow-hidden flex    bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
         {/* Background image with opacity */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -124,12 +124,12 @@ export default function Hero() {
 
         {/* Text content on top */}
         <div className="relative mt-4 p-5 z-10  ">
-          <h1 className="text-3xl font-bold text-yellow-500">
+          <h1 className="text-4xl font-bold text-yellow-500">
             All Inclusive <span className="text-white">Umrah Package </span>{" "}
             with Guided Tour.
           </h1>
           <p
-            className="text-gray-200 leading-loose
+            className="text-gray-200 text-lg  
      font-semibold py-3"
           >
             All packages include flights, visa processing, accommodation near

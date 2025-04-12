@@ -140,41 +140,41 @@ const AlhabibInNumbers = () => {
   return (
     <>
       <section
-        className="relative bg-white border    rounded-2xl
-       border-yellow-600 px-4 w-[95%] mx-auto py-14   md:px-16 overflow-hidden"
+        className="relative bg-white border mt-10 lg:max-w-7xl  rounded-2xl
+         px-4 w-[95%] mx-auto py-14   md:px-16 overflow-hidden"
       >
         {/* Modern Background Circles */}
-        <motion.div
+        {/* <motion.div
           variants={circleVariants}
           initial="hidden"
           animate="visible"
           className="absolute top-0 right-0 w-64 h-64 rounded-full bg-primary-color 
           -translate-y-1/4 translate-x-1/4 z-0"
-        />
+        /> */}
 
-        <motion.div
+        {/* <motion.div
           variants={circleVariants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2 }}
           className="absolute bottom-0 left-0 w-56 h-56 rounded-full bg-primary-color translate-y-1/3 -translate-x-1/3 z-0"
-        />
-
+        /> */}
+        {/* 
         <motion.div
           variants={circleVariants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.4 }}
           className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-[#1d4849] blur-sm z-0 opacity-40"
-        />
+        /> */}
 
-        <motion.div
+        {/* <motion.div
           variants={circleVariants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }}
           className="absolute bottom-1/3 right-1/4 w-32 h-32 rounded-full bg-primary-color blur-sm z-0 opacity-40"
-        />
+        /> */}
 
         {/* Original Vector Image (kept for mobile) */}
         <motion.div
@@ -199,15 +199,8 @@ const AlhabibInNumbers = () => {
             animate="visible"
             className="text-primary-color text-4xl md:text-4xl font-semibold mb-12 text-center"
           >
-            Al Habib <span className="text-white">
-            Travel in
-              </span> {" "}
-            <span className="text-yellow-600">
-
-             Numbers
-
-            </span>
-            
+            Al Habib Travel{" "}
+            <span className="text-yellow-600"> in Numbers </span>
           </motion.h2>
 
           {/* Cards wrapper with stagger animation */}
@@ -230,7 +223,7 @@ const AlhabibInNumbers = () => {
                   key={index}
                   variants={cardVariants}
                   whileHover="hover"
-                  className={`bg-white border-yellow-600 border relative rounded-xl 
+                  className={`bg-white    border relative rounded-xl 
                     shadow-md p-5 w-full max-w-[300px] ${extraClasses}`}
                 >
                   <h3 className="text-yellow-600 text-lg lg:text-xl font-semibold   mb-1">

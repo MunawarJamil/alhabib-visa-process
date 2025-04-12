@@ -270,38 +270,39 @@ function Faqs() {
                   </button>
 
                   {showOptions && (
-  <div className="absolute top-[-100] w-full md:w-[98%] bg-white shadow-xl border rounded-xl z-50 p-4 mt-2 space-y-3 text-sm  ">
-    
-    {/* Cross Button */}
-    <button
-      onClick={() => setShowOptions(false)}
-      className="absolute top-2 right-4 text-gray-500 hover:text-red-600 text-xl font-bold"
-    >
-      &times;
-    </button>
+                    <div
+                      className="absolute top-[-100] w-full md:w-[98%] bg-white
+   shadow-xl border rounded-xl z-50 p-4 mt-2 space-y-3 text-sm  "
+                    >
+                      {/* Cross Button */}
+                      <button
+                        onClick={() => setShowOptions(false)}
+                        className="absolute top-2 right-4 text-gray-500 hover:text-red-600 text-xl font-bold"
+                      >
+                        &times;
+                      </button>
 
-    {/* Option 1: Call */}
-    <a
-      href={`tel:${phoneNumber}`}
-      className="flex items-center gap-2 text-black hover:text-primary-color"
-    >
-      <Phone className="w-4 h-4" />
-      Call via SIM
-    </a>
+                      {/* Option 1: Call */}
+                      <a
+                        href={`tel:${phoneNumber}`}
+                        className="flex items-center gap-2 text-black hover:text-primary-color"
+                      >
+                        <Phone className="w-4 h-4" />
+                        Call via SIM
+                      </a>
 
-    {/* Option 2: WhatsApp */}
-    <a
-      href={`https://wa.me/44${phoneNumber.replace(/^0/, "")}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-green-600 hover:text-green-800"
-    >
-      <MessageCircle className="w-4 h-4" />
-      Message on WhatsApp
-    </a>
-  </div>
-)}
-
+                      {/* Option 2: WhatsApp */}
+                      <a
+                        href={`https://wa.me/${phoneNumber.replace(/^0/, "")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-green-600 hover:text-green-800"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        Message on WhatsApp
+                      </a>
+                    </div>
+                  )}
                 </motion.div>
               </div>
             </motion.div>
