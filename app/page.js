@@ -13,26 +13,19 @@ import Faqs from "./components/Faqs";
 import TravelDetails from "./components/TravelDetails";
 import VideoTestimonial from "./components/VideoTestimonial";
 import ReviewCard from "./components/ReviewSection";
-import ImageGallery from "./components/ImageGallary"; 
+import ImageGallery from "./components/ImageGallary";
 import Partners from "./components/Partners";
 import EnquiryComponent from "./components/VisaForm";
 import { useEffect, useState } from "react";
-export default function Home() {
-  const images = [
-    { src: "/alhabibImages/imgalary2.png", alt: "Kaaba in Mecca" },
-    { src: "/alhabibImages/imgalary2.png", alt: "Beautiful Mosque" },
-    { src: "/alhabibImages/imgalary2.png", alt: "Scenic Beach" },
-    { src: "/alhabibImages/imgalary2.png", alt: "City Skyline" },
-    { src: "/alhabibImages/imgalary2.png", alt: "City Skyline" },
-    { src: "/alhabibImages/imgalary2.png", alt: "City Skyline" },
-  ];
+export default function App() {
+  // 
   const [showPopup, setShowPopup] = useState(false);
-  
+
   useEffect(() => {
     const inquiryHandled = localStorage.getItem("inquiryFilled");
 
     if (!inquiryHandled) {
-      let appearanceCount = 0; 
+      let appearanceCount = 0;
 
       // Show the popup after 10 seconds
       const initialTimeout = setTimeout(() => {
@@ -40,18 +33,16 @@ export default function Home() {
         appearanceCount++;
       }, 10000);
 
-      
       const reappearTimeout = setTimeout(() => {
         if (appearanceCount === 1) {
           setShowPopup(true);
           appearanceCount++;
-          
         }
-      }, 30000);  
+      }, 30000);
       if (appearanceCount === 2) {
         setShowPopup(false);
       }
-    
+
       return () => {
         clearTimeout(initialTimeout);
         clearTimeout(reappearTimeout);
@@ -73,25 +64,25 @@ export default function Home() {
 
       <BookingProcess />
       <Zyarat />
-      
+
       <AlhabibInNumbers />
       <PackageInclusions />
-      
+
       <ReviewCard />
       <VideoTestimonial />
-      
-      <ImageGallery images={images} />
+
+      <ImageGallery />
 
       <Faqs />
       <Partners />
-      <Footer /> 
+      <Footer />
 
-       {/*   render the InquiryForm as a popup */}
-   {showPopup && (
-    <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
-      <EnquiryComponent closePopup={handleFormSubmit} />
-    </div>
-  )}
+      {/*   render the InquiryForm as a popup */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
+          <EnquiryComponent closePopup={handleFormSubmit} />
+        </div>
+      )}
     </>
   );
 }

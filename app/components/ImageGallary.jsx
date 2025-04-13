@@ -12,7 +12,8 @@ import "./styles/gallaryStyles.css";
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { useState } from "react";
-export default function App() {
+
+export default function ImageGallery() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -65,16 +66,16 @@ export default function App() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src="/alhabibImages/img1.jpg" className="object-contain" />
+            <img src="/alhabibImages/wa1.jpeg" className="object-contain" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/alhabibImages/img2.jpg" />
+            <img src="/alhabibImages/wa2.jpeg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/alhabibImages/img3.jpg" />
+            <img src="/alhabibImages/wa3.jpeg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/alhabibImages/img4.jpg" />
+            <img src="/alhabibImages/wa4.jpeg" />
           </SwiperSlide>
           <SwiperSlide>
             <img src="/alhabibImages/img5.jpg" />

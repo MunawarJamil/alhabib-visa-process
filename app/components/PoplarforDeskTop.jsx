@@ -10,7 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 
 // Package data structure with months and categories
-import { packageData } from "./data/popularPackage";
+import { packageData } from "../data/popularPackage";
 
 const PopularforDeskTop = () => {
   const [selectedMonth, setSelectedMonth] = useState("april");

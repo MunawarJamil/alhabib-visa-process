@@ -21,13 +21,13 @@ const inclusionData = [
   {
     title: "Accommodation",
     content:
-      "Stay in premium hotels near Haram Sharif in Makkah and Madinah, all within 8-10 minutes walking distance. We offer luxurious hotels with Haram & Kaaba views and 4-star budget-friendly options close to Masjid Al Haram. Have a hotel preference? Let our agents know, and we’ll arrange it for you!",
+      "Stay in premium hotels near Haram Sharif in Makkah and Madinah, all within 5-10 minutes walking distance. We offer luxurious hotels with Haram & Kaaba views and 4-star budget-friendly options close to Masjid Al Haram. Have a hotel preference? Let our agents know, and we’ll arrange it for you!",
     icon: "/alhabibImages/Icons/Hotel Black Icon.png",
   },
   {
     title: "Transportation",
     content:
-      "Enjoy private, comfortable transport with expert English-speaking drivers. Upon arrival at Jeddah or Madinah Airport, our driver will pick you up and take you to your Makkah or Madinah hotel as per your itinerary. Travel between Makkah and Madinah via private car or the Haramain High-Speed Train. We also provide guided Ziyarah tours to must-visit Islamic sites. Customize your transport needs—just let us know!",
+      "Upon arrival at Jeddah or Madinah Airport, our driver will pick you up and take you to your Makkah or Madinah hotel as per your itinerary. Travel between Makkah and Madinah via private car or the Haramain High-Speed Train. We also provide guided Ziyarah tours to must-visit Islamic sites. Submit the lead form or directly call us for more details.",
     icon: "/alhabibImages/Icons/Car Cyan icon.png",
   },
 ];
@@ -53,7 +53,7 @@ export default function TravelDetails() {
           className="text-center mb-12"
         >
           <h1 className="text-3xl md:text-5xl font-bold relative mt-5 inline-block">
-            What Include <span className="text-[#D4A10F]">in your Package</span>
+          What’s Included  <span className="text-[#D4A10F]">in Your Umrah Package</span>
             <motion.div
               className="absolute -bottom-2 left-0 right-0 h-1 bg-[#D4A10F]"
               initial={{ width: "0%" }}

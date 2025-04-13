@@ -4,13 +4,11 @@ import React, { useState, useRef } from "react";
 // import emailjs from "@emailjs/browser";
 import { FaTimes } from "react-icons/fa";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 const InquiryComponent = ({ closePopup }) => {
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
-  const router = useRouter();
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -20,7 +18,7 @@ const InquiryComponent = ({ closePopup }) => {
 
     try {
       await emailjs.sendForm(
-        "service_evauowe",
+        "service_evauoweMyservicetodelete",
 
         "template_jjly3hv",
         form.current,
@@ -35,7 +33,10 @@ const InquiryComponent = ({ closePopup }) => {
         window.location.reload();
       }, 1500);
     } catch (error) {
-      setStatusMessage("Your inquiry has been sent...");
+      setStatusMessage("Your inquiry is not sent...");
+      // for now i need to set
+
+      localStorage.setItem("inquiryFilled", "true");
     } finally {
       setIsSending(false);
     }

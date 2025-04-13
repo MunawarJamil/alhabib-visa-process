@@ -69,13 +69,14 @@ const CustomAccordion = ({ item, index, activeIndex, setActiveIndex }) => {
     >
       <motion.button
         onClick={toggleAccordion}
-        className={`w-full text-left text-base font-medium py-5 px-6 text-[#0C3E3E] bg-white flex justify-between items-center hover:bg-gray-50 transition-colors duration-300 ${
-          isOpen ? "border-b border-gray-100" : ""
+        className={`w-full text-left text-base font-medium py-5 px-6 text-[#0C3E3E]
+             flex justify-between items-center hover:bg-gray-50 transition-colors duration-300 ${
+          isOpen ? "border-b-2  border-primary-color" : ""
         }`}
         whileHover={{ backgroundColor: "#f9f9f9" }}
-        whileTap={{ scale: 0.99 }}
+        whileTap={{ scale: 0.99   }}
       >
-        <span>{item.title}</span>
+        <span  >{item.title}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}

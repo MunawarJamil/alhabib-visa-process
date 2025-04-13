@@ -165,7 +165,7 @@ export default function TravelDetails() {
                       justify-between p-4 rounded-lg cursor-pointer
                        transition-all duration-300 ${
                          activeInclusions[index]
-                           ? "bg-primary-color text-white border-l-4 border-[#D4A10F]"
+                           ? "bg-gray-200 text-primary-color border-l-4 border-[#D4A10F]"
                            : "bg-gray-50 hover:bg-gray-200"
                        }`}
                   >
@@ -227,7 +227,7 @@ export default function TravelDetails() {
                     onClick={() => toggleExclusion(index)}
                     className={`flex items-center justify-between p-4 rounded-lg cursor-pointer transition-all duration-300 ${
                       activeExclusions[index]
-                        ? "bg-primary-color text-white  border-l-4 border-[#D4A10F]"
+                        ? "bg-gray-200 text-primary-color  border-l-4 border-[#D4A10F]"
                         : "bg-gray-50 hover:bg-gray-200"
                     }`}
                   >
