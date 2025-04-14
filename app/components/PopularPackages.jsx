@@ -7,20 +7,21 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EnquiryComponent from "./VisaForm";
 
 // Package data structure with months and categories
 import { packageData } from "../data/popularPackage";
 
 const PopularPackages = () => {
-
-
-  const enquiryStatus = localStorage.getItem("inquiryFilled") === "true" 
-
+  useEffect(() => {
+    const status = localStorage.getItem("inquiryFilled") === "true";
+    setEnquiryStatus(status);
+  }, []);
+  const [enquiryStatus, setEnquiryStatus] = useState(false); // State to track inquiry status
   const [selectedMonth, setSelectedMonth] = useState("april");
   const [selectedCategory, setSelectedCategory] = useState("account");
-
+   
   // Map between tab values and category keys
   const categoryMap = {
     account: "luxury",
@@ -95,7 +96,7 @@ const PopularPackages = () => {
           onClick={handleFormSubmit}
           className=" w-full bg-[#D4A10F] pt-2 py-2 text-center md:mt-7 lg:text-lg   font-semibold text-white"
         >
-           {enquiryStatus ? "$456" : "View price"}
+          {enquiryStatus ? "$456" : "View price"}
         </button>
       </div>
     </div>

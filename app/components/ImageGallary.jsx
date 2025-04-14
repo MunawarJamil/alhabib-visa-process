@@ -1,28 +1,88 @@
 "use client";
 
-// Import Swiper React components
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { 
+  Autoplay, 
+  EffectCoverflow, 
+  FreeMode, 
+  Navigation, 
+  Pagination, 
+  Thumbs, 
+  Zoom 
+} from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-coverflow";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/thumbs";
+import "swiper/css/zoom";
 import "./styles/gallaryStyles.css";
-// import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import { useState } from "react";
+
+// Image data with captions
+const galleryImages = [
+  { src: "/alhabibImages/wa1.jpeg", caption: "Beautiful Architecture" },
+  { src: "/alhabibImages/wa2.jpeg", caption: "Interior Design" },
+  { src: "/alhabibImages/wa3.jpeg", caption: "Modern Aesthetics" },
+  { src: "/alhabibImages/wa4.jpeg", caption: "Stunning Details" },
+  { src: "/alhabibImages/img5.jpg", caption: "Elegant Spaces" },
+  { src: "/alhabibImages/img6.jpg", caption: "Contemporary Design" },
+  { src: "/alhabibImages/img7.jpg", caption: "Innovative Concepts" }
+];
 
 export default function ImageGallery() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoplay, setIsAutoplay] = useState(true);
+
+  // Simulate loading images
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
+  };
+
+  const toggleAutoplay = () => {
+    setIsAutoplay(!isAutoplay);
+  };
 
   return (
-    <>
-      <div className="text-center h-[100%]  border-t-4  pb-10  mb-28">
-        <p className="font-semibold text-3xl  md:text-4xl mb-6 pt-10">
-          {" "}
-          Image <span className="text-yellow-600  ">Gallery</span>{" "}
-        </p>
+    <div className="text-center max-w-7xl mx-auto border px-2 lg:px-10 pb-10 lg:pb-10 rounded-xl shadow-lg  ">
+      {/* Gallery Header with animation */}
+      <div className="relative overflow-hidden  py-4">
+        <h2 className="font-semibold text-3xl md:text-4xl  mb-3 inline-block relative">
+          <span className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
+            Image
+          </span>{" "}
+          <span className="text-yellow-600 animate-fade-in opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
+            Gallery
+          </span>
+
+          </h2>
+
+          <p className="text-sm text-yellow-600 animate-bounce">Moments of joy from our beloved travelers.</p>
+         
+      </div>
+
+      {/* Loading spinner */}
+      {isLoading && (
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-yellow-600"></div>
+        </div>
+      )}
+
+      {/* Main gallery container */}
+      <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+        {/* Main Swiper with zoom and effects */}
         <Swiper
           style={{
             "--swiper-navigation-color": "#fff",
@@ -30,66 +90,94 @@ export default function ImageGallery() {
           }}
           spaceBetween={10}
           navigation={true}
+          pagination={{
+            type: "progressbar",
+          }}
+          zoom={{
+            maxRatio: 3,
+            minRatio: 1,
+          }}
+          autoplay={isAutoplay ? {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          } : false}
+          effect="coverflow"
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
           thumbs={{ swiper: thumbsSwiper }}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper2"
+          modules={[Autoplay, EffectCoverflow, FreeMode, Navigation, Pagination, Thumbs, Zoom]}
+          onSlideChange={handleSlideChange}
+          className="mySwiper2 rounded-lg shadow-xl mb-4"
         >
-          <SwiperSlide>
-            <img src="/alhabibImages/wa1.jpeg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/wa2.jpeg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/wa3.jpeg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/wa4.jpeg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/img5.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/img6.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/img7.jpg" />
-          </SwiperSlide>
+          {galleryImages.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="swiper-zoom-container">
+                <img 
+                  src={image.src} 
+                  alt={image.caption}
+                  className="transition-transform hover:scale-105 duration-500"
+                />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-4 transform translate-y-full transition-transform duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+                <p className="text-lg font-medium">{image.caption}</p>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
+
+        {/* Controls bar */}
+        <div className="flex justify-between items-center mb-4 px-2">
+          <div className="text-sm text-gray-600">
+            Image {activeIndex + 1} of {galleryImages.length}
+          </div>
+          
+          
+        </div>
+
+        {/* Thumbnail carousel */}
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
-          slidesPerView={4}
+          slidesPerView={2.5}
+          breakpoints={{
+            640: {
+              slidesPerView: 4,
+            },
+            768: {
+              slidesPerView: 5,
+            },
+            1024: {
+              slidesPerView: 6,
+            },
+          }}
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
+          className="mySwiper rounded-md"
         >
-          <SwiperSlide>
-            <img src="/alhabibImages/wa1.jpeg" className="object-contain" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/wa2.jpeg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/wa3.jpeg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/wa4.jpeg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/img5.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/img6.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/alhabibImages/img7.jpg" />
-          </SwiperSlide>
+          {galleryImages.map((image, index) => (
+            <SwiperSlide 
+              key={index} 
+              className={`cursor-pointer transition-all duration-300 ${activeIndex === index ? 'opacity-100 border-2 border-yellow-600 scale-95' : 'opacity-70 hover:opacity-100'}`}
+            >
+              <img 
+                src={image.src} 
+                alt={`Thumbnail ${index + 1}`}
+                className="object-cover h-20"
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
 
-        <p className="text-yellow-600 py-3 md:hidden "> - swipe for more - </p>
+        
+        <p className="hidden md:block text-gray-500 text-sm mt-2">Click on image to zoom, drag to explore</p>
       </div>
-    </>
+    </div>
   );
 }

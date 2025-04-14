@@ -111,42 +111,48 @@ export default function Hero() {
   return (
     <>
       {/* Mobile view */}
-      <div className="relative font-[Coolvetica] w-full h-[400px] rounded-b-2xl shadow-2xl lg:hidden mx-auto overflow-hidden flex    bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
-        {/* Background image with opacity */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('/alhabibImages/MadinahZiyaarat/the-kaaba-in-mecca-photo.jpg')",
-            opacity: 0.2,
-          }}
-        ></div>
+      <div className="relative font-[Coolvetica] 
+      w-full  rounded-b-2xl shadow-2xl 
+      lg:hidden mx-auto overflow-hidden flex  h-[255px] md:md:h-[330px]
+        ">
+       
+      <img src="/alhabibImages/herobanner.jpeg" alt="" className="object-cover w-full "/>
+      <div className="absolute inset-0 ">
+      <h1 className="text-xl px-5 mt-6 my-3  font-bold text-yellow-500">
+                        All Inclusive <span className="text-white">Umrah Packages </span>{" "}
+                       <br /> with Guided Tour.
+                      </h1>
 
-        {/* Text content on top */}
-        <div className="relative mt-4 p-5 z-10  ">
-          <h1 className="text-4xl font-bold text-yellow-500">
-            All Inclusive <span className="text-white">Umrah Package </span>{" "}
-            with Guided Tour.
-          </h1>
-          <p
-            className="text-gray-200 text-lg  
-     font-semibold py-3"
-          >
-            All packages include flights, visa processing, accommodation near
-            Haram, ground transport, and a guided tour. Meals are optional.
-          </p>
+                      <p
+                        className="text-gray-200 text-sm  px-5
+                   py-1"
+                      >
+                        All packages include flights, visa processing, 
+                       <br /> accommodation near
+                        Haram, ground transport, <br /> and a guided tour.
+                        <br /> Meals are optional.
+                      </p>
 
-          <div className="flex   items-center    ">
-            <img src="svgfiles/arrow.svg " alt="" className="h-20" />
-            <button
-              onClick={handleFormSubmit} // Open the form popup
-              className="  bg-yellow-600 text-white px-4 py-2 rounded text-lg font-semibold shadow-lg hover:bg-yellow-700 animate-pulse transition duration-initial mt-8  ease-in-out"
-            >
-              Get Quote - It's free
-            </button>
-          </div>
-        </div>
+                      <div className="flex   items-center ml-4   ">
+                        <img src="svgfiles/arrow.svg " alt="" className="h-10" />
+                        <button
+                          onClick={handleFormSubmit} // Open the form popup
+                          className="  bg-yellow-600 text-white
+                           px-4  py-2  mt-4 rounded    
+                           shadow-lg hover:bg-yellow-700
+                            animate-pulse transition duration-initial   ease-in-out"
+                        >
+                          Get Quote - It's free
+                        </button>
+                      </div>
+
       </div>
+      </div>
+
+
+
+
+
 
       <div className="w-full relative overflow-hidden top-2 bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
         <div
