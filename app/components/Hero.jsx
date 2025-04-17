@@ -110,38 +110,76 @@ export default function Hero() {
 
   return (
     <>
-      {/* Mobile view */}
-      <div className="relative font-[Coolvetica] md:hidden max-h-[500px]
-      w-full  rounded-b-2xl shadow-2xl 
-      lg:hidden mx-auto overflow-hidden flex   object-contain  
-        ">
-       
-      <Image src="/images/b1.jpeg" alt="" className="  w-full " height={500}  width={1200}
-      unoptimized/>
+      <div className="md:hidden  shadow-2xl  relative flex flex-col justify-between bg-gradient-to-b from-[#004D4F] to-[#006D6F] text-white  rounded-bl-2xl rounded-br-2xl overflow-hidden"
       
-      
-      <div className=" absolute top-36  flex  left-10  items-center ml-4   ">
-                        <img src="svgfiles/arrow.svg " alt="" className="h-10" />
-                        <button
-                          onClick={handleFormSubmit} // Open the form popup
-                          className="  bg-yellow-600 text-white
-                           px-4  py-2  mt-4 rounded-2xl   
-                           shadow-lg hover:bg-yellow-700
-                            animate-pulse transition duration-initial   ease-in-out"
-                        >
-                          Get Quote - It's free
-                        </button>
-                      </div> 
+        style={{
+          backgroundImage:
+            "url('/images/herobgimg.png')" ,
+          backgroundSize: "cover",
+          backgroundPosition: "center", 
+          backgroundColor: "#004D4F",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
      
+     <div className="z-10 font-[Coolvetica] px-5 text-center pt-10">
+          <h1 className="text-2xl font-semibold leading-snug mb-2">
+            All Inclusive Umrah <br /> Package with Guided Tour.
+          </h1>
+          <p className="mt-4 leading-relaxed">
+            All packages include flights, visa processing, accommodation near
+            Haram, ground transport, and a guided tour. Meals are optional.
+          </p>
+
+          <div className="flex flex-col items-center   mt-3">
+            <img src="/svgfiles/leftarrow.svg" alt="" className="ml-20 h-10"/>
+
+            <button   onClick={handleFormSubmit}
+              // Open the form popup
+              className="  bg-yellow-600 text-white
+                             px-4  py-2  mt-4 rounded-2xl   
+                             shadow-lg hover:bg-yellow-700
+                              animate-pulse transition duration-initial   ease-in-out"
+            >
+              Get Quote - It's free
+            </button>
+          </div>
+        </div>
+
+        {/* Image Section */}
+         <div className="relative mt-6 flex justify-end items-end z-0">
+       
+          <img
+            src="/images/Ellipse40.png"
+            alt="Ellipse"
+            className="absolute bottom-0 z-0 w-64 h-64 object-contain"
+          />
+           <img
+            src="/images/Clock-Tower22.png"
+            alt="Clock Tower"
+            className="relative z-10 h-80 object-cover"
+          />
+        </div>
+
       </div>
 
+ 
+
+  
 
 
 
 
 
-      <div className="w-full relative 
-       overflow-hidden top-2 bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
+
+
+
+
+
+      <div
+        className="w-full relative 
+       overflow-hidden top-2 bg-gradient-to-r from-[#004D4F] to-[#006D6F]"
+      >
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
