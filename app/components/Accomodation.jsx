@@ -232,9 +232,9 @@ function Accommodation() {
               ))}
             </div>
           </div>
-          <p className="md:hidden mt-3 text-center text-yellow-600">
+          {/* <p className="md:hidden mt-3 text-center text-yellow-600">
             ← More available — keep swiping →
-          </p>
+          </p> */}
         </div>
       </div>
     </>

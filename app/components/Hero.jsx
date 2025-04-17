@@ -111,50 +111,37 @@ export default function Hero() {
   return (
     <>
       {/* Mobile view */}
-      <div className="relative font-[Coolvetica] 
+      <div className="relative font-[Coolvetica] md:hidden max-h-[500px]
       w-full  rounded-b-2xl shadow-2xl 
-      lg:hidden mx-auto overflow-hidden flex  h-[255px] md:md:h-[330px]
+      lg:hidden mx-auto overflow-hidden flex   object-contain  
         ">
        
-      <img src="/alhabibImages/herobanner.jpeg" alt="" className="object-cover w-full "/>
-      <div className="absolute inset-0 ">
-      <h1 className="text-xl px-5 mt-6 my-3  font-bold text-yellow-500">
-                        All Inclusive <span className="text-white">Umrah Packages </span>{" "}
-                       <br /> with Guided Tour.
-                      </h1>
-
-                      <p
-                        className="text-gray-200 text-sm  px-5
-                   py-1"
-                      >
-                        All packages include flights, visa processing, 
-                       <br /> accommodation near
-                        Haram, ground transport, <br /> and a guided tour.
-                        <br /> Meals are optional.
-                      </p>
-
-                      <div className="flex   items-center ml-4   ">
+      <Image src="/images/b1.jpeg" alt="" className="  w-full " height={500}  width={1200}
+      unoptimized/>
+      
+      
+      <div className=" absolute top-36  flex  left-10  items-center ml-4   ">
                         <img src="svgfiles/arrow.svg " alt="" className="h-10" />
                         <button
                           onClick={handleFormSubmit} // Open the form popup
                           className="  bg-yellow-600 text-white
-                           px-4  py-2  mt-4 rounded    
+                           px-4  py-2  mt-4 rounded-2xl   
                            shadow-lg hover:bg-yellow-700
                             animate-pulse transition duration-initial   ease-in-out"
                         >
                           Get Quote - It's free
                         </button>
-                      </div>
-
+                      </div> 
+     
       </div>
-      </div>
 
 
 
 
 
 
-      <div className="w-full relative overflow-hidden top-2 bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
+      <div className="w-full relative 
+       overflow-hidden top-2 bg-gradient-to-r from-[#004D4F] to-[#006D6F]">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -169,7 +156,8 @@ export default function Hero() {
           variants={bubbleVariants}
           initial="hidden"
           animate={["visible", "float"]}
-          className="absolute top-20 right-20 w-32 h-32 rounded-full bg-[#005a5c] opacity-40 z-0"
+          className="absolute top-20 right-20 w-32
+           h-32 rounded-full bg-[#005a5c] opacity-40 z-0"
         ></motion.div>
 
         <motion.div
@@ -204,7 +192,7 @@ export default function Hero() {
           className="absolute top-1/2 right-40 w-12 h-12 rounded-full bg-[#D4A10F] opacity-10 z-0"
         ></motion.div>
 
-        <div className="hidden lg:block w-full py-20 relative z-10">
+        <div className="hidden md:block w-full py-20 relative z-10">
           <div className="w-full flex flex-col md:flex-row gap-8 md:gap-16 px-8 lg:px-16 max-w-7xl mx-auto relative">
             {/* Left Content - Text Section */}
             <div className="md:w-1/2 flex flex-col justify-center">
