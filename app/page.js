@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PackageInclusions from "./components/PackageInclusions";
 import PopularPackages from "./components/PopularPackages";
+// import UmraPackages from "./components/PoplarforDeskTop";
 import Accomodation from "./components/Accomodation";
 import Zyarat from "./components/Zyarat";
 import Footer from "./components/Footer";
@@ -59,7 +60,7 @@ export default function App() {
       <Hero />
       <TravelDetails />
       <PopularPackages />
-      {/* <PopularforDeskTop /> */}
+      {/* <UmraPackages /> */}
       <Accomodation />
 
       <BookingProcess />
