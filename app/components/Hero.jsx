@@ -110,11 +110,13 @@ export default function Hero() {
 
   return (
     <>
-      <div className="md:hidden  shadow-2xl  relative flex flex-col justify-between bg-gradient-to-b from-[#004D4F] to-[#006D6F] text-white  rounded-bl-2xl rounded-br-2xl overflow-hidden"
+      <div className="md:hidden  shadow-2xl  relative flex flex-col 
+      justify-between bg-gradient-to-b from-[#004D4F] to-[#006D6F] text-white
+          overflow-hidden"
       
         style={{
           backgroundImage:
-            "url('/images/herobgimg.png')" ,
+            "url('/images/bg-mini.png')" ,
           backgroundSize: "cover",
           backgroundPosition: "center", 
           backgroundColor: "#004D4F",
@@ -122,42 +124,57 @@ export default function Hero() {
         }}
       >
      
-     <div className="z-10 font-[Coolvetica] px-5 text-center pt-10">
-          <h1 className="text-2xl font-semibold leading-snug mb-2">
-            All Inclusive Umrah <br /> Package with Guided Tour.
+     <div className="z-10  px-5 text-center pt-10">
+          <h1 className="text-3xl font-[Coolvetica] font-semibold leading-snug mb-2">
+            All Inclusive Umrah <br />
+             <span className="">Package with Guided Tour.</span>
           </h1>
-          <p className="mt-4 leading-relaxed">
+          <p className="mt-7 font-sans text-lg leading-relaxed">
             All packages include flights, visa processing, accommodation near
             Haram, ground transport, and a guided tour. Meals are optional.
           </p>
 
-          <div className="flex flex-col items-center   mt-3">
-            <img src="/svgfiles/leftarrow.svg" alt="" className="ml-20 h-10"/>
-
+          <div className="flex justify-center gap-4
+            items-center   mt-3 ml-12 ">
+            
             <button   onClick={handleFormSubmit}
               // Open the form popup
-              className="  bg-yellow-600 text-white
-                             px-4  py-2  mt-4 rounded-2xl   
-                             shadow-lg hover:bg-yellow-700
-                              animate-pulse transition duration-initial   ease-in-out"
+              className="  bg-yellow-500 text-white
+                             px-4  
+                             py-3  mt-7 rounded-4xl   
+                             shadow-lg
+                              hover:bg-yellow-600
+                               text-lg font-bold 
+                               transition 
+                              duration-initial 
+                              ease-in-out
+                               
+                                
+                               "
             >
               Get Quote - It's free
             </button>
+            <img src="/svgfiles/leftarrow.svg" alt="" 
+            className="  h-10"/>
+
           </div>
         </div>
 
         {/* Image Section */}
-         <div className="relative mt-6 flex justify-end items-end z-0">
+         <div className="relative mt-6 flex justify-center
+         w-full items-end z-0">
        
           <img
-            src="/images/Ellipse40.png"
+            src="/images/Ellipse-mini.png"
             alt="Ellipse"
-            className="absolute bottom-0 z-0 w-64 h-64 object-contain"
+            className="absolute bottom-0 z-0 w-64 h-64 
+            object-cover"
           />
            <img
-            src="/images/Clock-Tower22.png"
+            src="/images/Clock-mini.png"
             alt="Clock Tower"
-            className="relative z-10 h-80 object-cover"
+            className="relative w-full object-top
+             z-10 h-80 "
           />
         </div>
 
