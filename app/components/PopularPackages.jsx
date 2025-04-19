@@ -52,14 +52,14 @@ const PopularPackages = () => {
 
   // New Package Card component with updated design
   const PackageCard = ({ pkg }) => (
-    <div className="pb-10 bg-white rounded-xl shadow-2xl border mx-3  w-[360px] h-full">
+    <div className="pb-10 bg-white rounded-xl shadow-2xl border mx-3  w-[360px] md:w-[380px] h-full">
       <div className="flex justify-center mt-1">
-        <img src={pkg.image} alt="card-img" className="w-full p-4" />
+        <img src={pkg.image} alt="card-img" className="w-full  p-4" />
       </div>
 
       <div>
         <div className="flex">
-          <div className="w-10 h-10 ml-2 bg-gradient-to-r from-[#f4f4f4] to-[#bdb59f] opacity-25 rounded-full"></div>
+          <div className="w-10 h-10 ml-2 bg-gradient-to-r from-[#f4f4f4] to-[#bdb59f] opacity-45 rounded-full"></div>
           <h1 className=" text-xl md:text-2xl  flex items-center font-bold text-[#00454A]">
             {pkg.title}
           </h1>
@@ -104,12 +104,12 @@ const PopularPackages = () => {
       <div className="flex gap-3 mt-5 justify-center items-center">
         <button
           onClick={handleFormSubmit}
-          className="bg-[#D4A10F] py-2 px-6 flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105"
+          className={`bg-[#D4A10F] py-2 ${enquiryStatus ? "px-4" : "px-4"} flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105`}
         >
-          {enquiryStatus ? "$456" : "View Price"}
+          {enquiryStatus ? `Price: $${pkg.price}` : "View Price"}
         </button>
 
-        <button className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105">
+        <button className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg hover:bg-[#00454A] transition duration-300 ease-in-out transform hover:scale-105">
           Talk to Agent
         </button>
       </div>
@@ -130,7 +130,7 @@ const PopularPackages = () => {
       >
         <div
           className="w-full lg:border rounded-2xl  md:max-w-[85rem] lg:py-2
-        my-5 h-auto md:px-7 md:mx-auto"
+        my-10 h-auto md:px-7 md:mx-auto"
         >
           {/* Top area */}
           <div className="flex justify-between items-center px-4 text-primary-color md:pt-10">
@@ -185,7 +185,10 @@ const PopularPackages = () => {
 
               {Object.keys(categoryMap).map((category) => (
                 <TabsContent key={category} value={category}>
-                  <div className="w-full px-4   flex  flex-wrap lg:flex-row gap-10     max-w-7xl mx-auto p-5 justify-center items-center">
+                  <div
+                    className="w-full px-4   flex  flex-wrap lg:flex-row gap-3  
+                     max-w-7xl mx-auto p-5 justify-center items-center"
+                  >
                     {getCurrentPackages().map((pkg, index) => (
                       <div key={pkg.id || index} className="h-full">
                         <PackageCard pkg={pkg} />
