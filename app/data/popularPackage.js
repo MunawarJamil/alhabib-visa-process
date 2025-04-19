@@ -1,695 +1,115 @@
 export const packageData = {
-    april: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-    may: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-    june: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-    july: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-    august: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-    september: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-    october: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-    november: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-    december: {
-      luxury: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      premium: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-      economic: [
-        {
-          title: "7 days Umrah package",
-          makkah: "Hilton Makkah(3N)",
-          madinah: "Pullman Zam Zam(4)",
-          includes: "Flight l Visa l Transport l Accomodation",
-          image: "/images/papular/kaaba1.png",
-        },
-
-        {
-            title: "10 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-
-          {
-            title: "14 days Umrah package",
-            makkah: "Hilton Makkah(3N)",
-            madinah: "Pullman Zam Zam(4)",
-            includes: "Flight l Visa l Transport l Accomodation",
-            image: "/images/papular/kaaba1.png",
-          },
-      ],
-    },
-  };
+  april: {
+    luxury: [
+      {
+        id: 1,
+        image: "/images/papular/card-img.png",
+        title: "14 Nights Umrah Package",
+        makkah: "Swissotel Makkah",
+        makkahNights: "7N",
+        madinah: "Madinah Hilton",
+        madinahNights: "7N",
+        includes: ["Flight", "Visa", "Transport", "Accomodation"],
+      },
+      {
+        id: 2,
+        image: "/images/papular/card-img.png",
+        title: "14 Nights Umrah Package",
+        makkah: "Swissotel Makkah",
+        makkahNights: "7N",
+        madinah: "Madinah Hilton",
+        madinahNights: "7N",
+        includes: ["Flight", "Visa", "Transport", "Accomodation"],
+      },
+      {
+        id: 3,
+        image: "/images/papular/card-img.png",
+        title: "14 Nights Umrah Package",
+        makkah: "Swissotel Makkah",
+        makkahNights: "7N",
+        madinah: "Madinah Hilton",
+        madinahNights: "7N",
+        includes: ["Flight", "Visa", "Transport", "Accomodation"],
+      },
+    ],
+    premium: [
+      // Same data structure as luxury
+      {
+        id: 1,
+        image: "/images/papular/card-img.png",
+        title: "10 Nights Premium Package",
+        makkah: "Premium Hotel Makkah",
+        makkahNights: "5N",
+        madinah: "Premium Hotel Madinah",
+        madinahNights: "5N",
+        includes: ["Flight", "Visa", "Transport", "Accomodation"],
+      },
+    ],
+    economic: [
+      // Same data structure as luxury
+      {
+        id: 1,
+        image: "/images/papular/card-img.png",
+        title: "7 Nights Economic Package",
+        makkah: "Economic Hotel Makkah",
+        makkahNights: "4N",
+        madinah: "Economic Hotel Madinah",
+        madinahNights: "3N",
+        includes: ["Flight", "Visa", "Transport", "Accomodation"],
+      },
+    ],
+  },
+  // Same structure for other months
+  may: {
+    luxury: [
+      {
+        id: 1,
+        image: "/images/papular/card-img.png",
+        title: "14 Nights Umrah Package",
+        makkah: "Swissotel Makkah",
+        makkahNights: "7N",
+        madinah: "Madinah Hilton",
+        madinahNights: "7N",
+        includes: ["Flight", "Visa", "Transport", "Accomodation"],
+      },
+    ],
+    premium: [],
+    economic: [],
+  },
+  // Repeat for other months
+  june: {
+    luxury: [],
+    premium: [],
+    economic: [],
+  },
+  july: {
+    luxury: [],
+    premium: [],
+    economic: [],
+  },
+  august: {
+    luxury: [],
+    premium: [],
+    economic: [],
+  },
+  september: {
+    luxury: [],
+    premium: [],
+    economic: [],
+  },
+  october: {
+    luxury: [],
+    premium: [],
+    economic: [],
+  },
+  november: {
+    luxury: [],
+    premium: [],
+    economic: [],
+  },
+  december: {
+    luxury: [],
+    premium: [],
+    economic: [],
+  },
+};

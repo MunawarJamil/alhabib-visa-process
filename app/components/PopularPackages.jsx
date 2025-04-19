@@ -9,6 +9,8 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
 import EnquiryComponent from "./VisaForm";
+import { FaLocationPinLock } from "react-icons/fa6";
+import { LuPackageOpen } from "react-icons/lu";
 
 // Package data structure with months and categories
 import { packageData } from "../data/popularPackage";
@@ -21,7 +23,7 @@ const PopularPackages = () => {
   const [enquiryStatus, setEnquiryStatus] = useState(false); // State to track inquiry status
   const [selectedMonth, setSelectedMonth] = useState("april");
   const [selectedCategory, setSelectedCategory] = useState("account");
-   
+
   // Map between tab values and category keys
   const categoryMap = {
     account: "luxury",
@@ -48,81 +50,96 @@ const PopularPackages = () => {
     "december",
   ];
 
-  // Package card component to reduce repetition
+  // New Package Card component with updated design
   const PackageCard = ({ pkg }) => (
-    <div
-      className="flex my-6  lg:h-96 w-full overflow-hidden rounded-xl "
-      style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
-    >
-      <div className="relative  ml-4 w-2/5  ">
-        <img
-          src={pkg.image}
-          className="h-full w-full  object-cover"
-          alt={pkg.title}
-        />
+    <div className="pb-10 bg-white rounded-xl shadow-2xl border mx-3  w-[360px] h-full">
+      <div className="flex justify-center mt-1">
+        <img src={pkg.image} alt="card-img" className="w-full p-4" />
       </div>
 
-      <div className="w-3/5 p-3  ">
-        <div className="mb-2 inline-block md:my-3 rounded border border-primary-color px-2 py-1">
-          <h1 className="text-sm  md:text-lg text-nowrap  font-semibold text-primary-color">
+      <div>
+        <div className="flex">
+          <div className="w-10 h-10 ml-2 bg-gradient-to-r from-[#f4f4f4] to-[#bdb59f] opacity-25 rounded-full"></div>
+          <h1 className=" text-xl md:text-2xl  flex items-center font-bold text-[#00454A]">
             {pkg.title}
           </h1>
         </div>
+        <div className="my-3 w-56 mx-auto bg-yellow-500 h-0.5"></div>
+      </div>
 
-        <p className="mb-1 text-xs lg:text-sm md:my-2">
-          <span className="text-sm font-medium text-[#D4A10F] md:text-lg">
-            Makkah:{" "}
+      <div className="flex items-center ml-4 gap-3 px-4 my-5">
+        <FaLocationPinLock className="text-[#00454A]" />
+        <div>
+          <span className="text-yellow-600">Makkah :</span>{" "}
+          <span className="text-[#00454A] font-semibold text-sm">
+            {pkg.makkah} ({pkg.makkahNights})
           </span>
-          Hilton Makkah <br /> (3Nights)
-        </p>
-        <p className="border-b  md:my-3 text-xs md:text-sm">
-          <span
-            className="text-sm font-medium
-           text-[#D4A10F] md:text-lg "
-          >
-            Madinah:{" "}
+          <br />
+          <span className="text-yellow-600">Madina :</span>{" "}
+          <span className="text-[#00454A] font-semibold text-sm">
+            {pkg.madinah} ({pkg.madinahNights})
           </span>
-          Pullman Zam Zam <br /> (4Nights)
-        </p>
+        </div>
+      </div>
 
-        <p className="mt-2 text-sm md:my-3 font-medium text-[#D4A10F] md:text-lg">
-          Package Includes:
-        </p>
-        <p className="text-xs md:text-sm pb-1">
-          Flight | Visa | Transport | Accomodation
-        </p>
+      <div className="flex gap-2 items-center justify-end mr-6">
+        <div className="bg-yellow-200 opacity-90 rounded-lg text-white flex gap-2 items-center px-2 py-1">
+          <LuPackageOpen className="text-[#00454A]" />
+          <p className="text-[#00454A]">All inclusive packages</p>
+        </div>
+      </div>
 
+      <div className="flex justify-between my-2">
+        <div className="pl-4 ml-4">
+          <h1 className="bg-gray-100 w-36 font-semibold text-center mt-1 text-nowrap rounded-4xl shadow-2xl text-primary-color px-1">
+            Package Includes:
+          </h1>
+          <p className="pl-2 mt-1 text-sm text-primary-color">
+            {pkg.includes.join(" l ")}
+          </p>
+        </div>
+        <div className="w-10 h-10 ml-2 bg-gradient-to-l from-[#96d1d5] to-[#1cd5e2] opacity-25 rounded-full"></div>
+      </div>
+
+      <div className="flex gap-3 mt-5 justify-center items-center">
         <button
           onClick={handleFormSubmit}
-          className=" w-full bg-[#D4A10F] pt-2 py-2 text-center md:mt-7 lg:text-lg   font-semibold text-white"
+          className="bg-[#D4A10F] py-2 px-6 flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105"
         >
-          {enquiryStatus ? "$456" : "View price"}
+          {enquiryStatus ? "$456" : "View Price"}
+        </button>
+
+        <button className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105">
+          Talk to Agent
         </button>
       </div>
     </div>
   );
+
   const [showPopup, setShowPopup] = useState(false); // State to control the popup visibility
+
   const handleFormSubmit = () => {
-    setShowPopup(!showPopup); // Close the popup after form submission
+    setShowPopup(!showPopup); // Toggle the popup visibility
   };
+
   return (
     <>
       <div
-        className="bg-white flex   w-full shadow-2xl "
+        className="bg-white flex w-full shadow-2xl"
         style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
       >
         <div
-          className="w-full  lg:border-t border-l border-r border-b-0  md:max-w-[85rem] lg:py-10
-        my-10    h-auto md:px-7 md:mx-auto"
+          className="w-full lg:border rounded-2xl  md:max-w-[85rem] lg:py-2
+        my-5 h-auto md:px-7 md:mx-auto"
         >
           {/* Top area */}
-          <div className="flex   justify-between items-center px-4 text-primary-color md:pt-10">
+          <div className="flex justify-between items-center px-4 text-primary-color md:pt-10">
             <h1 className="text-xl md:text-4xl font-bold">
               Popular <span className="text-yellow-600">Packages</span>
             </h1>
             <div className="">
               <Select value={selectedMonth} onValueChange={setSelectedMonth}>
-                <SelectTrigger className="w-[160px] rounded-none md:border-primary-color ">
+                <SelectTrigger className="w-[160px] rounded-none md:border-primary-color">
                   <SelectValue placeholder="Preferred Month" />
                 </SelectTrigger>
                 <SelectContent>
@@ -137,7 +154,7 @@ const PopularPackages = () => {
           </div>
 
           {/* Below content */}
-          <div className="mt-5 px-3 ">
+          <div className="mt-5 px-3">
             <Tabs
               defaultValue="account"
               value={selectedCategory}
@@ -161,7 +178,6 @@ const PopularPackages = () => {
                       checked={selectedCategory === tab.value}
                       onChange={() => setSelectedCategory(tab.value)}
                     />
-
                     {tab.label}
                   </TabsTrigger>
                 ))}
@@ -169,15 +185,9 @@ const PopularPackages = () => {
 
               {Object.keys(categoryMap).map((category) => (
                 <TabsContent key={category} value={category}>
-                  <div
-                    className="flex 
-                 flex-col lg:gap-6 lg:flex-row lg:flex-wrap"
-                  >
+                  <div className="w-full px-4   flex  flex-wrap lg:flex-row gap-10     max-w-7xl mx-auto p-5 justify-center items-center">
                     {getCurrentPackages().map((pkg, index) => (
-                      <div
-                        key={index} // Apply key here
-                        className="lg:w-[48%] lg:h-80 xl:w-[32%]"
-                      >
+                      <div key={pkg.id || index} className="h-full">
                         <PackageCard pkg={pkg} />
                       </div>
                     ))}
@@ -189,7 +199,7 @@ const PopularPackages = () => {
         </div>
       </div>
 
-      {/*   render the InquiryForm as a popup */}
+      {/* Render the InquiryForm as a popup */}
       {showPopup && (
         <div className="fixed inset-0 bg-opacity-50 flex items-center popup-container justify-center z-50">
           <EnquiryComponent closePopup={handleFormSubmit} />
