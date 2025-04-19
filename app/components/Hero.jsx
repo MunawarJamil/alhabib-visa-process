@@ -125,11 +125,11 @@ export default function Hero() {
       >
      
      <div className="z-10  px-5 text-center pt-10">
-          <h1 className="text-3xl font-[Coolvetica] font-semibold leading-snug mb-2">
+          <h1 className="text-3xl font-[Poppins] font-semibold leading-snug mb-2">
             All Inclusive Umrah <br />
              <span className="">Package with Guided Tour.</span>
           </h1>
-          <p className="mt-7 font-sans text-lg leading-relaxed">
+          <p className="mt-7   text-lg font-[Coolvetica] leading-relaxed">
             All packages include flights, visa processing, accommodation near
             Haram, ground transport, and a guided tour. Meals are optional.
           </p>
@@ -148,7 +148,7 @@ export default function Hero() {
                                transition 
                               duration-initial 
                               ease-in-out
-                               
+                               font-[Poppins]
                                 
                                "
             >

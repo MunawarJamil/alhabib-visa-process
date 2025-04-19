@@ -14,10 +14,10 @@ export default function Navbar() {
     <>
       {/* phone no  */}
       <div
-        className="flex z-50 py-3 
+        className="flex z-50 pb-4 pt-5 md:py-4 
       shadow-lg
       
-      fixed top-0 bg-white flex-col justify-center w-full items-center text-center"
+      fixed top-0 bg-white flex-col justify-center w-full  items-center text-center"
       >
         <div className="flex flex-col items-center relative">
           <div
@@ -31,29 +31,35 @@ export default function Navbar() {
           </div>
 
           {showOptions && (
-            <div className="absolute top-14 mt-2 bg-white shadow-lg border rounded-lg w-full md:w-48 z-50 p-2 space-y-2  ">
+            <div className="absolute top-14 mt-2 bg-white shadow-lg
+             border rounded-lg px-4 lg:ml-3 md:w-72 z-50 p-2 space-y-2  ">
               {/* Cross Button */}
               <button
                 onClick={() => setShowOptions(false)}
-                className="absolute top-1 right-4 font-bold  text-gray-500 hover:text-black text-xl"
+                className="absolute top-1 right-4 font-bold 
+                 text-gray-500 hover:text-black text-xl"
               >
                 &times;
               </button>
 
               <a
                 href={`tel:${phoneNumber}`}
-                className="flex items-center gap-2 text-black hover:text-primary-color"
+                className="flex items-center gap-2
+                lg:hidden
+                  text-black hover:text-primary-color"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4  h-4" />
                 Call via SIM
               </a>
               <a
                 href={`https://wa.me/${phoneNumber.replace(/^0/, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-green-600 hover:text-green-800"
+                className="flex items-center gap-2 text-green-600 hover:text-green-800 
+                text-nowrap lg:py-5
+                lg:text-lg font-semibold"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-4  h-4 lg:w-5 lg:h-5 " />
                 Message on WhatsApp
               </a>
             </div>
@@ -66,8 +72,8 @@ export default function Navbar() {
       </div>
 
       {/* navbar */}
-      <div className="w-full bg-white top-0  sticky z-50">
-        <div className="flex lg:hidden h-20  top-0 z-50  bg-white px-6  w-full  justify-between   items-center    ">
+      <div className="w-full bg-white top-0    z-50">
+        <div className="flex lg:hidden h-20 sticky top-0 z-50  bg-white px-6  w-full  justify-between   items-center    ">
           <div className="left flex  items-center   w-6 h-3 mt-2   ">
             <button
               className="  py-2 text-sm  border border-yellow-600 shadow-2xl rounded-md   items-center flex gap-2 text-primary-color 

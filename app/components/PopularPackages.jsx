@@ -186,8 +186,8 @@ const PopularPackages = () => {
               {Object.keys(categoryMap).map((category) => (
                 <TabsContent key={category} value={category}>
                   <div
-                    className="w-full px-4   flex  flex-wrap lg:flex-row gap-3  
-                     max-w-7xl mx-auto p-5 justify-center items-center"
+                    className="w-full px-4   flex    flex-wrap lg:flex-row gap-3  
+                     max-w-7xl mx-auto p-5  justify-center  items-center"
                   >
                     {getCurrentPackages().map((pkg, index) => (
                       <div key={pkg.id || index} className="h-full">
