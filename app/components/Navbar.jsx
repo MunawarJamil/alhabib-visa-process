@@ -107,7 +107,7 @@ export default function Navbar() {
           <div className="left flex  items-center  gap-20 w-6 h-3   ">
             <button
               className="bg-[#D4A10F] py-3 items-center flex gap-2 text-white 
-             px-12 rounded-xl text-xl font-bold animate-pulse "
+             px-8 rounded-xl text-xl font-bold animate-pulse "
             >
               <span>
                 <PhoneCall />

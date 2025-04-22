@@ -1,9 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function Accommodation() {
   // Data for hotels
@@ -11,8 +10,8 @@ function Accommodation() {
     makkah: {
       5: [
         {
-          name: "Swissotel Makkah",
-          src: "/alhabibImages/MakkahHotels/5STAR/swiss.jpeg",
+          name: "Anjum Makkah",
+          src: "/alhabibImages/MakkahHotels/5STAR/Anjum Makkah.jpg",
         },
         {
           name: "Pullman ZamZam",
@@ -23,8 +22,11 @@ function Accommodation() {
           src: "/alhabibImages/MakkahHotels/5STAR/Jabal Omar Hyatt.jpg",
         },
         {
-          name: "Anjum Makkah",
-          src: "/alhabibImages/MakkahHotels/5STAR/Anjum Makkah.jpg",
+         
+
+
+          name: "Swissotel Makkah",
+          src: "/alhabibImages/MakkahHotels/5STAR/swiss.jpeg",
         },
       ],
       4: [
@@ -126,30 +128,65 @@ function Accommodation() {
   const [city, setCity] = useState("makkah");
   const [star, setStar] = useState("5");
   const [filteredHotels, setFilteredHotels] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const sliderRef = useRef(null);
 
   // Update filtered hotels when city or star changes
   useEffect(() => {
     if (hotelData[city] && hotelData[city][star]) {
       setFilteredHotels(hotelData[city][star]);
+      setActiveIndex(0);
+      if (sliderRef.current) {
+        sliderRef.current.scrollTo({ left: 0, behavior: "smooth" });
+      }
     } else {
       setFilteredHotels([]);
     }
   }, [city, star]);
 
+  // Scroll handling function
+  const scrollToIndex = (index) => {
+    const itemsLength = filteredHotels.length;
+    if (index < 0) index = itemsLength - 1;
+    if (index >= itemsLength) index = 0;
+
+    setActiveIndex(index);
+    const scrollAmount = index * 320;
+    sliderRef.current?.scrollTo({ left: scrollAmount, behavior: "smooth" });
+  };
+
+  // Handle scroll event to update active index
+  const handleScroll = () => {
+    const scrollLeft = sliderRef.current?.scrollLeft ?? 0;
+    const newIndex = Math.round(scrollLeft / 320);
+    setActiveIndex(newIndex);
+  };
+
+  // Add scroll event listener
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    slider.addEventListener("scroll", handleScroll);
+    return () => slider.removeEventListener("scroll", handleScroll);
+  }, [filteredHotels]);
+
   return (
     <>
-      <div className="  bg-white py-5 lg:py-20 lg:block scrollbar-hide md:text-center ">
-        <div className="border border-gray-200 rounded-lg shadow-lg p-8 max-w-7xl mx-auto">
+      <div className="bg-white pb-5 
+      px-1 lg:py-5 lg:block scrollbar-hide md:text-center">
+        <div className="border md:border-0 border-gray-200 rounded-lg shadow-lg md:shadow-none
+         py-8 px-6 max-w-7xl mx-auto">
           {/* Heading */}
-          <h2 className=" text-3xl md:text-4xl  lg:text-5xl font-semibold text-[#003C2F]">
+          <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-[#003C2F]">
             Accommodation
           </h2>
-          <p className="text-yellow-600 text-lg  animate-bounce opacity-70 md:text-lg mt-2 mb-6">
+          <p className="text-yellow-600 text-lg animate-bounce opacity-70 md:text-lg mt-2 mb-6">
             Stay Near the Haram
           </p>
 
           {/* Tabs */}
-          <div className="flex  flex-col  md:flex-row lg:items-center max-w-5xl mx-auto mb-8  gap-2  md:gap-4">
+          <div className="flex flex-col md:flex-row lg:items-center max-w-5xl mx-auto mb-8 gap-2 md:gap-4">
             {/* City Tabs */}
             <Tabs defaultValue="makkah" onValueChange={(val) => setCity(val)}>
               <TabsList className="rounded-none lg:ml- border border-primary-color shadow-sm text-yellow-600">
@@ -183,7 +220,7 @@ function Accommodation() {
                     type="radio"
                     checked={star === "5"}
                     readOnly
-                    className="form-radio  accent-primary-color text-yellow-600"
+                    className="form-radio accent-primary-color text-yellow-600"
                   />
                   5 Star
                 </TabsTrigger>
@@ -212,29 +249,63 @@ function Accommodation() {
           </div>
 
           {/* Images / Hotels */}
-          <div className="w-full overflow-x-auto scrollbar-hide">
-            <div className="flex justify-center gap-3 lg:gap-8 min-w-max">
-              {filteredHotels.map((hotel, index) => (
-                <div
+          <div
+            ref={sliderRef}
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-4"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
+            {filteredHotels.map((hotel, index) => (
+    <div
+      key={index}
+      className="flex-none snap-start mr-6 transition-all duration-300 transform"
+    >
+      <div className="rounded-xl shadow-lg p-4 h-full flex border-2 w-[19.8rem]  flex-col">
+        <Image
+          src={hotel.src}
+          alt={hotel.name}
+          width={240}
+          height={240}
+          className="rounded-lg h-48 w-full object-cover mb-4"
+        />
+        <p className="text-primary-color text-center text-lg  lg:text-lg">{hotel.name}</p>
+      </div>
+    </div>
+            ))}
+          </div>
+
+          {/* Controls */}
+          <div className="flex justify-center items-center mt-6 gap-6">
+            <button
+              onClick={() => scrollToIndex(activeIndex - 1)}
+              className="p-2 bg-white rounded-full shadow text-gray-700 hover:text-yellow-500"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <div className="flex gap-2">
+              {filteredHotels.map((_, index) => (
+                <button
                   key={index}
-                  className="text-center   border
-              border-yellow-600 p-1 py-3 lg:p-3 rounded-4xl"
-                >
-                  <Image
-                    src={hotel.src}
-                    alt={hotel.name}
-                    width={240}
-                    height={240}
-                    className="rounded-4xl w-52 h-60 object-cover px-2 mx-auto mb-2"
-                  />
-                  <p className="text-yellow-600 lg:text-lg">{hotel.name}</p>
-                </div>
+                  onClick={() => scrollToIndex(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === activeIndex
+                      ? "w-8 bg-gradient-to-r from-teal-400 to-primary-color"
+                      : "w-2 bg-gray-300 hover:bg-gray-400"
+                  }`}
+                />
               ))}
             </div>
+
+            <button
+              onClick={() => scrollToIndex(activeIndex + 1)}
+              className="p-2 bg-white rounded-full shadow text-gray-700 hover:text-yellow-500"
+            >
+              <ChevronRight size={20} />
+            </button>
           </div>
-          {/* <p className="md:hidden mt-3 text-center text-yellow-600">
-            ← More available — keep swiping →
-          </p> */}
         </div>
       </div>
     </>

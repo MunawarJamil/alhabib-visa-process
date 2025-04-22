@@ -32,12 +32,14 @@ export default function BookingProcess() {
 
   return (
 
-    <div className="bg-white w-full">
-    <div className="bg-white py-8 lg:py-16 px-6  my-1 max-w-7xl mx-auto">
+    <div className="bg-white px-1 mt-5 w-full">
+    <div className="bg-white py-8 md:py-5 
+    px-6 border md:border-none rounded-xl shadow-2xl md:shadow-none  my-1 max-w-7xl mx-auto">
       {/* Booking Process Section */}
-      <h2 className="text-center text-3xl font-bold text-teal-900">
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-teal-900">
         Our <span className="text-yellow-500">Booking</span> Process
       </h2>
+      <div className="mt-3 h-0.5 md:w-80 md:mx-auto bg-yellow-500"></div>
 
       {/* Desktop View - Same as before */}
       <div className="hidden md:grid grid-cols-3 gap-20 text-center mt-10 relative">
@@ -191,7 +193,7 @@ export default function BookingProcess() {
         ))}
       </div>
     </div>
-
+<div className="hidden md:block w-full h-0.5 bg-gray-100"></div>
     </div>
   );
 }

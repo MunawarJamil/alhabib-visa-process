@@ -111,7 +111,7 @@ export default function TravelDetails() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-5 lg:py-16">
+    <div className="bg-gradient-to-b border rounded-2xl md:border-none md:shadow-none mb-10 shadow-sm mx-1 from-white to-gray-50 py-5 lg:py-16">
       <div className="w-full max-w-7xl px-4 mx-auto">
         {/* Heading with animation */}
         <motion.div

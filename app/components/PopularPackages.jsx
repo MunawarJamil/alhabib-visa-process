@@ -21,7 +21,7 @@ const PopularPackages = () => {
     setEnquiryStatus(status);
   }, []);
   const [enquiryStatus, setEnquiryStatus] = useState(false); // State to track inquiry status
-  const [selectedMonth, setSelectedMonth] = useState("april");
+  const [selectedMonth, setSelectedMonth] = useState("july");
   const [selectedCategory, setSelectedCategory] = useState("account");
 
   // Map between tab values and category keys
@@ -39,20 +39,20 @@ const PopularPackages = () => {
 
   // Available months for selection
   const months = [
-    "april",
-    "may",
-    "june",
+    
     "july",
     "august",
     "september",
     "october",
     "november",
     "december",
+    "january",
+    "Ramadan"
   ];
 
   // New Package Card component with updated design
   const PackageCard = ({ pkg }) => (
-    <div className="pb-10 bg-white rounded-xl shadow-2xl border mx-3  w-[360px] md:w-[380px] h-full">
+    <div className="pb-10 bg-white rounded-xl shadow-2xl    mx-3  w-[360px] md:w-[380px] h-full">
       <div className="flex justify-center mt-1">
         <img src={pkg.image} alt="card-img" className="w-full  p-4" />
       </div>
@@ -129,7 +129,7 @@ const PopularPackages = () => {
         style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
       >
         <div
-          className="w-full lg:border rounded-2xl  md:max-w-[85rem] lg:py-2
+          className="w-full lg:border lg:border-b-0 rounded-2xl  md:max-w-[85rem] lg:py-2
         my-10 h-auto md:px-7 md:mx-auto"
         >
           {/* Top area */}

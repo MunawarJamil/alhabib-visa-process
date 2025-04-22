@@ -62,7 +62,7 @@ const CustomAccordion = ({ item, index, activeIndex, setActiveIndex }) => {
 
   return (
     <motion.div
-      className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md"
+      className="border  border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1, duration: 0.4 }}
@@ -130,7 +130,7 @@ function Faqs() {
   const phoneNumber = "923470063865"; // No spaces or '+' sign
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b my-10 border md:border-none md:shadow-none rounded-lg shadow-xl from-white to-gray-50 py-8 lg:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Main section title */}
         <motion.div

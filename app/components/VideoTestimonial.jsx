@@ -59,15 +59,18 @@ function VideoTestimonial() {
   }, []);
 
   return (
-    <div className="bg-white w-full">
+    <div className="bg-white w-full border 
+    rounded-lg md:border-none md:shadow-none shadow-lg mb-10">
       <div className="w-full lg:max-w-7xl mx-auto lg:text-center md:px-6 lg:px-8 py-8">
         <div className="w-[95%] md:w-[70%] mx-auto">
-          <div className="lg:text-center text-3xl px-4 font-bold text-nowrap">
+          <div className="text-center  text-3xl md:text-4xl px-4 font-bold text-nowrap">
             Watch <span className="text-[#D4A10F]"> Real Stories </span>!
           </div>
+          <div className="mt-3 h-0.5  w-[80%] mx-auto bg-yellow-500"></div>
+
         </div>
 
-        <div className="flex justify-center items-center w-[90%] md:w-[60%] lg:w-[45%] mx-auto gap-3 my-5 flex-col md:flex-row">
+        <div className="flex mt-7 justify-center items-center w-[90%] md:w-[60%] lg:w-[45%] mx-auto gap-3 my-5 flex-col md:flex-row">
           {videoData.map((item, index) => (
             <video
               key={index}

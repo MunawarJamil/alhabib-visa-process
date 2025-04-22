@@ -102,8 +102,12 @@ const ZiyaratSlider = () => {
   }, [selectedTab]);
 
   return (
-    <div className="bg-white py-10 border lg:max-w-7xl mx-auto   rounded-2xl   mt-4 ">
-      <p className="text-3xl text-center font-semibold pb-4">What <span className="text-yellow-600 ">Zyarats We</span> <br />  Provide</p>
+  <div className="bg-white shadow-2xl md:shadow-none  
+     py-10 border md:border-none lg:max-w-7xl
+      mx-auto px-1  rounded-2xl   mt-4 ">
+      <p className="text-2xl  lg:text-4xl text-center font-bold pb-4"> <span className="text-primary-color text-wrap">What</span> <span className="text-yellow-600 ">Zyarats We</span>   <span className="text-primary-color">     Provide</span> </p>
+      <div className="mb-6  h-0.5 w-56 md:w-80 mx-auto bg-yellow-500"></div>
+
       <div className="max-w-6xl mx-auto px-4">
         {/* Tabs */}
         <div className="flex justify-center mb-6 gap-6">

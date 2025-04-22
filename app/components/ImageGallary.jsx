@@ -56,12 +56,12 @@ export default function ImageGallery() {
   };
 
   return (
-    <div className="text-center max-w-7xl mx-auto border px-2 lg:px-10 pb-10 lg:pb-10 rounded-xl shadow-lg  ">
+    <div className="text-center max-w-7xl mx-auto border px-2 lg:px-10 py-3 pb-10   rounded-xl shadow-lg  ">
       {/* Gallery Header with animation */}
       <div className="relative overflow-hidden  py-4">
-        <h2 className="font-semibold text-3xl md:text-4xl  mb-3 inline-block relative">
+        <h2 className="font-bold text-3xl md:text-4xl  mb-3 inline-block relative">
           <span className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-            Image
+             Image
           </span>{" "}
           <span className="text-yellow-600 animate-fade-in opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
             Gallery
