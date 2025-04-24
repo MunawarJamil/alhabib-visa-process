@@ -173,80 +173,65 @@ function Accommodation() {
 
   return (
     <>
+    
+<div className="  h-0.5 w-full bg-gray-100 mb-2 lg:mt-10"></div>
       <div className="bg-white pb-5 
-      px-1 lg:py-5 lg:block scrollbar-hide md:text-center">
+      px-2 lg:py-5 lg:block scrollbar-hide md:text-center">
         <div className="border md:border-0 border-gray-200 rounded-lg shadow-lg md:shadow-none
          py-8 px-6 max-w-7xl mx-auto">
           {/* Heading */}
-          <h2 className="text-4xl md:text-4xl lg:text-5xl font-semibold text-[#003C2F]">
+          <h2 className="text-4xl text-center md:text-4xl lg:text-5xl font-semibold text-[#003C2F]">
             Accommodation
           </h2>
-          <p className="text-yellow-600 text-lg animate-bounce opacity-70 md:text-lg mt-2 mb-6">
+          <p className="text-yellow-600 text-center text-lg animate-bounce opacity-70 md:text-lg mt-2 mb-6">
             Stay Near the Haram
           </p>
 
           {/* Tabs */}
-          <div className="flex flex-col md:flex-row lg:items-center max-w-5xl mx-auto mb-8 gap-2 md:gap-4">
-            {/* City Tabs */}
-            <Tabs defaultValue="makkah" onValueChange={(val) => setCity(val)}>
-              <TabsList className="rounded-none lg:ml- border border-primary-color shadow-sm text-yellow-600">
-                <TabsTrigger value="makkah" className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    checked={city === "makkah"}
-                    readOnly
-                    className="form-radio accent-primary-color text-yellow-600"
-                  />
-                  Makkah
-                </TabsTrigger>
+          <div className="flex items-center gap-2 justify-center max-w-5xl mx-auto mb-8  ">
+  {/* City Tabs */}
+  <Tabs defaultValue="makkah" onValueChange={(val) => setCity(val)}>
+    <TabsList className="bg-[#b98a2f] text-white rounded-sm p-1 flex">
+      <TabsTrigger
+        value="makkah"
+        className={`px-2 py-1 rounded-sm text-xs font-medium data-[state=active]:bg-white data-[state=active]:text-[#b98a2f]`}
+      >
+        Makkah
+      </TabsTrigger>
+      <TabsTrigger
+        value="madina"
+        className={`px-2 py-1 rounded-sm text-xs font-medium data-[state=active]:bg-white data-[state=active]:text-[#b98a2f]`}
+      >
+        Madinah
+      </TabsTrigger>
+    </TabsList>
+  </Tabs>
 
-                <TabsTrigger value="madina" className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    checked={city === "madina"}
-                    readOnly
-                    className="form-radio accent-primary-color text-yellow-600"
-                  />
-                  Madina
-                </TabsTrigger>
-              </TabsList>
-            </Tabs>
+  {/* Star Tabs */}
+  <Tabs defaultValue="5" onValueChange={(val) => setStar(val)}>
+    <TabsList className="bg-[#b98a2f] text-white rounded-sm p-1 flex">
+      <TabsTrigger
+        value="5"
+        className={`px-2 py-1 rounded-sm text-xs font-medium data-[state=active]:bg-white data-[state=active]:text-[#b98a2f]`}
+      >
+        5 Star
+      </TabsTrigger>
+      <TabsTrigger
+        value="4"
+        className={`px-2 py-1 rounded-sm text-xs font-medium data-[state=active]:bg-white data-[state=active]:text-[#b98a2f]`}
+      >
+        4 Star
+      </TabsTrigger>
+      <TabsTrigger
+        value="3"
+        className={`px-2 py-1 rounded-sm text-xs font-medium data-[state=active]:bg-white data-[state=active]:text-[#b98a2f]`}
+      >
+        3 Star
+      </TabsTrigger>
+    </TabsList>
+  </Tabs>
+</div>
 
-            {/* Star Tabs */}
-            <Tabs defaultValue="5" onValueChange={(val) => setStar(val)}>
-              <TabsList className="rounded-none border border-primary-color shadow-sm text-yellow-600">
-                <TabsTrigger value="5" className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    checked={star === "5"}
-                    readOnly
-                    className="form-radio accent-primary-color text-yellow-600"
-                  />
-                  5 Star
-                </TabsTrigger>
-
-                <TabsTrigger value="4" className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    checked={star === "4"}
-                    readOnly
-                    className="form-radio accent-primary-color text-yellow-600"
-                  />
-                  4 Star
-                </TabsTrigger>
-
-                <TabsTrigger value="3" className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    checked={star === "3"}
-                    readOnly
-                    className="form-radio accent-primary-color text-yellow-600"
-                  />
-                  3 Star
-                </TabsTrigger>
-              </TabsList>
-            </Tabs>
-          </div>
 
           {/* Images / Hotels */}
           <div
@@ -308,6 +293,9 @@ function Accommodation() {
           </div>
         </div>
       </div>
+
+<div className="h-0.5 w-full bg-gray-100"></div>
+
     </>
   );
 }

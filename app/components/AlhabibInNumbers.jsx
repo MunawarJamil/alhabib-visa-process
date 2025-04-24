@@ -217,6 +217,9 @@ const AlhabibInNumbers = () => {
           </motion.div>
         </div>
       </section>
+
+      
+<div className="h-0.5 w-full bg-gray-100"></div>
     </>
   );
 };

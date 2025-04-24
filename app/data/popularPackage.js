@@ -15,7 +15,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "07 Nights Luxury Umrah Package",
+        title: "07 Nights   Umrah Package",
         makkah: "Conrad Makkah",
         makkahNights: "4N",
         madinah: "Millennium Taiba",
@@ -26,7 +26,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights Luxury Umrah Package",
+        title: "14 Nights   Umrah Package",
         makkah: "Hilton Convention",
         makkahNights: "7N",
         madinah: "Oberoi Madinah",
@@ -39,7 +39,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 4 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Grand Makkah",
         makkahNights: "4N",
         madinah: "Bada Al Madinah",
@@ -50,7 +50,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 4 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Al Enna Makkah",
         makkahNights: "5N",
         madinah: "Elmar Elite Makkah",
@@ -61,7 +61,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 4 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Pullman ZamZam",
         makkahNights: "7N",
         madinah: "Golden Tulip Al Madinah",
@@ -74,7 +74,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 3 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Al Khoai",
         makkahNights: "4N",
         madinah: "Elmar Elite Makkah",
@@ -85,7 +85,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 3 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Elmar Al Manaf",
         makkahNights: "5N",
         madinah: "Elmar Elite Makkah",
@@ -96,7 +96,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 3 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "La Meridian Tower",
         makkahNights: "7N",
         madinah: "Grand Zowair Makkah",
@@ -122,7 +122,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "07 Nights Luxury Umrah Package",
+        title: "07 Nights   Umrah Package",
         makkah: "Hyatt Regency",
         makkahNights: "4N",
         madinah: "Millennium Taiba",
@@ -133,7 +133,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights Luxury Umrah Package",
+        title: "14 Nights   Umrah Package",
         makkah: "Conrad Makkah",
         makkahNights: "7N",
         madinah: "Oberoi Madinah",
@@ -146,7 +146,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 4 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Al Enna Makkah",
         makkahNights: "4N",
         madinah: "Elmar Elite Makkah",
@@ -157,7 +157,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 4 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Elaf Ajyad",
         makkahNights: "5N",
         madinah: "Al Enna Makkah",
@@ -168,7 +168,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 4 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Royal Dayar Al Madinah",
         makkahNights: "7N",
         madinah: "Al Madinah",
@@ -181,7 +181,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 3 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Al Manaf",
         makkahNights: "4N",
         madinah: "Grand Zowair Makkah",
@@ -192,7 +192,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 3 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Zwar Al Asalatum",
         makkahNights: "5N",
         madinah: "Elmar Taiban",
@@ -203,7 +203,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 3 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Elmar Elite Makkah",
         makkahNights: "7N",
         madinah: "Grand Plaza Al Madinah",
@@ -229,7 +229,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "07 Nights Luxury Umrah Package",
+        title: "07 Nights   Umrah Package",
         makkah: "Fairmont Makkah",
         makkahNights: "4N",
         madinah: "Millennium Taiba",
@@ -240,7 +240,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights Luxury Umrah Package",
+        title: "14 Nights   Umrah Package",
         makkah: "Conrad Makkah",
         makkahNights: "7N",
         madinah: "Oberoi Madinah",
@@ -253,7 +253,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 4 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Burj Ayad",
         makkahNights: "4N",
         madinah: "Golden Tulip Al Madinah",
@@ -264,7 +264,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 4 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "DoubleTree Hilton",
         makkahNights: "5N",
         madinah: "Golden Tulip Al Shuhadaa",
@@ -275,7 +275,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 4 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Burj Ayad",
         makkahNights: "7N",
         madinah: "Rua Al Hijra",
@@ -288,7 +288,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 3 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Al Asalatum",
         makkahNights: "4N",
         madinah: "Elmar Al Qibla",
@@ -299,7 +299,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 3 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Al Enna Makkah",
         makkahNights: "5N",
         madinah: "Diyar Al Madinah",
@@ -310,7 +310,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 3 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Al Enna Asalatum",
         makkahNights: "7N",
         madinah: "Royal Diyar Al Madinah",
@@ -336,7 +336,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "07 Nights Luxury Umrah Package",
+        title: "07 Nights   Umrah Package",
         makkah: "Hilton Convention",
         makkahNights: "4N",
         madinah: "Millennium Taiba",
@@ -347,7 +347,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights Luxury Umrah Package",
+        title: "14 Nights   Umrah Package",
         makkah: "Conrad Makkah",
         makkahNights: "7N",
         madinah: "Oberoi Madinah",
@@ -360,7 +360,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 4 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "DoubleTree Hilton",
         makkahNights: "4N",
         madinah: "Golden Tulip Al Shuhadaa",
@@ -371,7 +371,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 4 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Balibul Ayiad Hotel",
         makkahNights: "5N",
         madinah: "Rua Al Hijra",
@@ -382,7 +382,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 4 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Al Enna Makkah",
         makkahNights: "7N",
         madinah: "Al Madinah Reserve",
@@ -395,7 +395,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 3 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Al Khoai",
         makkahNights: "4N",
         madinah: "Grand Plaza Al Madinah",
@@ -406,7 +406,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 3 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Al Massa Barari",
         makkahNights: "5N",
         madinah: "Diyar Golden",
@@ -417,7 +417,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 3 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Al Khalas Towers",
         makkahNights: "7N",
         madinah: "Elmar Taiban",
@@ -443,7 +443,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "07 Nights Luxury Umrah Package",
+        title: "07 Nights   Umrah Package",
         makkah: "Fairmont Makkah",
         makkahNights: "4N",
         madinah: "Millennium Taiba",
@@ -454,7 +454,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights Luxury Umrah Package",
+        title: "14 Nights   Umrah Package",
         makkah: "Conrad Makkah",
         makkahNights: "7N",
         madinah: "Oberoi Madinah",
@@ -467,7 +467,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 4 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Burj Ayad Hotel",
         makkahNights: "4N",
         madinah: "Rua Al Hijra",
@@ -478,7 +478,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 4 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Elmar Grand Makkah",
         makkahNights: "5N",
         madinah: "Al Madinah Reserve",
@@ -489,7 +489,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 4 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "DoubleTree Hilton",
         makkahNights: "7N",
         madinah: "Bada Al Madinah",
@@ -502,7 +502,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 3 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Al Massa Barari",
         makkahNights: "4N",
         madinah: "Elmar Elite Makkah",
@@ -513,7 +513,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 3 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Elmar Elite Makkah",
         makkahNights: "5N",
         madinah: "Zaina Al Madinah",
@@ -524,7 +524,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 3 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Elmar Al Asalatum",
         makkahNights: "7N",
         madinah: "Grand Zowair Makkah",
@@ -550,7 +550,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "07 Nights Luxury Umrah Package",
+        title: "07 Nights   Umrah Package",
         makkah: "Conrad Makkah",
         makkahNights: "4N",
         madinah: "Millennium Taiba",
@@ -561,7 +561,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights Luxury Umrah Package",
+        title: "14 Nights   Umrah Package",
         makkah: "Fairmont Makkah",
         makkahNights: "7N",
         madinah: "Oberoi Madinah",
@@ -574,7 +574,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 4 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Grand Makkah",
         makkahNights: "4N",
         madinah: "Al Madinah Reserve",
@@ -585,7 +585,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 4 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Al Enna Makkah",
         makkahNights: "5N",
         madinah: "Bada Al Madinah",
@@ -596,7 +596,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 4 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Elmar Ayad Hotel",
         makkahNights: "7N",
         madinah: "Royal Dar Al Madinah",
@@ -609,7 +609,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 3 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Elite Makkah",
         makkahNights: "4N",
         madinah: "Zaina Al Madinah",
@@ -620,7 +620,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 3 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Elmar Taiban Makkah",
         makkahNights: "5N",
         madinah: "Elmar Taiban",
@@ -631,7 +631,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 3 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Diyar Al Madinah",
         makkahNights: "7N",
         madinah: "Elmar Al Manaf",
@@ -657,7 +657,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "07 Nights Luxury Umrah Package",
+        title: "07 Nights   Umrah Package",
         makkah: "Conrad Makkah",
         makkahNights: "4N",
         madinah: "Millennium Taiba",
@@ -668,7 +668,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights Luxury Umrah Package",
+        title: "14 Nights   Umrah Package",
         makkah: "Fairmont Makkah",
         makkahNights: "7N",
         madinah: "Oberoi Madinah",
@@ -681,7 +681,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 4 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Al Enna Makkah",
         makkahNights: "4N",
         madinah: "Bada Al Madinah",
@@ -692,7 +692,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 4 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Balibul Ayiad Hotel",
         makkahNights: "5N",
         madinah: "Elmar Elite Makkah",
@@ -703,7 +703,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 4 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Elmar Grand Makkah",
         makkahNights: "7N",
         madinah: "Golden Tulip Al Shuhadaa",
@@ -716,7 +716,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 3 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Al Massa Barari",
         makkahNights: "4N",
         madinah: "Zaina Al Khoai",
@@ -727,7 +727,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 3 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Elmar Al Manaf",
         makkahNights: "5N",
         madinah: "Zaina Al Manaf",
@@ -738,7 +738,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 3 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Elmar Al Khoai",
         makkahNights: "7N",
         madinah: "Zaina Al Madinah",
@@ -766,7 +766,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 4 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Grand Makkah",
         makkahNights: "4N",
         madinah: "Elmar Elite Makkah",
@@ -777,7 +777,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 4 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "DoubleTree Hilton",
         makkahNights: "5N",
         madinah: "Rua Al Hijra",
@@ -788,7 +788,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 4 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Al Enna Makkah",
         makkahNights: "7N",
         madinah: "Al Madinah Reserve",
@@ -801,7 +801,7 @@ export const packageData = {
       {
         id: 1,
         image: "/images/papular/card-img.png",
-        title: "07 Nights 3 Star Umrah Package",
+        title: "07 Nights  Umrah Package",
         makkah: "Elmar Grand Makkah",
         makkahNights: "4N",
         madinah: "Grand Zowair Makkah",
@@ -812,7 +812,7 @@ export const packageData = {
       {
         id: 2,
         image: "/images/papular/card-img.png",
-        title: "10 Nights 3 Star Umrah Package",
+        title: "10 Nights  Umrah Package",
         makkah: "Elmar Taiban Makkah",
         makkahNights: "5N",
         madinah: "Elmar Taiban",
@@ -823,7 +823,7 @@ export const packageData = {
       {
         id: 3,
         image: "/images/papular/card-img.png",
-        title: "14 Nights 3 Star Umrah Package",
+        title: "14 Nights  Umrah Package",
         makkah: "Elmar Elite Makkah",
         makkahNights: "7N",
         madinah: "Zaina Al Madinah",
