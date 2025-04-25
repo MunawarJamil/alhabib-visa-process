@@ -81,15 +81,14 @@ const exclusionData = [
   },
   {
     title: "Travel Insurance",
-    desc:
-      "Travel insurance is not included in the package. You are advised to purchase a suitable policy for medical coverage, trip cancellations, and other unforeseen circumstances.",
-      icon: "🩺",
-    },
-    {
-      title: "PCR Test & Health Requirements",
-      desc:
-        "Any required PCR tests or other health-related formalities (such as vaccinations) are not covered in the package and must be arranged separately by the traveler.",
-      icon: "🩹",}
+    desc: "Travel insurance is not included in the package. You are advised to purchase a suitable policy for medical coverage, trip cancellations, and other unforeseen circumstances.",
+    icon: "🩺",
+  },
+  {
+    title: "PCR Test & Health Requirements",
+    desc: "Any required PCR tests or other health-related formalities (such as vaccinations) are not covered in the package and must be arranged separately by the traveler.",
+    icon: "🩹",
+  },
 ];
 
 export default function TravelDetails() {
@@ -111,8 +110,12 @@ export default function TravelDetails() {
   };
 
   return (
-    <div className="bg-gradient-to-b border rounded-2xl md:border-none md:shadow-none mb-10 shadow-sm mx-1 from-white to-gray-50 py-5 lg:py-16">
-      <div className="w-full max-w-7xl px-4 mx-auto">
+    <div className="bg-gradient-to-b border 
+     rounded-2xl md:border-none md:shadow-none my-10 shadow-sm mx-1 from-white to-gray-50 py-5 lg:py-16">
+      <div
+        className="w-full max-w-7xl px-4 mx-auto"
+        
+      >
         {/* Heading with animation */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

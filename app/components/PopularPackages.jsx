@@ -126,7 +126,10 @@ const PopularPackages = () => {
     <>
       <div
         className="bg-white flex w-full shadow-2xl"
-        style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
+        style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)"  ,  
+    } }
+
+     
       >
         <div
           className="w-full lg:border   rounded-2xl  md:max-w-[85rem] lg:py-2

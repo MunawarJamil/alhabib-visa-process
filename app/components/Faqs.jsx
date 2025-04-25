@@ -71,12 +71,12 @@ const CustomAccordion = ({ item, index, activeIndex, setActiveIndex }) => {
         onClick={toggleAccordion}
         className={`w-full text-left text-base font-medium py-5 px-6 text-[#0C3E3E]
              flex justify-between items-center hover:bg-gray-50 transition-colors duration-300 ${
-          isOpen ? "border-b-2  border-primary-color" : ""
-        }`}
+               isOpen ? "border-b-2  border-primary-color" : ""
+             }`}
         whileHover={{ backgroundColor: "#f9f9f9" }}
-        whileTap={{ scale: 0.99   }}
+        whileTap={{ scale: 0.99 }}
       >
-        <span  >{item.title}</span>
+        <span>{item.title}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -131,7 +131,13 @@ function Faqs() {
 
   return (
     <div className="bg-gradient-to-b my-10 border md:border-none md:shadow-none rounded-lg shadow-xl from-white to-gray-50 py-8 lg:py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div
+        className="max-w-7xl mx-auto"
+        style={{
+          backgroundImage: "var(--grid-bg)",
+          backgroundRepeat: "repeat",
+        }}
+      >
         {/* Main section title */}
         <motion.div
           className="text-center mb-12"

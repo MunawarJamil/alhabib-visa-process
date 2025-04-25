@@ -76,7 +76,10 @@ const ReviewSection = () => {
 
  
 
-  return ( <div className="bg-white py-4   "> 
+  return ( <div className="bg-white py-4   "    style={{
+    backgroundImage: "var(--grid-bg)",
+    backgroundRepeat: "repeat",
+  }}> 
     <div className="w-full   max-w-6xl mb-10 lg:mt-10 mx-auto px-4 relative">
       <div
         ref={sliderRef}

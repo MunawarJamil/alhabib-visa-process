@@ -127,6 +127,10 @@ function Partners() {
     <section
       className="w-full border md:border max-w-7xl mx-auto lg:py-14
      md:shadow-none rounded-lg shadow-xl py-10 md:py-5 px-4 flex flex-col items-center bg-white"
+      style={{
+        backgroundImage: "var(--grid-bg)",
+        backgroundRepeat: "repeat",
+      }}
     >
       <div className="text-4xl md:text-4xl font-bold text-emerald-900 mb-3">
         Our <span className="text-yellow-600">Partners</span>

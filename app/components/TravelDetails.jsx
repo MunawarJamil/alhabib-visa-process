@@ -43,8 +43,14 @@ export default function TravelDetails() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-5 mt-5 rounded-t-2xl lg:py-8">
-      <div className="w-full max-w-7xl px-4 mx-auto">
+    <div className="bg-gradient-to-b from-white to-gray-50 py-5 mt-5 rounded-t-2xl lg:py-8"    style={{
+      backgroundImage: "var(--grid-bg)",
+      backgroundRepeat: "repeat",
+    }}>
+      <div className="w-full max-w-7xl px-4 mx-auto"    style={{
+          backgroundImage: "var(--grid-bg)",
+          backgroundRepeat: "repeat",
+        }} >
         {/* Heading with animation */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

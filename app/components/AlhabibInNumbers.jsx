@@ -142,9 +142,11 @@ const AlhabibInNumbers = () => {
       <section
         className="relative bg-white border-yellow-600 border md:border-gray-200 my-10 lg:max-w-7xl  rounded-2xl
          px-4 w-[95%] mx-auto py-14 shadow-xl  md:px-16 overflow-hidden"
+        style={{
+          backgroundImage: "var(--grid-bg)",
+          backgroundRepeat: "repeat",
+        }}
       >
-        
-
         {/* Original Vector Image (kept for mobile) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -218,8 +220,7 @@ const AlhabibInNumbers = () => {
         </div>
       </section>
 
-      
-<div className="h-0.5 w-full bg-gray-100"></div>
+      <div className="h-0.5 w-full bg-gray-100"></div>
     </>
   );
 };

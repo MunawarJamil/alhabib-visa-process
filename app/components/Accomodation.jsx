@@ -175,8 +175,13 @@ function Accommodation() {
     <>
     
 <div className="  h-0.5 w-full bg-gray-100 mb-2 lg:mt-10"></div>
-      <div className="bg-white pb-5 
-      px-2 lg:py-5 lg:block scrollbar-hide md:text-center">
+<div
+  className="bg-  pb-5 px-2 lg:py-5 lg:block scrollbar-hide md:text-center"
+  style={{
+    backgroundImage: "var(--grid-bg)",
+    backgroundRepeat: "repeat",
+  }}
+>
         <div className="border md:border-0 border-gray-200 rounded-lg shadow-lg md:shadow-none
          py-8 px-6 max-w-7xl mx-auto">
           {/* Heading */}
