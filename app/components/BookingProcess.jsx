@@ -107,9 +107,9 @@ export default function BookingProcess() {
         </div>
 
         {/* Mobile View */}
-        <div className="md:hidden mt-6 relative px-4">
+        <div className="md:hidden mt-4 relative px-4">
           {steps.map((step, index) => (
-            <div key={step.num} className="relative mb-8">
+            <div key={step.num} className="relative mb-5">
               {/* Even numbers (2,4) go on right side */}
               {step.num % 2 === 0 ? (
                 <div className="flex justify-end">
