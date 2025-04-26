@@ -39,7 +39,7 @@ export default function BookingProcess() {
       }}
     >
       <div
-        className="bg-white py-8 md:py-5 
+        className="bg-white py-5 
     px-6 border md:border-none rounded-xl shadow-2xl md:shadow-none  my-1 max-w-7xl mx-auto"
     style={{
       backgroundImage: "var(--grid-bg)",
@@ -107,36 +107,36 @@ export default function BookingProcess() {
         </div>
 
         {/* Mobile View */}
-        <div className="md:hidden mt-8 relative px-4">
+        <div className="md:hidden mt-6 relative px-4">
           {steps.map((step, index) => (
-            <div key={step.num} className="relative mb-10">
+            <div key={step.num} className="relative mb-8">
               {/* Even numbers (2,4) go on right side */}
               {step.num % 2 === 0 ? (
                 <div className="flex justify-end">
                   <div className="w-4/5 text-left">
                     {/* Number circle - positioned above content */}
-                    <div className="flex justify-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold">
+                    <div className="flex justify-center mb-1">
+                      <div className="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-semibold">
                         {step.num}
                       </div>
                     </div>
 
                     {/* Content */}
-                    <h3 className="font-bold text-lg text-[#D4A10F] text-center">
+                    <h3 className="font-semibold text-lg text-[#D4A10F] text-center">
                       {step.title}
                     </h3>
-                    <p className="text-black  mt-1 text-center">{step.desc}</p>
+                    <p className="text-black  mt-1 text-center text-sm">{step.desc}</p>
 
                     {/* Arrow - except after last step */}
                     {index < steps.length - 1 && (
-                      <div className="flex justify-start ml-4 mt-4">
+                      <div className="flex justify-start ml-4 mt-2">
                         {step.num === 2 || step.num === 4 ? (
                           // Use vector1.svg with adjusted rotation to point downward
                           <Image
                             src="/svgfiles/vector1.svg"
                             alt="Arrow"
                             width={30}
-                            height={15}
+                            height={10}
                             className="transform rotate-320" // Adjusted to point downward
                           />
                         ) : (
@@ -144,7 +144,7 @@ export default function BookingProcess() {
                             src="/svgfiles/vector.svg"
                             alt="Arrow"
                             width={40}
-                            height={20}
+                            height={30}
                             className="transform rotate-90" // Default downward arrow
                           />
                         )}
@@ -157,17 +157,17 @@ export default function BookingProcess() {
                 <div className="flex justify-start">
                   <div className="w-4/5 text-left">
                     {/* Number circle - positioned above content */}
-                    <div className="flex justify-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold">
+                    <div className="flex justify-center mb-2">
+                      <div className="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-semibold">
                         {step.num}
                       </div>
                     </div>
 
                     {/* Content */}
-                    <h3 className="font-bold text-lg text-[#D4A10F] text-center">
+                    <h3 className="font-semibold text-lg text-[#D4A10F] text-center">
                       {step.title}
                     </h3>
-                    <p className="text-black   mt-1 text-center">{step.desc}</p>
+                    <p className="text-black   mt-1 text-sm text-center">{step.desc}</p>
 
                     {/* Arrow - except after last step */}
                     {index < steps.length - 1 && (

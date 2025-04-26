@@ -5,26 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Check, X } from "lucide-react";
 
 const inclusionData = [
-  {
-    title: "Return Flight",
-    desc: "Round-trip flights from one of our preferred partners. Travel with reputable airlines that offer quality services and comfort.",
-    icon: "✈️",
-  },
-  {
-    title: "Accommodation",
-    desc: "Stay in hotels close to the Haram in Makkah and Madinah, as per your booked package. Provides enough time to perform your prayers & rituals or to explore the city.",
-    icon: "🏨",
-  },
-  {
-    title: "Visa Processing",
-    desc: "Al Habib Travel Ltd will process the Umrah Visa application. You just need to provide the required documents, and we will take care of the rest.",
-    icon: "📄",
-  },
-  {
-    title: "Ground Transport",
-    desc: "Private ground transport is included between Jeddah - Makkah - Madinah - Airport in the package.",
-    icon: "🚌",
-  },
+  
+  
   {
     title: "Rawdah Permit",
     desc: "To pray in the Rawdah, you will need a Rawdah permit, which we will help you obtain without any delay.",
@@ -45,10 +27,9 @@ const inclusionData = [
     desc: "An Umrah kit will be provided that contains essential items for the journey, such as different essential bags, a 3-point travel adapter, and more.",
     icon: "🎒",
   },
-];
 
-// Data for Exclusions
-const exclusionData = [
+
+  // exclusionData
   {
     title: "Meal",
     desc: "Meals are not included in the packages. You can add them to your package by requesting our agent. The charges will be £7 per person per day for breakfast only.",
@@ -84,11 +65,12 @@ const exclusionData = [
     desc: "Travel insurance is not included in the package. You are advised to purchase a suitable policy for medical coverage, trip cancellations, and other unforeseen circumstances.",
     icon: "🩺",
   },
-  {
-    title: "PCR Test & Health Requirements",
-    desc: "Any required PCR tests or other health-related formalities (such as vaccinations) are not covered in the package and must be arranged separately by the traveler.",
-    icon: "🩹",
-  },
+];
+
+// Data for Exclusions
+const exclusionData = [
+
+   
 ];
 
 export default function TravelDetails() {
@@ -124,7 +106,7 @@ export default function TravelDetails() {
           className="text-center mb-12"
         >
           <h1 className="text-3xl md:text-5xl font-bold relative inline-block">
-            Umrah <span className="text-[#D4A10F]">Package</span>
+              Umrah <span className="text-[#D4A10F]">Packages</span>
             <motion.div
               className="absolute -bottom-2 left-0 right-0 h-1 bg-[#D4A10F]"
               initial={{ width: "0%" }}
@@ -150,7 +132,7 @@ export default function TravelDetails() {
             <div className="bg-[#D4A10F] text-white py-4 px-6">
               <div className="flex items-center">
                 <Check className="mr-2" size={20} />
-                <h2 className="text-xl font-bold">Includes</h2>
+                <h2 className="text-xl font-bold">Important Umrah Packages</h2>
               </div>
             </div>
             <div className="p-4">
@@ -204,67 +186,7 @@ export default function TravelDetails() {
             </div>
           </motion.div>
 
-          {/* Exclusive */}
-          <motion.div
-            className="flex-1 bg-white rounded-lg shadow-sm overflow-hidden"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="bg-[#D4A10F] text-white py-4 px-6">
-              <div className="flex items-center">
-                <X className="mr-2" size={20} />
-                <h2 className="text-xl font-bold">Exclusive</h2>
-              </div>
-            </div>
-            <div className="p-4">
-              {exclusionData.map((item, index) => (
-                <motion.div
-                  key={`exclusion-${index}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.3 }}
-                  className="mb-3"
-                >
-                  <div
-                    onClick={() => toggleExclusion(index)}
-                    className={`flex items-center justify-between p-4 rounded-lg cursor-pointer transition-all duration-300 ${
-                      activeExclusions[index]
-                        ? "bg-gray-200 text-primary-color  border-l-4 border-[#D4A10F]"
-                        : "bg-gray-50 hover:bg-gray-200"
-                    }`}
-                  >
-                    <div className="flex items-center">
-                      <span className="text-xl mr-3">{item.icon}</span>
-                      <span className="font-medium">{item.title}</span>
-                    </div>
-                    <motion.div
-                      animate={{ rotate: activeExclusions[index] ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <ChevronDown size={18} className="text-gray-500" />
-                    </motion.div>
-                  </div>
-
-                  <AnimatePresence>
-                    {activeExclusions[index] && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="p-4 md:pl-12 text-gray-600 border-l border-r border-b rounded-b-lg">
-                          {item.desc}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+         
         </div>
       </div>
     </div>

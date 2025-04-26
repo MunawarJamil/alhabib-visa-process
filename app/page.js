@@ -62,19 +62,21 @@ export default function App() {
       <PopularPackages />
       {/* <UmraPackages /> */}
       <Accomodation />
+      <Zyarat />
+      
+      <ReviewCard />
+
+      
+      <VideoTestimonial />
 
       <BookingProcess />
-      <Zyarat />
+      
+      <Faqs />
 
       <AlhabibInNumbers />
       <PackageInclusions />
-
-      <ReviewCard />
-      <VideoTestimonial />
-
       <ImageGallery />
 
-      <Faqs />
       <Partners />
       <Footer />
 
