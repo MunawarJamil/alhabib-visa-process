@@ -109,7 +109,7 @@ export default function BookingProcess() {
         </div>
 
         {/* Mobile View */}
-        <div className="md:hidden mt-4 relative overflow-y-auto h-[400px] px-4 [&::-webkit-scrollbar]:hidden  ">
+        <div className="md:hidden mt-4 relative overflow-y-auto h-[500px] px-4 [&::-webkit-scrollbar]:hidden  ">
           {steps.map((step, index) => (
             <div key={step.num} className="relative  mb-5">
               {/* Even numbers (2,4) go on right side */}
