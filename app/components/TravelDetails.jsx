@@ -58,7 +58,7 @@ export default function TravelDetails() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-3xl md:text-5xl font-bold relative mt-2 inline-block">
+          <h1 className="text-3xl md:text-5xl font-bold relative mt-1 inline-block">
           What’s Included  <span className="text-[#D4A10F]">in Your Umrah Package</span>
             <motion.div
               className="absolute -bottom-2 left-0 right-0 h-1 bg-[#D4A10F]"
