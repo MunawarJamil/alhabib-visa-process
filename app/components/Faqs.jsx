@@ -138,9 +138,8 @@ function Faqs() {
           backgroundRepeat: "repeat",
         }}
       >
-        {/* Main section title */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center hidden lg:block mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -160,7 +159,26 @@ function Faqs() {
         {/* Two column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* FAQ Accordion - takes more space */}
-          <div className="lg:col-span-7 w-full">
+          <div className=" order-2 lg:order-1 lg:col-span-7 mt-8 md:mt-0 w-full">
+            {/* Main section title */}
+            <motion.div
+              className="text-center lg:hidden mb-12"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0C3E3E]">
+                Frequently Asked Questions{" "}
+                <span className="text-[#D4A10F]">(FAQs)</span>
+              </h2>
+              <motion.div
+                className="w-24 h-1 bg-[#D4A10F] mx-auto mt-4 rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: "6rem" }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              ></motion.div>
+            </motion.div>
+
             <div className="space-y-4">
               {accordionData.map((item, index) => (
                 <CustomAccordion
@@ -175,7 +193,7 @@ function Faqs() {
           </div>
 
           {/* Call now section - takes less space */}
-          <div className="lg:col-span-5 w-full lg:sticky lg:top-8">
+          <div className=" order-1 lg:order-2 lg:col-span-5 w-full lg:sticky lg:top-8">
             <motion.div
               className="bg-gradient-to-br from-[#00484A] to-[#003638] rounded-2xl p-8 md:p-10 text-white shadow-xl relative overflow-hidden"
               initial={{ opacity: 0, scale: 0.95 }}

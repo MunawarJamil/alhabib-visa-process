@@ -41,14 +41,16 @@ export default function BookingProcess() {
       <div
         className="bg-white py-5 
     px-6 border md:border-none rounded-xl shadow-2xl md:shadow-none  my-1 max-w-7xl mx-auto"
-    style={{
-      backgroundImage: "var(--grid-bg)",
-      backgroundRepeat: "repeat",
-    }}>
+        style={{
+          backgroundImage: "var(--grid-bg)",
+          backgroundRepeat: "repeat",
+        }}
+      >
         {/* Booking Process Section */}
         <h2 className="text-center text-3xl md:text-4xl font-bold text-teal-900">
           Our <span className="text-yellow-500">Booking</span> Process
         </h2>
+
         <div className="mt-3 h-0.5 md:w-80 md:mx-auto bg-yellow-500"></div>
 
         {/* Desktop View - Same as before */}
@@ -107,9 +109,9 @@ export default function BookingProcess() {
         </div>
 
         {/* Mobile View */}
-        <div className="md:hidden mt-4 relative px-4">
+        <div className="md:hidden mt-4 relative overflow-y-auto h-[400px] px-4 [&::-webkit-scrollbar]:hidden  ">
           {steps.map((step, index) => (
-            <div key={step.num} className="relative mb-5">
+            <div key={step.num} className="relative  mb-5">
               {/* Even numbers (2,4) go on right side */}
               {step.num % 2 === 0 ? (
                 <div className="flex justify-end">
@@ -125,11 +127,13 @@ export default function BookingProcess() {
                     <h3 className="font-semibold text-lg text-[#D4A10F] text-center">
                       {step.title}
                     </h3>
-                    <p className="text-black  mt-1 text-center text-sm">{step.desc}</p>
+                    <p className="text-black  mt-1 text-center text-sm">
+                      {step.desc}
+                    </p>
 
                     {/* Arrow - except after last step */}
                     {index < steps.length - 1 && (
-                      <div className="flex justify-start ml-4 mt-2">
+                      <div className="flex justify-start ml-4 mt-1">
                         {step.num === 2 || step.num === 4 ? (
                           // Use vector1.svg with adjusted rotation to point downward
                           <Image
@@ -157,7 +161,7 @@ export default function BookingProcess() {
                 <div className="flex justify-start">
                   <div className="w-4/5 text-left">
                     {/* Number circle - positioned above content */}
-                    <div className="flex justify-center mb-2">
+                    <div className="flex justify-center mb-1">
                       <div className="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-semibold">
                         {step.num}
                       </div>
@@ -167,11 +171,13 @@ export default function BookingProcess() {
                     <h3 className="font-semibold text-lg text-[#D4A10F] text-center">
                       {step.title}
                     </h3>
-                    <p className="text-black   mt-1 text-sm text-center">{step.desc}</p>
+                    <p className="text-black   mt-1 text-sm text-center">
+                      {step.desc}
+                    </p>
 
                     {/* Arrow - except after last step */}
                     {index < steps.length - 1 && (
-                      <div className="flex justify-end mr-4 mt-4">
+                      <div className="flex justify-end mr-4 mt-3">
                         {step.num === 2 || step.num === 4 ? (
                           // Use vector1.svg with adjusted rotation to point downward
                           <Image

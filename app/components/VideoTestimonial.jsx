@@ -3,9 +3,9 @@
 import React, { useEffect, useRef } from "react";
 
 const videoData = [
+  { videoLink: "/alhabibVideos/vid4.mp4" },
   { videoLink: "/alhabibVideos/vid1.mp4" },
 
-  { videoLink: "/alhabibVideos/vid4.mp4" },
   { videoLink: "/alhabibVideos/vid2.mp4" },
   { videoLink: "/alhabibVideos/vid3.mp4" },
 ];
@@ -71,16 +71,15 @@ function VideoTestimonial() {
           <div className="mt-3 h-0.5  w-[80%] mx-auto bg-yellow-500"></div>
         </div>
 
-        <div className="flex mt-7 justify-center items-center w-[90%] md:w-[60%] lg:w-[45%] mx-auto gap-3 my-5 flex-col md:flex-row">
+        <div className="flex mt-7 justify-center items-center w-[90%] md:w-[60%] lg:w-[45%] mx-auto md:gap-6 my-5 flex-col gap-10  md:flex-row">
           {videoData.map((item, index) => (
             <video
               key={index}
               ref={(el) => (videoRefs.current[index] = el)}
-              className="w-full p-1 md:w-[52%] h-[23rem] lg:h-[29rem] object-contain rounded-lg"
+              className="w-full border-t-2 md:border-0 pt-2 p-1 md:w-[52%] h-[23rem] lg:h-[29rem] object-contain rounded-lg"
               src={item.videoLink}
               controls
               playsInline
-              muted
               onPlay={() => handlePlay(index)}
             ></video>
           ))}
