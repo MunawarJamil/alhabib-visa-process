@@ -110,41 +110,42 @@ export default function Hero() {
 
   return (
     <>
-      <div className="md:hidden  shadow-2xl  relative flex flex-col 
+      {/* Mobile View */}
+      <div
+        className="md:hidden  shadow-2xl  relative flex flex-col 
       justify-between bg-gradient-to-b from-[#004D4F] to-[#006D6F] text-white
           overflow-hidden"
-      
         style={{
-          backgroundImage:
-            "url('/images/bg-mini.png')" ,
+          backgroundImage: "url('/images/bg-mini.png')",
           backgroundSize: "cover",
-          backgroundPosition: "center", 
+          backgroundPosition: "center",
           backgroundColor: "#004D4F",
           backgroundRepeat: "no-repeat",
         }}
       >
-     
-     <div className="z-10  px-5 text-center pt-10">
-          <h1 className="text-3xl font-[Poppins] font-semibold leading-snug mb-2">
+        <div className="z-10  px-5 text-center pt-10">
+          <h1 className="text-2xl font-[Poppins] font-semibold leading mb-1">
             All Inclusive Umrah <br />
-             <span className="">Package with Guided Tour.</span>
+            <span className="">Package with Guided Tour.</span>
           </h1>
-          <p className="mt-7   text-lg font-[Coolvetica] leading-relaxed">
+          <p className="mt-4   text-sm font-[Coolvetica] leading-relaxed">
             All packages include flights, visa processing, accommodation near
             Haram, ground transport, and a guided tour. Meals are optional.
           </p>
 
-          <div className="flex justify-center gap-4
-            items-center   mt-3 ml-12 ">
-            
-            <button   onClick={handleFormSubmit}
+          <div
+            className="flex justify-center gap-4
+            items-center   mt-1 ml-12 "
+          >
+            <button
+              onClick={handleFormSubmit}
               // Open the form popup
               className="  bg-yellow-500 text-white
                              px-4  
-                             py-3  mt-7 rounded-4xl   
+                             py-2  mt-4 rounded-4xl   
                              shadow-lg
                               hover:bg-yellow-600
-                               text-lg font-bold 
+                               text- font-bold 
                                transition 
                               duration-initial 
                               ease-in-out
@@ -154,44 +155,34 @@ export default function Hero() {
             >
               Get Quote - It's free
             </button>
-            <img src="/svgfiles/leftarrow.svg" alt="" 
-            className="  h-10"/>
-
+            <img src="/svgfiles/leftarrow.svg" alt="" className="  h-10" />
           </div>
         </div>
 
         {/* Image Section */}
-         <div className="relative mt-6 flex justify-center
-         w-full items-end z-0">
-       
+        <div
+          className="relative mt-6 flex justify-center
+         w-full items-end z-0"
+        >
           <img
             src="/images/Ellipse-mini.png"
             alt="Ellipse"
             className="absolute bottom-0 z-0 w-64 h-64 
             object-cover"
           />
-           <img
+          <img
             src="/images/Clock-mini.png"
             alt="Clock Tower"
             className="relative w-full object-top
-             z-10 h-80 "
+             z-10 h-72 "
           />
         </div>
-
       </div>
 
- 
-
-  
 
 
 
-
-
-
-
-
-
+      {/* Desktop View */}
 
       <div
         className="w-full relative 
