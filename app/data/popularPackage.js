@@ -4,7 +4,7 @@ export const packageData = {
      
       {
         id: 2,
-        image: "/visaImages/1.jpg",
+        image: "/visaImages/2.jpg",
         title: "07 Nights   Umrah Package",
         makkah: "Conrad Makkah",
         makkahNights: "4N",
@@ -16,7 +16,7 @@ export const packageData = {
       },
       {
         id: 1,
-        image: "/visaImages/2.jpg",
+        image: "/visaImages/1.jpg",
         title: "10 Nights Umrah Package",
         makkah: "Jabal Omar Marriott",
         makkahNights: "5N",

@@ -211,8 +211,8 @@ const ZiyaratSlider = () => {
           }}
         >
           <h1 className="text-white text-center lg:text-3xl   py-3  lg:py-5 px-5 font-[Coolvetica] text-lg  font- ">
-            We are proude to be an authorized partner <br /> of the
-            <span className="text-[#00FF1E]"> Saudi Visa </span> for processing.
+            We are proude to be an authorized 
+            <span className="text-[#00FF1E]"> partner of the Saudi Visa </span> for processing.
           </h1>
         </div>
       </div>
