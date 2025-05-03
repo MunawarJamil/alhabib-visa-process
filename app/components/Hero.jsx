@@ -174,7 +174,7 @@ export default function Hero() {
             src="/images/Clock-mini.png"
             alt="Clock Tower"
             className="relative w-full object-top
-             z-10 h-[17rem] "
+             z-10 h-[17.5rem] "
           />
         </div>
       </div>
