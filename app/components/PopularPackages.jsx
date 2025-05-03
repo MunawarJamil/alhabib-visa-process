@@ -52,8 +52,19 @@ const PopularPackages = () => {
   // New Package Card component with updated design
   const PackageCard = ({ pkg }) => (
     <div className="pb-10 bg-white rounded-xl shadow-2xl    mx-3  w-[360px] md:w-[380px] h-full">
-      <div className="flex justify-center mt-1">
-        <img src={pkg.image} alt="card-img" className="w-full  p-4" />
+      <div className="flex  relative p-4 justify-center mt-1">
+        <img
+          src={pkg.image}
+          alt="card-img"
+          className="w-full  rounded-2xl   "
+        />
+
+        <div className="absolute  top-6 left-6 bg-white px-2 rounded-sm text-xs pt-1 pb-[5.5px] text-center ">
+          
+           
+            {pkg.stars}
+          
+        </div>
       </div>
 
       <div>
@@ -101,15 +112,14 @@ const PopularPackages = () => {
       </div>
 
       <div className="flex gap-3 mt-5 justify-center items-center">
-      <button
-  onClick={() => {
-    if (!enquiryStatus) handleFormSubmit();
-  }}
-  className="bg-[#D4A10F] py-2 px-4 flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105"
->
-  {enquiryStatus ? `Price: $${pkg.price}` : "View Price"}
-</button>
- 
+        <button
+          onClick={() => {
+            if (!enquiryStatus) handleFormSubmit();
+          }}
+          className="bg-[#D4A10F] py-2 px-4 flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          {enquiryStatus ? `Price: $${pkg.price}` : "View Price"}
+        </button>
 
         <button
           onClick={handleFormSubmit}

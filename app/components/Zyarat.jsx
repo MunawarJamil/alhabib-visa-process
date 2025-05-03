@@ -102,104 +102,122 @@ const ZiyaratSlider = () => {
   }, [selectedTab]);
 
   return (
-  <div className="bg-white shadow-2xl md:shadow-none  
+    <>
+      <div
+        className="bg-white shadow-2xl md:shadow-none  
      py-10 border md:border-none lg:max-w-7xl
-      mx-auto px-1  rounded-2xl   mt-4 "    style={{
-        backgroundImage: "var(--grid-bg)",
-        backgroundRepeat: "repeat",
-      }}>
-      <p className="text-2xl  lg:text-4xl text-center font-bold pb-4"> <span className="text-primary-color text-wrap">What</span> <span className="text-yellow-600 ">Zyarats We</span>   <span className="text-primary-color">     Provide</span> </p>
-      <div className="mb-6  h-0.5 w-56 md:w-80 mx-auto bg-yellow-500"></div>
+      mx-auto px-1  rounded-2xl   mt-4 "
+        style={{
+          backgroundImage: "var(--grid-bg)",
+          backgroundRepeat: "repeat",
+        }}
+      >
+        <p className="text-2xl  lg:text-4xl text-center font-bold pb-4">
+          {" "}
+          <span className="text-primary-color text-wrap">What</span>{" "}
+          <span className="text-yellow-600 ">Zyarats We</span>{" "}
+          <span className="text-primary-color"> Provide</span>{" "}
+        </p>
+        <div className="mb-6  h-0.5 w-56 md:w-80 mx-auto bg-yellow-500"></div>
 
-      <div className="max-w-6xl mx-auto px-4">
-        {/* Tabs */}
-        <div className="flex justify-center mb-6 gap-6">
-          {["makkah", "madina"].map((tab) => (
-            <button
-              key={tab}
-              className={`px-6 py-2 text-lg     border transition-all ${
-                selectedTab === tab
-                  ? "bg-gradient-to-r from-teal-700 to-primary-color text-white  shadow-lg"
-                  : "bg-gray-100 text-yellow-600 hover:bg-gray-200"
-              }`}
-              onClick={() => setSelectedTab(tab)}
-            >
-              {tab === "makkah" ? "Makkah" : "Madinah"}
-            </button>
-          ))}
-        </div>
-
-        {/* Slider */}
-        <div
-          ref={sliderRef}
-          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-4"
-          style={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-          }}
-        >
-          {ziyarat.map((item, index) => (
-            <div
-              key={index}
-              className="flex-none   snap-start mr-6 transition-all duration-300 transform"
-            >
-              <div className=" 
-               rounded-xl shadow-lg p-4 h-full flex border-2 w-[20.5rem]  flex-col">
-                <img
-                  src={item.src}
-                  alt={item.name}
-                  className="rounded-lg h-48   w-full object-cover mb-4"
-                />
-                <h3 className="text-lg   text-gray-600 text-center">
-                  {item.name}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Controls */}
-        <div className="flex justify-center items-center mt-6 gap-6">
-          <button
-            onClick={() => scrollToIndex(activeIndex - 1)}
-            className="p-2 bg-white rounded-full shadow text-gray-700 hover:text-yellow-500"
-          >
-            <ChevronLeft size={20} />
-          </button>
-
-          <div className="flex gap-2">
-            {ziyarat.map((_, index) => (
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Tabs */}
+          <div className="flex justify-center mb-6 gap-6">
+            {["makkah", "madina"].map((tab) => (
               <button
-                key={index}
-                onClick={() => scrollToIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex
-                    ? "w-8 bg-gradient-to-r from-teal-400 to-primary-color"
-                    : "w-2 bg-gray-300 hover:bg-gray-400"
+                key={tab}
+                className={`px-6 py-2 text-lg     border transition-all ${
+                  selectedTab === tab
+                    ? "bg-gradient-to-r from-teal-700 to-primary-color text-white  shadow-lg"
+                    : "bg-gray-100 text-yellow-600 hover:bg-gray-200"
                 }`}
-              />
+                onClick={() => setSelectedTab(tab)}
+              >
+                {tab === "makkah" ? "Makkah" : "Madinah"}
+              </button>
             ))}
           </div>
 
-          <button
-            onClick={() => scrollToIndex(activeIndex + 1)}
-            className="p-2 bg-white rounded-full shadow text-gray-700 hover:text-yellow-500"
+          {/* Slider */}
+          <div
+            ref={sliderRef}
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth pb-4"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
           >
-            <ChevronRight size={20} />
-          </button>
+            {ziyarat.map((item, index) => (
+              <div
+                key={index}
+                className="flex-none   snap-start mr-6 transition-all duration-300 transform"
+              >
+                <div
+                  className=" 
+               rounded-xl shadow-lg p-4 h-full flex border-2 w-[20.5rem]  flex-col"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.name}
+                    className="rounded-lg h-48   w-full object-cover mb-4"
+                  />
+                  <h3 className="text-lg   text-gray-600 text-center">
+                    {item.name}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Controls */}
+          <div className="flex justify-center items-center mt-6 gap-6">
+            <button
+              onClick={() => scrollToIndex(activeIndex - 1)}
+              className="p-2 bg-white rounded-full shadow text-gray-700 hover:text-yellow-500"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <div className="flex gap-2">
+              {ziyarat.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToIndex(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === activeIndex
+                      ? "w-8 bg-gradient-to-r from-teal-400 to-primary-color"
+                      : "w-2 bg-gray-300 hover:bg-gray-400"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() => scrollToIndex(activeIndex + 1)}
+              className="p-2 bg-white rounded-full shadow text-gray-700 hover:text-yellow-500"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+
+        <div
+          className=" mt-4 w-[95%]  flex  items-center  justify-center md:max-w-5xl mx-auto rounded-2xl "
+          style={{
+            backgroundImage: `url('alhabibImages/MakkahZiyaarat/ZBanner.jpeg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "100px",
+          }}
+        >
+          <h1 className="text-white text-center lg:text-3xl   py-3  lg:py-5 px-5 font-[Coolvetica] text-lg  font- ">
+            We are proude to be an authorized partner <br /> of the
+            <span className="text-[#00FF1E]"> Saudi Visa </span> for processing.
+          </h1>
         </div>
       </div>
-
-
-      <div className=" mt-4 w-[95%] md:hidden mx-auto rounded-2xl "
-      
-      style={{backgroundImage: `url('alhabibImages/MakkahZiyaarat/ZBanner.jpeg')`, backgroundSize: 'cover', backgroundPosition: 'center', height:"120px" }}>
-            
-          <h1 className="text-white text-center py-4 px-5 font-[Coolvetica] text-lg  font-bold">We are proude to be an authorized partner of the Saudi Visa for processing.</h1>  
-         
-       
-        </div>
-    </div>
+      <div className="w-full h-1 hidden lg:block bg-gray-100 my-3"></div>
+    </>
   );
 };
 
