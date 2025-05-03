@@ -30,10 +30,16 @@ const InquiryComponent = ({ closePopup }) => {
       form.current.reset();
 
       setTimeout(() => {
+        closePopup();
         window.location.reload();
       }, 1500);
     } catch (error) {
       setStatusMessage("Your inquiry is not sent...");
+      window.location.reload();
+      setTimeout(() => {
+       
+        closePopup();
+      }, 1500);
       // for now i need to set
 
       localStorage.setItem("inquiryFilled", "true");

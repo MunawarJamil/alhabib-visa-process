@@ -39,7 +39,6 @@ const PopularPackages = () => {
 
   // Available months for selection
   const months = [
-    
     "july",
     "august",
     "september",
@@ -47,7 +46,7 @@ const PopularPackages = () => {
     "november",
     "december",
     "january",
-    "Ramadan"
+    "Ramadan",
   ];
 
   // New Package Card component with updated design
@@ -102,14 +101,20 @@ const PopularPackages = () => {
       </div>
 
       <div className="flex gap-3 mt-5 justify-center items-center">
+      <button
+  onClick={() => {
+    if (!enquiryStatus) handleFormSubmit();
+  }}
+  className="bg-[#D4A10F] py-2 px-4 flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105"
+>
+  {enquiryStatus ? `Price: $${pkg.price}` : "View Price"}
+</button>
+ 
+
         <button
           onClick={handleFormSubmit}
-          className={`bg-[#D4A10F] py-2 ${enquiryStatus ? "px-4" : "px-4"} flex rounded-lg text-white text-lg hover:bg-yellow-500 transition duration-300 ease-in-out transform hover:scale-105`}
+          className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg hover:bg-[#00454A] transition duration-300 ease-in-out transform hover:scale-105"
         >
-          {enquiryStatus ? `Price: $${pkg.price}` : "View Price"}
-        </button>
-
-        <button className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg hover:bg-[#00454A] transition duration-300 ease-in-out transform hover:scale-105">
           Talk to Agent
         </button>
       </div>
@@ -126,10 +131,7 @@ const PopularPackages = () => {
     <>
       <div
         className="bg-white flex w-full shadow-2xl"
-        style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)"  ,  
-    } }
-
-     
+        style={{ boxShadow: "0 0 30px rgba(0,0,0,0.1)" }}
       >
         <div
           className="w-full lg:border   rounded-2xl  md:max-w-[85rem] lg:py-2
