@@ -250,7 +250,7 @@ function Faqs() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.4 }}
                 >
-                  You Have Different Question?
+                  Call Our Umrah Agents Now!
                 </motion.h3>
 
                 {/* Divider */}
@@ -268,9 +268,9 @@ function Faqs() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8, duration: 0.4 }}
                 >
-                  Our team will answer all your questions.
+                  Our team is available 24/7 to provide instant guidance and
                   <br />
-                  We ensure a quick response.
+                  help you choose the best Umrah package.
                 </motion.p>
 
                 {/* Call Now Button */}
