@@ -71,13 +71,15 @@ export default function App() {
 
       <BookingProcess />
       
-      <Faqs />
-
       <AlhabibInNumbers />
+      
       <PackageInclusions />
-      <ImageGallery />
+     
 
+      <ImageGallery />
       <Partners />
+      <Faqs />
+     
       <Footer />
 
       {/*   render the InquiryForm as a popup */}
