@@ -24,13 +24,15 @@ import "./styles/gallaryStyles.css";
 
 // Image data with captions
 const galleryImages = [
-  { src: "/alhabibImages/wa1.jpeg", caption: "Beautiful Architecture" },
-  { src: "/alhabibImages/wa2.jpeg", caption: "Interior Design" },
+  
+  { src: "/alhabibImages/fm3.png", caption: "Innovative Concepts" },
+  
+  { src: "/alhabibImages/fm2.png", caption: "Contemporary Design" },
+  
+  { src: "/alhabibImages/fm1.png", caption: "Elegant Spaces" }, 
+  { src: "/alhabibImages/wa1.jpeg", caption: "Beautiful Architecture" }, 
   { src: "/alhabibImages/wa3.jpeg", caption: "Modern Aesthetics" },
   { src: "/alhabibImages/wa4.jpeg", caption: "Stunning Details" },
-  { src: "/alhabibImages/img5.jpg", caption: "Elegant Spaces" },
-  { src: "/alhabibImages/img6.jpg", caption: "Contemporary Design" },
-  { src: "/alhabibImages/img7.jpg", caption: "Innovative Concepts" },
 ];
 
 export default function ImageGallery() {
