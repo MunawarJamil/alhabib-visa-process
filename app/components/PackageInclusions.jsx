@@ -132,7 +132,7 @@ export default function TravelDetails() {
             <div className="bg-[#D4A10F] text-white py-4 px-6">
               <div className="flex items-center">
                 <Check className="mr-2" size={20} />
-                <h2 className="text-xl font-bold">Important Umrah Packages</h2>
+                <h2 className="text-xl font-bold">Umrah Packages Includes</h2>
               </div>
             </div>
             <div className="p-4">

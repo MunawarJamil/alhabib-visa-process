@@ -8,33 +8,33 @@ const ReviewSection = () => {
   const sliderRef = useRef(null);
   const testimonials = [
     {
-      date: "Mar 05, 2024",
-      text: "Amazing support! The entire process was handled professionally and without delays.",
-      author: "Ahmed Khan",
+      date: "Mar 07, 2025",
+      text: "They Help us to get the Saudi Umra visa in the busy time Like Ramadan there are very helpful and made the whole visa process very easy. Thanks Al Habib travels",
+      author: "Shaik Azhar ",
       avatar: null,
     },
     {
       date: "Apr 18, 2024",
-      text: "Very cooperative team. They answered all my queries and made the transaction easy.",
-      author: "Fatima Zahra",
+      text: "Saad has been a very considerate and helpful agent. Answered all the questions promptly and tailored Umrah packages based on our needs and preferences. Would recommend Al Habib Travel.",
+      author: "Saima",
       avatar: null,
     },
     {
-      date: "Feb 22, 2024",
-      text: "I was really impressed with the speed and clarity of the service. Highly recommended!",
-      author: "Omar Siddiqui",
+      date: "April 30, 2025",
+      text: "Amazing service. I was confused with my Visa situation. Basit bhai helped me in every possible way. Highly recommended. You can contact him anytime.",
+      author: "Armaghan Akhlaq",
       avatar: null,
     },
     {
-      date: "Jan 30, 2024",
-      text: "Smooth experience from start to finish. Thank you for the reliable support.",
-      author: "Ayesha Malik",
+      date: "April 29, 2025",
+      text: "I contacted Al-habib travel & Mr Basit managed to provide me properly tailored itenary as per choice. Would recommend others to have their services",
+      author: "Kamran Zafar",
       avatar: null,
     },
     {
-      date: "Mar 10, 2024",
-      text: "Great communication and fast service. I’ll definitely use this platform again.",
-      author: "Zainab Ali",
+      date: "April 01, 2025",
+      text: "Sonia is absolutely amazing! Her dedication, expertise, and warm personality make her a standout. She's gone above and beyond to help me, and I couldn't be more grateful. Highly recommend!",
+      author: "Customer",
       avatar: null,
     },
   ];

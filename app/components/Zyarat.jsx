@@ -201,21 +201,7 @@ const ZiyaratSlider = () => {
           </div>
         </div>
 
-        <div
-          className=" mt-4 w-[95%]  flex  items-center  justify-center md:max-w-5xl mx-auto rounded-2xl "
-          style={{
-            backgroundImage: `url('alhabibImages/MakkahZiyaarat/ZBanner.jpeg')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "100px",
-          }}
-        >
-          <h1 className="text-white text-center lg:text-3xl   py-3  lg:py-5 px-5 
-          font-serif text-lg  font- ">
-            We are proude to be an authorized 
-            <span className="text-[#00FF1E]"> partner of the Saudi Visa </span> for processing.
-          </h1>
-        </div>
+         
       </div>
       <div className="w-full h-1 hidden lg:block bg-gray-100 my-3"></div>
     </>

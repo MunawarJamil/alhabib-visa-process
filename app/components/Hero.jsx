@@ -153,7 +153,7 @@ export default function Hero() {
                                 
                                "
             >
-              Get Quote - It's free
+              Get Umrah Quote 
             </button>
             <img src="/svgfiles/leftarrow.svg" alt="" className="  h-10" />
           </div>
@@ -312,7 +312,7 @@ export default function Hero() {
                      text-white shadow-xl group-hover:scale-105 transition duration-300"
                       onClick={handleFormSubmit} // Open the form popup
                     >
-                      Get quote - it&apos;s free
+                      Get Umrah Quote
                     </button>
                   </Link>
                 </motion.div>

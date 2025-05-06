@@ -162,7 +162,7 @@ export default function ImageGallery() {
         {/* Controls bar */}
         <div className="flex justify-between items-center mb-4 px-2">
           <div className="text-sm text-gray-600">
-            Image {activeIndex + 1} of {galleryImages.length}
+            Family {activeIndex + 1} of {galleryImages.length}
           </div>
         </div>
 

@@ -127,7 +127,7 @@ const CustomAccordion = ({ item, index, activeIndex, setActiveIndex }) => {
 function Faqs() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [showOptions, setShowOptions] = useState(false);
-  const phoneNumber = "923470063865"; // No spaces or '+' sign
+  const phoneNumber = "0203 773 0804"; // No spaces or '+' sign
 
   return (
     <div className="bg-gradient-to-b my-10 border md:border-none md:shadow-none rounded-lg shadow-xl from-white to-gray-50 py-8 lg:py-16 px-4 sm:px-6 lg:px-8">
