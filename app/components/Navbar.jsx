@@ -2,6 +2,7 @@
 import { PhoneCall, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import EnquiryComponent from "./VisaForm";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function Navbar() {
   const [showOptions, setShowOptions] = useState(false);
@@ -10,6 +11,15 @@ export default function Navbar() {
   const handleFormSubmit = () => {
     setShowPopup(!showPopup); // Close the popup after form submission
   };
+
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+923470063865";
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/02037730804", "_blank");
+  };
+
   return (
     <>
       {/* phone no  */}
@@ -31,8 +41,10 @@ export default function Navbar() {
           </div>
 
           {showOptions && (
-            <div className="absolute top-14 mt-2 bg-white shadow-lg
-             border rounded-lg px-4 lg:ml-3 md:w-72 z-50 p-2 space-y-2  ">
+            <div
+              className="absolute top-14 mt-2 bg-white shadow-lg
+             border rounded-lg px-4 lg:ml-3 md:w-72 z-50 p-2 space-y-2  "
+            >
               {/* Cross Button */}
               <button
                 onClick={() => setShowOptions(false)}
@@ -72,31 +84,31 @@ export default function Navbar() {
       </div>
 
       {/* navbar */}
-      <div className="w-full bg-white top-0    z-50">
-        <div className="flex lg:hidden h-20 sticky top-0 z-50  bg-white px-6  w-full  justify-between   items-center    ">
-          <div className="left flex  items-center   w-6 h-3 mt-2   ">
-            <button
-              className="  py-2 text-sm  border border-yellow-600 shadow-2xl rounded-md   items-center flex gap-2 text-primary-color 
-             px-3     animate-pulse "
-            >
-              <span>
-                <PhoneCall />
-              </span>
-              <span className="text-nowrap" onClick={handleFormSubmit}>
-                Connect Now
-              </span>
-            </button>
-          </div>
-
-          <div className="logo flex flex-col justify-center items-center   ">
+      <div className="w-full bg-white top-0 shadow-2xl   z-50">
+        <div className="flex  lg:hidden h-20 sticky top-0 z-50  bg-white px-6  w-full  justify-between   items-center    ">
+          <div className="logo  pt-2 flex flex-col justify-center items-center   ">
             <img
-              src="alhabibImages/logoimage.png"
+              src="alhabibImages/caption.png"
               alt=""
               className=" w-14 h-12"
             />
-            <p className="text-xs mt-1 text-center text-[#00454A]">
-              Al-Habib-Travel
-            </p>
+          </div>
+
+          <div class="flex pt-2 space-x-4">
+            <button
+              onClick={handlePhoneClick}
+              class="bg-[#C49B0D] text-white p-2 rounded-tl-md rounded-br-md"
+            >
+              {/* <!-- Phone Icon --> */}
+              <PhoneCall />
+            </button>
+            <button
+              onClick={handleWhatsAppClick}
+              class="bg-[#25D366] text-white p-2 rounded-tr-md rounded-bl-md"
+            >
+              {/* <!-- WhatsApp Icon --> */}
+              <BsWhatsapp className="w-6 h-6" />
+            </button>
           </div>
         </div>
       </div>

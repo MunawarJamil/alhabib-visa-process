@@ -1,6 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { PhoneCall, Phone } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 
 const zyaratdata = {
   makkah: [
@@ -101,6 +103,14 @@ const ZiyaratSlider = () => {
     sliderRef.current?.scrollTo({ left: 0 });
   }, [selectedTab]);
 
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+923470063865";
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/02037730804", "_blank");
+  };
+
   return (
     <>
       <div
@@ -200,8 +210,35 @@ const ZiyaratSlider = () => {
             </button>
           </div>
         </div>
-
-         
+        {/* 
+        <!-- Make sure you have Tailwind CSS included in your project -->
+<!-- You can use Heroicons or Font Awesome for the icons --> */}
+        <div class="flex md:hidden justify-around w-[90%] mx-auto items-center space-x-4 bg-white shadow-xl rounded-lg px-4 py-3 mt-6">
+          <div class="flex flex-col">
+            <span class="text-primary-color font-bold text-lg">
+              Talk with Agent
+            </span>
+            <span class="text-sm text-[#CC9B06] text-center font-medium">
+              Available 24/7
+            </span>
+          </div>
+          <div class="flex space-x-4">
+            <button
+              onClick={handlePhoneClick}
+              class="bg-[#C49B0D] text-white p-2 rounded-tl-md rounded-br-md"
+            >
+              {/* <!-- Phone Icon --> */}
+              <PhoneCall />
+            </button>
+            <button
+              onClick={handleWhatsAppClick}
+              class="bg-[#25D366] text-white p-2 rounded-tr-md rounded-bl-md"
+            >
+              {/* <!-- WhatsApp Icon --> */}
+              <BsWhatsapp className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
       </div>
       <div className="w-full h-1 hidden lg:block bg-gray-100 my-3"></div>
     </>
