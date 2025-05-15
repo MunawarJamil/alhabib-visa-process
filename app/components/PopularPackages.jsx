@@ -37,7 +37,6 @@ const PopularPackages = () => {
     const category = categoryMap[selectedCategory];
     return packageData[selectedMonth][category] || [];
   };
- 
 
   // Available months for selection
   const months = [
@@ -52,29 +51,28 @@ const PopularPackages = () => {
   ];
   const [showPopup, setShowPopup] = useState(false); // State to control the popup visibility
   const handleFormSubmit = () => {
-    setShowPopup(!showPopup);  
+    setShowPopup(!showPopup);
   };
   // New Package Card component with updated design
-  const PackageCard = ({ pkg }) =>{
+  const PackageCard = ({ pkg }) => {
     const [showOptions, setShowOptions] = useState(false); // move state here
     const phoneNumber = "0203 773 0804";
-    
- 
-    return( 
+
+    return (
       <>
-        <div className="pb-10 bg-white rounded-xl shadow-2xl    mx-3  w-[360px] md:w-[380px] h-full">
+        <div className="pb-10 bg-white rounded-xl shadow-xl    mx-3  w-[345px] md:w-[360px] h-full">
           <div className="flex  relative p-4 justify-center mt-1">
             <img
               src={pkg.image}
               alt="card-img"
               className="w-full  rounded-2xl   "
             />
-  
+
             <div className="absolute  top-6 left-6 bg-white px-2 rounded-sm text-xs pt-1 pb-[5.5px] text-center ">
               {pkg.stars}
             </div>
           </div>
-  
+
           <div>
             <div className="flex">
               <div className="w-10 h-10 ml-2 bg-gradient-to-r from-[#f4f4f4] to-[#bdb59f] opacity-45 rounded-full"></div>
@@ -84,7 +82,7 @@ const PopularPackages = () => {
             </div>
             <div className="my-3 w-56 mx-auto bg-yellow-500 h-0.5"></div>
           </div>
-  
+
           <div className="flex items-center ml-4 gap-3 px-4 my-5">
             <FaLocationPinLock className="text-[#00454A]" />
             <div>
@@ -99,17 +97,17 @@ const PopularPackages = () => {
               </span>
             </div>
           </div>
-  
+
           <div className="flex gap-2 items-center justify-end mr-6">
             <div className="bg-yellow-200 opacity-90 rounded-lg text-white flex gap-2 items-center px-2 py-1">
               <LuPackageOpen className="text-[#00454A]" />
               <p className="text-[#00454A]">All inclusive packages</p>
             </div>
           </div>
-  
+
           <div className="flex justify-between my-2">
             <div className="pl-4 ml-4">
-              <h1 className="bg-gray-100 w-36 font-semibold text-center mt-1 text-nowrap rounded-4xl shadow-2xl text-primary-color px-1">
+              <h1 className="bg-gray-100 w-32 font-semibold text-center mt-1 text-nowrap rounded-4xl shadow-2xl text-primary-color px-1">
                 Package Includes:
               </h1>
               <p className="pl-2 mt-1 text-sm text-primary-color">
@@ -122,7 +120,8 @@ const PopularPackages = () => {
           <div className=" relative flex gap-3 mt-5 justify-center items-center">
             <button
               onClick={() => setShowOptions(!showOptions)}
-              className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg hover:bg-[#00454A] transition duration-300 ease-in-out transform hover:scale-105"
+              className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg
+               hover:bg-[#00454A] transition duration-300 ease-in-out transform hover:scale-105"
             >
               Talk to Agent
             </button>
@@ -134,7 +133,7 @@ const PopularPackages = () => {
             >
               {enquiryStatus ? `Price: £${pkg.price}` : "View Price"}
             </button>
-  
+
             {showOptions && (
               <div
                 className="absolute top-[-120] w-[80%] mx-auto   bg-white
@@ -147,7 +146,7 @@ const PopularPackages = () => {
                 >
                   &times;
                 </button>
-  
+
                 {/* Option 1: Call */}
                 <a
                   href={`tel:${phoneNumber}`}
@@ -156,7 +155,7 @@ const PopularPackages = () => {
                   <Phone className="w-4 h-4" />
                   Call via SIM
                 </a>
-  
+
                 {/* Option 2: WhatsApp */}
                 <a
                   href={`https://wa.me/${phoneNumber.replace(/^0/, "")}`}
@@ -173,10 +172,8 @@ const PopularPackages = () => {
         </div>
       </>
     );
-  }
- 
+  };
 
- 
   return (
     <>
       <div
