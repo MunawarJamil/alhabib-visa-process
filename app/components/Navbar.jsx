@@ -57,18 +57,18 @@ export default function Navbar() {
               <a
                 href={`tel:${phoneNumber}`}
                 className="flex items-center gap-2
-                lg:hidden
+                
                   text-black hover:text-primary-color"
               >
                 <Phone className="w-4  h-4" />
-                Call via SIM
+               <span className="  lg:font-semibold"> Call Via SIM</span> 
               </a>
               <a
                 href={`https://wa.me/${phoneNumber.replace(/^0/, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-green-600 hover:text-green-800 
-                text-nowrap lg:py-5
+                text-nowrap lg:py-
                 lg:text-lg font-semibold"
               >
                 <MessageCircle className="w-4  h-4 lg:w-5 lg:h-5 " />
@@ -115,20 +115,8 @@ export default function Navbar() {
       {/* for desktop */}
 
       <div className="hidden  top-0 bg-white    lg:flex w-full  ">
-        <div className=" flex px-10 justify-between w-full max-w-7xl   lg:hidded h-20 sticky top-0 z-50 bg-white        mx-auto     items-center    ">
-          <div className="left flex  items-center  gap-20 w-6 h-3   ">
-            <button
-              className="bg-[#D4A10F] py-3 items-center flex gap-2 text-white 
-             px-8 rounded-xl text-xl font-bold animate-pulse "
-            >
-              <span>
-                <PhoneCall />
-              </span>
-              <span className="text-nowrap" onClick={handleFormSubmit}>
-                Connect Now
-              </span>
-            </button>
-          </div>
+        <div className=" flex px-16 justify-between w-full max-w-7xl   lg:hidded h-20 sticky top-0 z-50 bg-white        mx-auto     items-center    ">
+       
 
           <div className="logo  flex flex-col justify-center items-center   ">
             <img
@@ -140,6 +128,20 @@ export default function Navbar() {
               Al-Habib-Travel
             </p>
           </div>
+
+              
+            <button
+              className="bg-[#D4A10F] py-3 items-center flex gap-2 text-white 
+             px-8 rounded-xl text-xl font-bold animate-pulse "
+            >
+              <span>
+                <PhoneCall />
+              </span>
+              <span className="text-nowrap" onClick={handleFormSubmit}>
+                Connect Now
+              </span>
+            </button>
+           
         </div>
       </div>
 

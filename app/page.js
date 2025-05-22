@@ -34,19 +34,19 @@ export default function App() {
         appearanceCount++;
       }, 10000);
 
-      const reappearTimeout = setTimeout(() => {
-        if (appearanceCount === 1) {
-          setShowPopup(true);
-          appearanceCount++;
-        }
-      }, 30000);
-      if (appearanceCount === 2) {
-        setShowPopup(false);
-      }
+      // const reappearTimeout = setTimeout(() => {
+      //   if (appearanceCount === 1) {
+      //     setShowPopup(true);
+      //     appearanceCount++;
+      //   }
+      // }, 30000);
+      // if (appearanceCount === 2) {
+      //   setShowPopup(false);
+      // }
 
       return () => {
         clearTimeout(initialTimeout);
-        clearTimeout(reappearTimeout);
+        // clearTimeout(reappearTimeout);
       };
     }
   }, []);
@@ -58,6 +58,8 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
+      
+      <AlhabibInNumbers />
       <TravelDetails />
       <PopularPackages />
       {/* <UmraPackages /> */}
@@ -71,7 +73,6 @@ export default function App() {
 
       <BookingProcess />
       
-      <AlhabibInNumbers />
       
       <PackageInclusions />
      
